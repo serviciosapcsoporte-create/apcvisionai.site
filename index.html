@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APC VisionIA — Visión Computacional para Gimnasios y Negocios en Bogotá</title>
+  <meta name="description" content="Optimiza tu gimnasio o negocio con visión computacional e IA en Bogotá. Análisis de flujo, zonas de calor, conteo de personas y eficiencia operativa impulsada por inteligencia artificial.">
+  <meta name="keywords" content="visión computacional, análisis de flujo, zonas de calor, conteo de personas, eficiencia operativa, inteligencia artificial, Bogotá, gimnasios">
+  <meta name="author" content="APC VisionIA">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="APC VisionIA — Visión Computacional para Gimnasios y Negocios en Bogotá">
+  <meta property="og:description" content="Optimiza tu negocio con visión computacional e IA en Bogotá. Análisis de flujo, zonas de calor y eficiencia operativa.">
+  <meta property="og:image" content="https://apcvisionai.site/imagenes/logo.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apcvisionai.site">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="APC VisionIA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="APC VisionIA — Visión Computacional para Gimnasios y Negocios">
+  <meta name="twitter:description" content="Optimiza tu negocio con visión computacional e IA en Bogotá.">
+  <link rel="canonical" href="https://apcvisionai.site">
+  <link rel="icon" href="imagenes/logo.webp" type="image/webp">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "APC VisionIA",
+    "description": "Visión computacional e inteligencia artificial para gimnasios y negocios en Bogotá. Análisis de flujo, zonas de calor, conteo de personas y eficiencia operativa.",
+    "url": "https://apcvisionai.site",
+    "logo": "https://apcvisionai.site/imagenes/logo.webp",
+    "image": "https://apcvisionai.site/imagenes/logo.webp",
+    "telephone": "+57-333-745-0634",
+    "email": "serviciosapcsoporte@gmail.com",
+    "priceRange": "$200,000 - $1,500,000",
+    "areaServed": ["Bogotá", "Sabana de Bogotá"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cra. 52c #39b-22",
+      "addressLocality": "Bogotá",
+      "addressRegion": "Bogotá D.C.",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "4.6001461",
+      "longitude": "-74.1330034"
+    },
+    "sameAs": [
+      "https://www.facebook.com/alejandropiraquiveapc",
+      "https://www.instagram.com/serviciosapc"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+57-333-745-0634",
+      "contactType": "sales",
+      "areaServed": "CO",
+      "availableLanguage": ["Spanish"]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Visión Computacional APC VisionIA",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Conteo de Personas",
+            "description": "Mide con precisión el flujo de clientes en tiempo real. Optimiza la asignación de personal según la demanda real de tu negocio.",
+            "category": "Visión Computacional",
+            "areaServed": "Bogotá"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mapas de Calor",
+            "description": "Visualiza las zonas más concurridas de tu espacio. Descubre patrones de movimiento y optimiza el layout de tu negocio.",
+            "category": "Visión Computacional",
+            "areaServed": "Bogotá"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Alertas de Fila",
+            "description": "Notificaciones automáticas cuando los tiempos de espera superan el umbral. Abre cajas adicionales al instante.",
+            "category": "Visión Computacional",
+            "areaServed": "Bogotá"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Dashboard Analítico",
+            "description": "Panel unificado con métricas clave: ventas, asistencia, tráfico y eficiencia. Decisiones basadas en datos reales.",
+            "category": "Visión Computacional",
+            "areaServed": "Bogotá"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Necesito comprar cámaras nuevas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Trabajamos con las cámaras que ya tienes instaladas. Si cuentas con cámaras IP, DVR o NVR, las conectamos directamente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo toma la implementación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La implementación completa toma entre 48 y 72 horas desde que conectamos tus cámaras, incluyendo configuración del motor de IA y dashboard en tiempo real."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué precisión tiene el conteo de personas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nuestro motor de visión computacional alcanza un 98% de precisión en conteo de personas en condiciones normales de iluminación y flujo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo probar el servicio antes de contratar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Ofrecemos una garantía de 7 días: si en una semana no puedes tomar una mejor decisión con nuestros datos, apagamos el servicio sin costo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué tipo de negocios se benefician más?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nuestra tecnología está optimizada para gimnasios, centros comerciales, restaurantes, clínicas, bancos y tiendas minoristas en Bogotá."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    html { scroll-behavior: smooth; }
+    * { min-width: 0; }
+
+    #videoBg {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+    #videoBg video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    #scrollOverlay {
+      position: absolute;
+      inset: 0;
+      background: #080C18;
+      opacity: 0.4;
+      transition: opacity 0.15s linear;
+    }
+
+    #mainContent {
+      position: relative;
+      z-index: 1;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 50;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #10b981;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
+      transition: all 0.2s ease;
+    }
+    .whatsapp-float:hover {
+      background: #34d399;
+      transform: scale(1.1);
+      box-shadow: 0 12px 40px rgba(16, 185, 129, 0.4);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      background: #111A2E;
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(34, 211, 238, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(34, 211, 238, 0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="antialiased overflow-x-hidden bg-[#080C18] text-[#E2E8F0] selection:bg-cyan-400/30">
+
+  <div id="videoBg">
+    <video autoplay muted loop playsinline>
+      <source src="videos/Servicos%20APC.mp4" type="video/mp4">
+    </video>
+    <div id="scrollOverlay"></div>
+  </div>
+
+  <a href="https://wa.me/573337450634" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp APC VisionIA">
+    <i data-lucide="message-circle" class="w-7 h-7"></i>
+  </a>
+
+  <div id="mainContent">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#080C18]/80 border-b border-[#1E2A4A]">
+      <div class="mx-auto max-w-7xl px-6 h-[68px] flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="imagenes/logo.webp" alt="APC VisionIA logo" class="h-9 w-auto">
+          <div class="leading-tight">
+            <div class="font-extrabold tracking-tight text-white text-[15px]">APC VisionIA</div>
+            <div class="text-[10px] tracking-[0.22em] text-cyan-300/70">BOGOTÁ</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-1">
+          <a href="#hero" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Inicio</a>
+          <a href="#servicios" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Servicios</a>
+          <a href="#como-funciona" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Cómo Funciona</a>
+          <a href="#beneficios" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Beneficios</a>
+          <a href="/articulos/5-formas-analisis-flujo.html" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Artículos</a>
+          <a href="#contacto" class="ml-2 px-4 py-2 rounded-xl bg-cyan-400 text-[#080C18] text-sm font-semibold hover:bg-cyan-300 shadow shadow-cyan-500/20">Hablar ahora</a>
+        </nav>
+        <button id="mb" class="md:hidden size-10 grid place-items-center rounded-xl bg-[#111A2E] border border-[#1E2A4A]">
+          <i data-lucide="menu" class="w-5 h-5 text-slate-300"></i>
+        </button>
+      </div>
+      <div id="mm" class="hidden md:hidden border-t border-[#1E2A4A] bg-[#080C18] px-4 py-3 space-y-1">
+        <a href="#hero" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Inicio</a>
+        <a href="#servicios" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Servicios</a>
+        <a href="#como-funciona" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Cómo Funciona</a>
+        <a href="#beneficios" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Beneficios</a>
+        <a href="/articulos/5-formas-analisis-flujo.html" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Artículos</a>
+        <a href="#contacto" class="block mt-2 text-center px-4 py-3 rounded-xl bg-cyan-400 text-black font-semibold">Hablar ahora</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="min-h-screen flex items-center justify-center py-32 px-6 text-center relative">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold mb-4 reveal">VISIÓN COMPUTACIONAL</div>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tight text-white leading-[1.05] reveal">
+          Transforma tu <span class="text-cyan-300">Gimnasio o Negocio</span> con Visión Computacional e IA
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed reveal">
+          Optimiza la eficiencia operativa, mejora la experiencia de tus clientes y toma decisiones informadas con análisis de flujo, zonas de calor y conteo de personas impulsado por inteligencia artificial en Bogotá.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 reveal">
+          <a href="#servicios" class="px-8 py-4 rounded-xl bg-cyan-400 text-[#080C18] font-bold hover:bg-cyan-300 shadow-lg shadow-cyan-500/20 transition-all">Conoce nuestros servicios</a>
+          <a href="#contacto" class="px-8 py-4 rounded-xl border border-[#1E2A4A] text-slate-300 font-semibold hover:bg-[#111A2E] hover:text-white transition-all">Contáctanos</a>
+        </div>
+        <div class="mt-16 flex items-center justify-center gap-8 text-sm text-slate-500 reveal">
+          <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Implementación en 48h</div>
+          <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> 98% de precisión</div>
+          <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Garantía 7 días</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-24 px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">SOLUCIONES</div>
+          <h2 class="mt-3 text-4xl font-black tracking-tight text-white">Servicios de Visión Computacional</h2>
+          <p class="mt-3 text-slate-400">Tecnología de inteligencia artificial diseñada para optimizar la operación de gimnasios, centros comerciales, restaurantes y negocios en Bogotá.</p>
+        </div>
+
+        <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all reveal">
+            <img src="imagenes/flujo-personas.webp" alt="Flujo de clientes en tiempo real con inteligencia artificial" class="card-img" loading="lazy">
+            <div class="size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center mb-4"><i data-lucide="users" class="w-6 h-6 text-cyan-300"></i></div>
+            <h3 class="text-lg font-bold text-white">Conteo de Personas</h3>
+            <p class="mt-2 text-sm text-slate-400 leading-relaxed">Mide con precisión el flujo de clientes en tiempo real. Optimiza la asignación de personal según la demanda real de tu negocio.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-cyan-300">Tiempo real</span>
+              <span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">-25% personal</span>
+            </div>
+            <a href="#contacto" class="mt-4 inline-flex items-center gap-1 text-xs text-cyan-300 hover:text-cyan-200 font-medium transition-colors">Saber más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+          </article>
+
+          <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all reveal">
+            <img src="imagenes/zonas-calor.webp" alt="Mapas de calor de zonas concurridas en negocios" class="card-img" loading="lazy">
+            <div class="size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center mb-4"><i data-lucide="flame" class="w-6 h-6 text-cyan-300"></i></div>
+            <h3 class="text-lg font-bold text-white">Mapas de Calor</h3>
+            <p class="mt-2 text-sm text-slate-400 leading-relaxed">Visualiza las zonas más concurridas de tu espacio. Descubre patrones de movimiento y optimiza el layout de tu negocio.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-cyan-300">+18% clientes</span>
+              <span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Zonas muertas</span>
+            </div>
+            <a href="#contacto" class="mt-4 inline-flex items-center gap-1 text-xs text-cyan-300 hover:text-cyan-200 font-medium transition-colors">Saber más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+          </article>
+
+          <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all reveal">
+            <img src="imagenes/espera-clientes.webp" alt="Alertas automáticas de tiempos de espera" class="card-img" loading="lazy">
+            <div class="size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center mb-4"><i data-lucide="clock" class="w-6 h-6 text-cyan-300"></i></div>
+            <h3 class="text-lg font-bold text-white">Alertas de Fila</h3>
+            <p class="mt-2 text-sm text-slate-400 leading-relaxed">Notificaciones automáticas cuando los tiempos de espera superan el umbral. Abre cajas adicionales al instante.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-cyan-300">Tiempo real</span>
+              <span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Menos quejas</span>
+            </div>
+            <a href="#contacto" class="mt-4 inline-flex items-center gap-1 text-xs text-cyan-300 hover:text-cyan-200 font-medium transition-colors">Saber más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+          </article>
+
+          <article class="rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all reveal">
+            <img src="imagenes/panel-analitico.webp" alt="Dashboard analítico con KPIs automáticos y reportes" class="card-img" loading="lazy">
+            <div class="size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center mb-4"><i data-lucide="layout-dashboard" class="w-6 h-6 text-cyan-300"></i></div>
+            <h3 class="text-lg font-bold text-white">Dashboard Analítico</h3>
+            <p class="mt-2 text-sm text-slate-400 leading-relaxed">Panel unificado con métricas clave: ventas, asistencia, tráfico y eficiencia. Decisiones basadas en datos reales.</p>
+            <div class="mt-4 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-cyan-300">KPI automáticos</span>
+              <span class="px-2.5 py-1 rounded-full bg-[#0B1220] border border-[#1E2A4A] text-slate-400">Reportes PDF</span>
+            </div>
+            <a href="#contacto" class="mt-4 inline-flex items-center gap-1 text-xs text-cyan-300 hover:text-cyan-200 font-medium transition-colors">Saber más <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo Funciona -->
+    <section id="como-funciona" class="py-24 px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">PROCESO</div>
+          <h2 class="mt-3 text-4xl font-black tracking-tight text-white">Cómo Funciona</h2>
+          <p class="mt-3 text-slate-400">Implementamos visión computacional en tu negocio en menos de una semana. Sin obras, sin complicaciones.</p>
+        </div>
+
+        <div class="mt-16 grid md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal text-center">
+            <div class="size-16 mx-auto rounded-2xl bg-gradient-to-br from-cyan-400 to-cyan-600 text-white grid place-items-center text-2xl font-black">1</div>
+            <h3 class="mt-6 text-xl font-bold text-white">Conectamos tus Cámaras</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">Usamos tu infraestructura existente. Cámaras IP, DVR o NVR que ya tienes instaladas se convierten en sensores inteligentes de análisis.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal text-center">
+            <div class="size-16 mx-auto rounded-2xl bg-gradient-to-br from-cyan-400 to-cyan-600 text-white grid place-items-center text-2xl font-black">2</div>
+            <h3 class="mt-6 text-xl font-bold text-white">IA Aprende tu Espacio</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">Nuestro motor de visión artificial aprende tu local en 2 horas. Identifica personas, patrones de movimiento y zonas de interés.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal text-center">
+            <div class="size-16 mx-auto rounded-2xl bg-gradient-to-br from-cyan-400 to-cyan-600 text-white grid place-items-center text-2xl font-black">3</div>
+            <h3 class="mt-6 text-xl font-bold text-white">Recibes Insights en Vivo</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">Dashboard en tiempo real con métricas, alertas y reportes. Toma decisiones informadas desde el primer día.</p>
+          </div>
+        </div>
+
+        <div class="mt-16 p-8 rounded-2xl bg-gradient-to-br from-[#111A2E] to-[#0B1220] border border-[#1E2A4A] text-center reveal">
+          <div class="grid md:grid-cols-3 gap-8 items-center">
+            <div class="text-center">
+              <div class="text-[11px] tracking-widest text-slate-500">IMPLEMENTACIÓN</div>
+              <div class="mt-2 text-4xl font-black text-cyan-300">48 horas</div>
+              <div class="mt-1 text-sm text-slate-400">Desde la conexión inicial</div>
+            </div>
+            <div class="text-center">
+              <div class="text-[11px] tracking-widest text-slate-500">PRECISIÓN</div>
+              <div class="mt-2 text-4xl font-black text-cyan-300">98%</div>
+              <div class="mt-1 text-sm text-slate-400">En conteo de personas</div>
+            </div>
+            <div class="text-center">
+              <div class="text-[11px] tracking-widest text-slate-500">GARANTÍA</div>
+              <div class="mt-2 text-4xl font-black text-cyan-300">7 días</div>
+              <div class="mt-1 text-sm text-slate-400">O lo apagamos sin costo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center reveal">
+          <a href="#servicios" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#111A2E] border border-[#1E2A4A] hover:bg-[#162040] text-white font-medium transition-all">
+            <i data-lucide="layers" class="w-4 h-4"></i> Ver todos los servicios
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios" class="py-24 px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">POR QUÉ APC VISIONIA</div>
+          <h2 class="mt-3 text-4xl font-black tracking-tight text-white">Beneficios Comprobados</h2>
+          <p class="mt-3 text-slate-400">Empresas en Bogotá ya están transformando su operación con nuestra tecnología de visión computacional.</p>
+        </div>
+
+        <div class="mt-16 grid md:grid-cols-2 gap-8">
+          <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal">
+            <div class="size-14 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="trending-up" class="w-7 h-7 text-cyan-300"></i></div>
+            <h3 class="mt-5 text-xl font-bold text-white">+18% Más Clientes Atendidos</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">Al optimizar la asignación de personal según los picos de demanda real, puedes atender más clientes sin aumentar tu nómina. Gimnasios y restaurantes en Bogotá reportan incrementos de hasta 18% en clientes atendidos por hora.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal">
+            <div class="size-14 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="dollar-sign" class="w-7 h-7 text-cyan-300"></i></div>
+            <h3 class="mt-5 text-xl font-bold text-white">-25% en Costos de Personal</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">Programación de turnos basada en datos reales de tráfico, no en suposiciones. Negocios en Bogotá reducen su costo de personal hasta un 25% eliminando horas improductivas.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal">
+            <div class="size-14 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="zap" class="w-7 h-7 text-cyan-300"></i></div>
+            <h3 class="mt-5 text-xl font-bold text-white">Decisiones en Tiempo Real</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">Alertas instantáneas cuando algo requiere atención: filas largas, zonas vacías, picos de demanda. Actúa antes de que afecte la experiencia de tus clientes.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal">
+            <div class="size-14 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="shield-check" class="w-7 h-7 text-cyan-300"></i></div>
+            <h3 class="mt-5 text-xl font-bold text-white">ROI Medible desde el Día 1</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">Cada implementación incluye métricas claras de retorno de inversión. Si en 7 días no puedes tomar una decisión informada con nuestros datos, apagamos el servicio sin compromiso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artículos -->
+    <section id="articulos" class="py-24 px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">BLOG</div>
+          <h2 class="mt-3 text-4xl font-black tracking-tight text-white">Artículos y Recursos</h2>
+          <p class="mt-3 text-slate-400">Aprende cómo la visión computacional puede transformar tu negocio en Bogotá.</p>
+        </div>
+
+        <div class="mt-16 grid md:grid-cols-2 gap-8">
+          <a href="/articulos/5-formas-analisis-flujo.html" class="group rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all reveal">
+            <div class="size-14 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="book-open" class="w-7 h-7 text-cyan-300"></i></div>
+            <h3 class="mt-5 text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">5 Formas en que el Análisis de Flujo y Zonas de Calor Pueden Mejorar tu Negocio</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">Descubre las 5 formas principales en que el análisis de flujo y zonas de calor puede transformar la eficiencia operativa de tu negocio con soluciones prácticas basadas en datos.</p>
+            <div class="mt-4 flex items-center gap-2 text-sm text-cyan-300 font-semibold">
+              Leer artículo <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </div>
+          </a>
+          <a href="/articulos/como-implementar-analisis-flujo.html" class="group rounded-[20px] border border-[#1E2A4A] bg-[#111A2E] p-6 hover:border-cyan-400/30 hover:-translate-y-1 transition-all reveal">
+            <div class="size-14 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="book-open" class="w-7 h-7 text-cyan-300"></i></div>
+            <h3 class="mt-5 text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">Cómo Implementar un Análisis de Flujo y Zonas de Calor en tu Negocio Colombiano</h3>
+            <p class="mt-3 text-slate-400 leading-relaxed">Guía completa paso a paso para implementar análisis de flujo y zonas de calor en tu negocio colombiano, con mejores prácticas y métricas de éxito.</p>
+            <div class="mt-4 flex items-center gap-2 text-sm text-cyan-300 font-semibold">
+              Leer artículo <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 px-6">
+      <div class="mx-auto max-w-4xl">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">FAQ</div>
+          <h2 class="mt-3 text-4xl font-black tracking-tight text-white">Preguntas Frecuentes</h2>
+          <p class="mt-3 text-slate-400">Resolvemos tus dudas sobre visión computacional para gimnasios y negocios en Bogotá.</p>
+        </div>
+
+        <div class="mt-12 space-y-4">
+          <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+            <summary class="flex items-center justify-between text-white font-semibold text-lg">
+              <h3>¿Necesito comprar cámaras nuevas?</h3>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+            </summary>
+            <p class="mt-4 text-slate-400 leading-relaxed">No. Trabajamos con las cámaras que ya tienes instaladas. Si cuentas con cámaras IP, DVR o NVR, las conectamos directamente. En caso de que no tengas infraestructura, podemos recomendarte equipos compatibles de bajo costo para negocios en Bogotá.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+            <summary class="flex items-center justify-between text-white font-semibold text-lg">
+              <h3>¿Cuánto tiempo toma la implementación?</h3>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+            </summary>
+            <p class="mt-4 text-slate-400 leading-relaxed">La implementación completa toma entre 48 y 72 horas desde que conectamos tus cámaras. Esto incluye la configuración del motor de IA, el aprendizaje de tu espacio y la activación de tu <a href="#servicios" class="text-cyan-300 hover:text-cyan-200">dashboard analítico</a> en tiempo real.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+            <summary class="flex items-center justify-between text-white font-semibold text-lg">
+              <h3>¿Qué precisión tiene el conteo de personas?</h3>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+            </summary>
+            <p class="mt-4 text-slate-400 leading-relaxed">Nuestro motor de visión computacional alcanza un <strong class="text-white">98% de precisión</strong> en conteo de personas en condiciones normales de iluminación y flujo. Esto ha sido validado en gimnasios, restaurantes y centros comerciales en Bogotá.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+            <summary class="flex items-center justify-between text-white font-semibold text-lg">
+              <h3>¿Puedo probar el servicio antes de contratar?</h3>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+            </summary>
+            <p class="mt-4 text-slate-400 leading-relaxed">Sí. Ofrecemos una <strong class="text-white">garantía de 7 días</strong>: si en una semana no puedes tomar una mejor decisión con nuestros datos, apagamos el servicio sin costo. Agenda tu <a href="#contacto" class="text-cyan-300 hover:text-cyan-200">diagnóstico gratuito</a> y te mostramos cómo funciona en tu negocio.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+            <summary class="flex items-center justify-between text-white font-semibold text-lg">
+              <h3>¿Qué tipo de negocios se benefician más?</h3>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+            </summary>
+            <p class="mt-4 text-slate-400 leading-relaxed">Nuestra tecnología está optimizada para <strong class="text-white">gimnasios, centros comerciales, restaurantes, clínicas, bancos y tiendas minoristas</strong> en Bogotá. Cualquier negocio con flujo de personas recurrente puede beneficiarse del análisis de flujo y las <a href="#beneficios" class="text-cyan-300 hover:text-cyan-200">alertas en tiempo real</a> para optimizar su operación.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-24 px-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-2xl mx-auto text-center reveal">
+          <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">HABLEMOS</div>
+          <h2 class="mt-3 text-4xl font-black tracking-tight text-white">Transforma tu Negocio Hoy</h2>
+          <p class="mt-3 text-slate-400">¿Listo para implementar visión computacional en tu gimnasio o negocio en Bogotá? Escríbenos y te guiaremos en el proceso.</p>
+        </div>
+
+        <div class="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div class="space-y-6 reveal">
+            <a href="https://wa.me/573337450634" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-5 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-emerald-500/40 transition-all group">
+              <div class="size-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 grid place-items-center"><i data-lucide="message-circle" class="w-6 h-6 text-emerald-400"></i></div>
+              <div><div class="font-semibold text-white">WhatsApp</div><div class="text-sm text-slate-400">+57 333 745 0634</div></div>
+            </a>
+            <div class="flex items-center gap-4 p-5 rounded-2xl bg-[#111A2E] border border-[#1E2A4A]">
+              <div class="size-12 rounded-xl bg-violet-500/10 border border-violet-500/20 grid place-items-center"><i data-lucide="map-pin" class="w-6 h-6 text-violet-400"></i></div>
+              <div><div class="font-semibold text-white">Bogotá, Colombia</div><div class="text-sm text-slate-400">Trabajamos en toda la ciudad</div></div>
+            </div>
+            <div class="rounded-2xl overflow-hidden border border-[#1E2A4A]">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.6273294163123!2d-74.1330034!3d4.6001461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9f7c1f0336a3%3A0xa4924ef5edb6d5d7!2sCra.%2052c%20%2339b-22%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación APC VisionIA en Bogotá"></iframe>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] reveal">
+            <h3 class="text-lg font-bold text-white">Envíanos un mensaje</h3>
+            <form id="contactForm" class="mt-5 space-y-4">
+              <div><label class="block text-xs text-slate-500 mb-1">Nombre</label><input type="text" name="nombre" required class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none" placeholder="Tu nombre"></div>
+              <div><label class="block text-xs text-slate-500 mb-1">Email o WhatsApp</label><input type="text" name="contacto" required class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none" placeholder="313 000 0000"></div>
+              <div><label class="block text-xs text-slate-500 mb-1">¿Qué necesitas?</label><textarea name="mensaje" rows="4" required class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none" placeholder="Cuéntanos sobre tu proyecto..."></textarea></div>
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300 shadow shadow-cyan-500/20 transition-all flex items-center justify-center gap-2"><i data-lucide="send" class="w-4 h-4"></i> Enviar mensaje</button>
+              <p id="formStatus" class="text-xs text-center hidden"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#050914]/90 border-t border-[#1E2A4A] py-10">
+      <div class="mx-auto max-w-7xl px-6">
+        <div class="grid md:grid-cols-3 gap-8 text-[12px] text-slate-500">
+          <div>
+            <div class="font-bold text-white text-sm">APC VisionIA</div>
+            <p class="mt-2 leading-relaxed">Visión computacional e inteligencia artificial para gimnasios y negocios en Bogotá. Optimiza tu operación con datos en tiempo real.</p>
+          </div>
+          <div>
+            <div class="font-bold text-white text-sm">Enlaces</div>
+            <nav class="mt-2 flex flex-col gap-1.5">
+              <a href="#servicios" class="hover:text-cyan-300 transition-colors">Servicios</a>
+              <a href="#beneficios" class="hover:text-cyan-300 transition-colors">Beneficios</a>
+              <a href="/articulos/5-formas-analisis-flujo.html" class="hover:text-cyan-300 transition-colors">Artículos</a>
+              <a href="#faq" class="hover:text-cyan-300 transition-colors">Preguntas Frecuentes</a>
+              <a href="#contacto" class="hover:text-cyan-300 transition-colors">Contacto</a>
+            </nav>
+          </div>
+          <div>
+            <div class="font-bold text-white text-sm">Contacto</div>
+            <div class="mt-2 space-y-1">
+              <div><a href="https://wa.me/573337450634" target="_blank" class="hover:text-cyan-300 transition-colors">+57 333 745 0634</a></div>
+              <div>Bogotá, Colombia</div>
+              <div class="text-[11px] opacity-60">Cra. 52c #39b-22</div>
+            </div>
+            <div class="mt-3 flex gap-3">
+              <a href="https://www.facebook.com/alejandropiraquiveapc" target="_blank" rel="noopener noreferrer" class="size-8 rounded-lg bg-[#111A2E] border border-[#1E2A4A] grid place-items-center hover:bg-blue-950/40 hover:border-blue-500/40 transition-all group"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-400"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="https://www.instagram.com/serviciosapc" target="_blank" rel="noopener noreferrer" class="size-8 rounded-lg bg-[#111A2E] border border-[#1E2A4A] grid place-items-center hover:bg-pink-950/40 hover:border-pink-500/40 transition-all group"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-slate-400 group-hover:text-pink-400"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-[#1E2A4A] flex flex-col md:flex-row justify-between gap-2 text-[11px] text-slate-600">
+          <div>© 2026 APC VisionIA — Todos los derechos reservados.</div>
+          <div><span class="text-cyan-300">Bogotá</span> — <span class="text-cyan-300">Servicioapc.site</span></div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+
+      const mb = document.getElementById('mb');
+      const mm = document.getElementById('mm');
+      if (mb && mm) {
+        mb.onclick = function() { mm.classList.toggle('hidden'); };
+      }
+
+      const overlay = document.getElementById('scrollOverlay');
+      if (overlay) {
+        function updateOverlay() {
+          var p = Math.min(window.scrollY / window.innerHeight, 1);
+          overlay.style.opacity = 0.4 + (0.52 * p);
+        }
+        window.addEventListener('scroll', updateOverlay, { passive: true });
+        updateOverlay();
+      }
+
+      // Reveal animations
+      function revealSections() {
+        var reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(function(el) {
+          var top = el.getBoundingClientRect().top;
+          var windowHeight = window.innerHeight;
+          if (top < windowHeight * 0.85) {
+            el.classList.add('active');
+          }
+        });
+      }
+      window.addEventListener('scroll', revealSections, { passive: true });
+      revealSections();
+
+      // Intersection Observer fallback for reveals
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(function(el) {
+        observer.observe(el);
+      });
+
+      // External link handler
+      (function() {
+        function m(a) {
+          var h = a.getAttribute('href');
+          if (!h) return;
+          try {
+            var u = new URL(h, document.baseURI);
+            if ((u.protocol === 'http:' || u.protocol === 'https:') && u.host !== location.host) {
+              a.target = '_blank';
+              a.rel = 'noopener noreferrer';
+            }
+          } catch (e) {}
+        }
+        function s() {
+          document.querySelectorAll('a[href]').forEach(m);
+        }
+        if (document.readyState !== 'loading') { s(); } else { document.addEventListener('DOMContentLoaded', s); }
+        document.addEventListener('click', function(e) {
+          var a = e.target && e.target.closest && e.target.closest('a[href]');
+          if (a) { m(a); }
+        }, true);
+      })();
+    });
+  </script>
+</body>
+</html>
