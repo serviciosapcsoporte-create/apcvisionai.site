@@ -10,7 +10,9 @@
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="APC VisionIA — Visión Computacional para Gimnasios y Negocios en Bogotá">
   <meta property="og:description" content="Optimiza tu negocio con visión computacional e IA en Bogotá. Análisis de flujo, zonas de calor y eficiencia operativa.">
-  <meta property="og:image" content="https://apcvisionai.site/imagenes/logo.webp">
+  <meta property="og:image" content="https://apcvisionai.site/imagenes/Hero%20Image.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://apcvisionai.site">
   <meta property="og:locale" content="es_CO">
@@ -25,6 +27,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <script type="application/ld+json">
+  [
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -51,7 +54,8 @@
     },
     "sameAs": [
       "https://www.facebook.com/alejandropiraquiveapc",
-      "https://www.instagram.com/serviciosapc"
+      "https://www.instagram.com/serviciosapc",
+      "https://www.linkedin.com/in/alejandropiraquive/"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -153,6 +157,7 @@
       }
     ]
   }
+  ]
   </script>
   <style>
     :root { color-scheme: dark; }
@@ -234,8 +239,9 @@
 <body class="antialiased overflow-x-hidden bg-[#080C18] text-[#E2E8F0] selection:bg-cyan-400/30">
 
   <div id="videoBg">
-    <video autoplay muted loop playsinline>
-      <source src="videos/Servicos%20APC.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="videos/Servicios%20APC.webm" type="video/webm">
+      <source src="videos/Servicios%20APC-opt.mp4" type="video/mp4">
     </video>
     <div id="scrollOverlay"></div>
   </div>
@@ -558,13 +564,18 @@
           </div>
           <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] reveal">
             <h3 class="text-lg font-bold text-white">Envíanos un mensaje</h3>
-            <form id="contactForm" class="mt-5 space-y-4">
-              <div><label class="block text-xs text-slate-500 mb-1">Nombre</label><input type="text" name="nombre" required class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none" placeholder="Tu nombre"></div>
-              <div><label class="block text-xs text-slate-500 mb-1">Email o WhatsApp</label><input type="text" name="contacto" required class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none" placeholder="313 000 0000"></div>
-              <div><label class="block text-xs text-slate-500 mb-1">¿Qué necesitas?</label><textarea name="mensaje" rows="4" required class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none" placeholder="Cuéntanos sobre tu proyecto..."></textarea></div>
-              <button type="submit" class="w-full py-3.5 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300 shadow shadow-cyan-500/20 transition-all flex items-center justify-center gap-2"><i data-lucide="send" class="w-4 h-4"></i> Enviar mensaje</button>
-              <p id="formStatus" class="text-xs text-center hidden"></p>
-            </form>
+              <form id="contactForm" class="mt-5 space-y-4" action="https://formsubmit.co/serviciosapcsoporte@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Nuevo contacto APC VisionIA">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_next" value="https://apcvisionai.site">
+                <div><label class="block text-xs text-slate-500 mb-1">Nombre</label><input type="text" name="nombre" required class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none" placeholder="Tu nombre"></div>
+                <div><label class="block text-xs text-slate-500 mb-1">Email o WhatsApp</label><input type="text" name="contacto" required class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none" placeholder="313 000 0000"></div>
+                <div><label class="block text-xs text-slate-500 mb-1">¿Qué necesitas?</label><textarea name="mensaje" rows="4" required class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none" placeholder="Cuéntanos sobre tu proyecto..."></textarea></div>
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300 shadow shadow-cyan-500/20 transition-all flex items-center justify-center gap-2"><i data-lucide="send" class="w-4 h-4"></i> Enviar mensaje</button>
+                <p id="formStatus" class="text-xs text-center hidden">Mensaje enviado correctamente. Te contactaremos pronto.</p>
+              </form>
           </div>
         </div>
       </div>
@@ -603,7 +614,7 @@
         </div>
         <div class="mt-8 pt-6 border-t border-[#1E2A4A] flex flex-col md:flex-row justify-between gap-2 text-[11px] text-slate-600">
           <div>© 2026 APC VisionIA — Todos los derechos reservados.</div>
-          <div><span class="text-cyan-300">Bogotá</span> — <span class="text-cyan-300">Servicioapc.site</span></div>
+          <div><span class="text-cyan-300">Bogotá</span> — <span class="text-cyan-300">serviciosapc.site</span></div>
         </div>
       </div>
     </footer>
@@ -655,6 +666,36 @@
       document.querySelectorAll('.reveal').forEach(function(el) {
         observer.observe(el);
       });
+
+      // Contact form handler
+      const contactForm = document.getElementById('contactForm');
+      const formStatus = document.getElementById('formStatus');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var btn = contactForm.querySelector('button[type="submit"]');
+          var original = btn.innerHTML;
+          btn.disabled = true;
+          btn.innerHTML = '<i data-lucide="loader" class="w-4 h-4 animate-spin"></i> Enviando...';
+          lucide.createIcons();
+          fetch(contactForm.getAttribute('action'), {
+            method: contactForm.getAttribute('method') || 'POST',
+            body: new FormData(contactForm)
+          }).then(function(r) {
+            formStatus.classList.remove('hidden');
+            contactForm.reset();
+            btn.disabled = false;
+            btn.innerHTML = original;
+            lucide.createIcons();
+          }).catch(function() {
+            formStatus.classList.remove('hidden');
+            formStatus.textContent = 'Error al enviar. Intenta de nuevo.';
+            btn.disabled = false;
+            btn.innerHTML = original;
+            lucide.createIcons();
+          });
+        });
+      }
 
       // External link handler
       (function() {
