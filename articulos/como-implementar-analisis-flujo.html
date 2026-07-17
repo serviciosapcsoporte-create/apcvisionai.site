@@ -12,7 +12,9 @@
   <meta property="og:description" content="Guía completa paso a paso para implementar análisis de flujo y zonas de calor en tu negocio colombiano con mejores prácticas y métricas de éxito.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://apcvisionai.site/articulos/como-implementar-analisis-flujo.html">
-  <meta property="og:image" content="https://apcvisionai.site/imagenes/logo.webp">
+  <meta property="og:image" content="https://apcvisionai.site/imagenes/Hero%20Image.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="es_CO">
   <meta property="og:site_name" content="APC VisionIA">
   <meta name="twitter:card" content="summary_large_image">
@@ -725,6 +727,46 @@
         font-size: 28px;
       }
     }
+
+    .related-box {
+      background: rgba(6, 182, 212, 0.06);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 40px;
+    }
+
+    .related-box h4 {
+      color: var(--secondary);
+      font-size: 18px;
+      margin-bottom: 14px;
+    }
+
+    .related-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .related-list li::before {
+      content: '→';
+      color: var(--accent);
+      font-weight: 700;
+      margin-right: 8px;
+    }
+
+    .related-list a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    .related-list a:hover {
+      color: var(--primary);
+    }
   </style>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -858,7 +900,7 @@
     "@type": "Article",
     "headline": "Cómo Implementar un Análisis de Flujo y Zonas de Calor en tu Negocio para Mejorar la Eficiencia Operativa",
     "description": "Guía completa paso a paso para implementar análisis de flujo y zonas de calor en tu negocio colombiano. Escenarios de implementación, mejores prácticas y métricas de éxito.",
-    "image": "https://apcvisionai.site/imagenes/logo.webp",
+    "image": "https://apcvisionai.site/imagenes/Hero%20Image.webp",
     "author": {
       "@type": "Organization",
       "name": "APC VisionIA",
@@ -1109,20 +1151,20 @@
 
               <div class="tools-list">
                 <div class="tool-item">
-                  <div class="tool-name">VideoAI Pro</div>
-                  <div class="tool-desc">Procesamiento local de video de alta velocidad para análisis en tiempo real, sin latencia</div>
+                  <div class="tool-name">Motor de inferencia local</div>
+                  <div class="tool-desc">Procesamiento de video en el equipo del cliente para análisis en tiempo real, sin latencia ni envío de imágenes a la nube</div>
                 </div>
                 <div class="tool-item">
-                  <div class="tool-name">HeatMap Analytics Suite</div>
-                  <div class="tool-desc">Herramienta especializada de análisis de mapas de calor con políticas de privacidad locales</div>
+                  <div class="tool-name">Módulo de mapas de calor</div>
+                  <div class="tool-desc">Generación de mapas térmicos de circulación con políticas de privacidad y anonimización de rostros</div>
                 </div>
                 <div class="tool-item">
-                  <div class="tool-name">Dashboard Colombia</div>
-                  <div class="tool-desc">Visualización local de métricas con validación de moneda y unidades</div>
+                  <div class="tool-name">Panel de métricas</div>
+                  <div class="tool-desc">Visualización local de indicadores con unidades y moneda configurables al contexto colombiano</div>
                 </div>
                 <div class="tool-item">
-                  <div class="tool-name">WhatsApp Business API</div>
-                  <div class="tool-desc">Integración con alertas de WhatsApp para soporte en español</div>
+                  <div class="tool-name">Alertas por WhatsApp</div>
+                  <div class="tool-desc">Notificaciones automáticas de filas y eventos a tu WhatsApp para atención en español</div>
                 </div>
               </div>
             </section>
@@ -1219,8 +1261,17 @@
 
               <div class="cta-section">
                 <h3 class="cta-title">¿Necesita Asistencia con la Implementación?</h3>
-                <p class="cta-text">Nuestra experiencia local en Colombia ha permitido implementación exitosa de más de 50 negocios colombianos, con un ROI medible en menos de 30 días. ¡Comencemos hoy mismo!</p>
+                <p class="cta-text">Nuestra experiencia local en Colombia nos ha permitido acompañar a negocios en su adopción de visión computacional, con resultados medibles desde las primeras semanas. ¡Comencemos hoy mismo!</p>
                 <a href="/#contacto" class="cta-button">Agendar Consulta de Implementación</a>
+              </div>
+
+              <div class="related-box">
+                <h4>Sigue aprendiendo</h4>
+                <ul class="related-list">
+                  <li><a href="/articulos/5-formas-analisis-flujo.html">5 formas en que el análisis de flujo y zonas de calor mejoran tu eficiencia operativa</a></li>
+                  <li><a href="/#servicios">Conoce nuestros servicios de visión computacional</a></li>
+                  <li><a href="/#contacto">Solicita una demostración de implementación</a></li>
+                </ul>
               </div>
 
               <a href="/" class="back-link">
