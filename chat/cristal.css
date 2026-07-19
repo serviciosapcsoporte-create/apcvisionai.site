@@ -1,11 +1,11 @@
 /* Cristal — estilos del asistente flotante */
 #cristal-mount { position: fixed; z-index: 60; }
 
-/* Launcher abajo-derecha */
+/* Launcher abajo-izquierda */
 .cr-launcher {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  left: 24px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -39,7 +39,7 @@
 .cr-panel {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  left: 24px;
   width: 360px;
   max-width: calc(100vw - 32px);
   height: 540px;
@@ -150,6 +150,6 @@
 .cr-legal:hover { color: #67e8f9; text-decoration: underline; }
 
 @media (max-width: 480px) {
-  .cr-launcher { bottom: 16px; right: 16px; width: 54px; height: 54px; }
-  .cr-panel { bottom: 16px; right: 16px; left: 16px; width: auto; height: 70vh; }
+  .cr-launcher { bottom: 16px; left: 16px; width: 54px; height: 54px; }
+  .cr-panel { bottom: 16px; left: 16px; right: 16px; width: auto; height: 70vh; }
 }
