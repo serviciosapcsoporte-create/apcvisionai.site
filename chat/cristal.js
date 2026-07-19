@@ -71,12 +71,38 @@
     if (value && value.step) {
       return goStep(value.step, value.data);
     }
-    // texto libre: intentamos clasificar el dolor
+    // texto libre: lo interpretamos según el contexto actual
     return classify(value);
+  }
+
+  // ¿El usuario quiere cerrar / avanzar / hablar ya?
+  function isAffirm(text) {
+    var t = (text || "").toLowerCase();
+    return /(si|sí|dale|vale|bueno|ok|esta bien|hagamos|activ|cotiz|quiero|adelante|proced|apart|envi|dejame|me interesa|hablemos|hablar|whatsapp|wa|contact|empez|contrat|compr)/.test(t);
+  }
+
+  // ¿El usuario pide explícitamente hablar con alguien / ir a WhatsApp?
+  function isTalkIntent(text) {
+    var t = (text || "").toLowerCase();
+    return /(whatsapp|habla|hablemos|asesor|persona|llam|contacto|telefono|celular)/.test(t);
   }
 
   function classify(text) {
     var t = (text || "").toLowerCase();
+
+    // Si estamos en un momento de cierre (oferta o "déjame pensarlo"),
+    // cualquier afirmación debe llevar al formulario o a WhatsApp, no dar vueltas.
+    if (state.step === "offer" || state.step === "close") {
+      if (isTalkIntent(t)) return goStep("wa");
+      if (isAffirm(t)) return goStep("capture");
+      // si no es afirmación ni hablar, asumimos duda -> volver a ofrecer cierre claro
+      return goStep("close");
+    }
+
+    // En cualquier otro punto, si pide hablar directo, lo llevamos a WA
+    if (isTalkIntent(t)) return goStep("wa");
+
+    // Clasificación de dolor por palabras clave
     var pain = "otro";
     if (/(camara|cctv|seguridad|vigilar|robo|video|monitoreo)/.test(t)) pain = "camaras";
     else if (/(gente|cliente|flujo|persona|concurrencia|aglomer|cola|fila|espera)/.test(t)) pain = "flujo";
@@ -84,6 +110,11 @@
     else if (/(whatsapp|bot|automat|ia|chat|respuesta|cliente)/.test(t)) pain = "ia";
     else if (/(dato|analitic|dashboard|reporte|kpi|metr|eficien)/.test(t)) pain = "datos";
     state.pain = pain;
+
+    // Si el texto es una afirmación suelta sin palabra de dolor conocida,
+    // lo mandamos a la oferta para cerrar en vez de preguntar de nuevo.
+    if (pain === "otro" && isAffirm(t)) return goStep("offer", { pain: state.pain || "otro" });
+
     return goStep("pain_" + pain);
   }
 
