@@ -404,6 +404,12 @@
     panel.classList.add("open");
     panel.setAttribute("aria-hidden", "false");
     launcher.classList.add("hidden");
+    // ocultar redes flotantes para que el panel no las tape
+    document.querySelectorAll(".social-float").forEach(function (n) {
+      n.style.transition = "opacity .2s ease";
+      n.style.opacity = "0";
+      n.style.pointerEvents = "none";
+    });
     if (state.step === "intro" && chatLog.children.length === 0) {
       goStep("intro");
     }
@@ -413,6 +419,10 @@
     panel.classList.remove("open");
     panel.setAttribute("aria-hidden", "true");
     launcher.classList.remove("hidden");
+    document.querySelectorAll(".social-float").forEach(function (n) {
+      n.style.opacity = "1";
+      n.style.pointerEvents = "auto";
+    });
   }
 
   launcher.onclick = openPanel;
