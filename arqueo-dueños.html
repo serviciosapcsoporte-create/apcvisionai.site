@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arqueo Inteligente — ¿Tu Caja Cuadra? | APC VisionIA</title>
+  <meta name="description" content="Descubre si tu caja tiene discrepancies. Calcula tu pérdida en 30 segundos. Arqueo Inteligente con mini PC + checkpoint + transcripción + Excel automático en Bogotá.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="¿Tu Caja Cuadra? — Arqueo Inteligente APC">
+  <meta property="og:description" content="Calcula cuánto pierdes cada mes por discrepancies en caja. Solución con mini PC + checkpoint + Excel automático.">
+  <meta property="og:image" content="https://apcvisionai.site/imagenes/Hero%20Image.webp">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://apcvisionai.site/arqueo-dueños.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: dark; }
+    * { min-width: 0; }
+    .calc-result { display: none; }
+    .calc-result.show { display: block; animation: fadeUp 0.5s ease; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .reveal { opacity: 0; transform: translateY(14px); transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="antialiased bg-[#080C18] text-[#E2E8F0]">
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center py-20 px-6 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold mb-4">ARQUEO INTELIGENTE</div>
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight text-white leading-[1.05]">
+        ¿Tu caja <span class="text-cyan-300">cuadra</span>?
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        Si no estás 100% seguro, estás perdiendo dinero. Calcula cuánto en 30 segundos.
+      </p>
+      <div class="mt-10">
+        <a href="#calculadora" class="px-8 py-4 rounded-xl bg-cyan-400 text-[#080C18] font-bold hover:bg-cyan-300 shadow-lg shadow-cyan-500/20 transition-all">Calcular mi pérdida ahora</a>
+      </div>
+      <div class="mt-12 flex items-center justify-center gap-6 text-sm text-slate-500">
+        <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Mini PC incluida</div>
+        <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Checkpoint de red</div>
+        <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Excel automático</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problema -->
+  <section class="py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="text-[11px] tracking-[0.2em] text-red-400 font-semibold mb-3">EL PROBLEMA</div>
+        <h2 class="text-4xl font-black text-white">La caja <span class="text-red-400">nunca</span> cuadra. Y tú no sabes por qué.</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A]">
+          <div class="text-3xl mb-4">😰</div>
+          <h3 class="text-lg font-bold text-white">"Siento que me roban"</h3>
+          <p class="mt-2 text-sm text-slate-400">Pero no tengo pruebas. El POS dice una cosa, el cajero otra.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A]">
+          <div class="text-3xl mb-4">😤</div>
+          <h3 class="text-lg font-bold text-white">"La caja nunca cuadra"</h3>
+          <p class="mt-2 text-sm text-slate-400">Cada turno tiene su versión. Nadie tiene la verdad completa.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A]">
+          <div class="text-3xl mb-4">😡</div>
+          <h3 class="text-lg font-bold text-white">"Las cámaras no sirven"</h3>
+          <p class="mt-2 text-sm text-slate-400">Graban video, pero no te dicen qué pasó en el arqueo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solución -->
+  <section class="py-20 px-6 bg-[#0B1220]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold mb-3">LA SOLUCIÓN</div>
+        <h2 class="text-4xl font-black text-white">Arqueo Inteligente <span class="text-cyan-300">APC</span></h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-[#111A2E] border border-[#1E2A4A]">
+            <div class="size-10 rounded-lg bg-cyan-400/10 grid place-items-center shrink-0"><i data-lucide="monitor" class="w-5 h-5 text-cyan-300"></i></div>
+            <div>
+              <div class="font-bold text-white">Mini PC Configurada</div>
+              <div class="text-sm text-slate-400 mt-1">La conectas y funciona. Sin obras, sin complicaciones.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-[#111A2E] border border-[#1E2A4A]">
+            <div class="size-10 rounded-lg bg-cyan-400/10 grid place-items-center shrink-0"><i data-lucide="shield" class="w-5 h-5 text-cyan-300"></i></div>
+            <div>
+              <div class="font-bold text-white">Checkpoint de Red</div>
+              <div class="text-sm text-slate-400 mt-1">Firewall que protege tu computador y tu red.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-[#111A2E] border border-[#1E2A4A]">
+            <div class="size-10 rounded-lg bg-cyan-400/10 grid place-items-center shrink-0"><i data-lucide="mic" class="w-5 h-5 text-cyan-300"></i></div>
+            <div>
+              <div class="font-bold text-white">Transcripción de Audio</div>
+              <div class="text-sm text-slate-400 mt-1">Cada conversación queda transcrita y searchable.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-[#111A2E] border border-[#1E2A4A]">
+            <div class="size-10 rounded-lg bg-cyan-400/10 grid place-items-center shrink-0"><i data-lucide="file-spreadsheet" class="w-5 h-5 text-cyan-300"></i></div>
+            <div>
+              <div class="font-bold text-white">Excel Automático</div>
+              <div class="text-sm text-slate-400 mt-1">Comparación POS vs físico al final del día. Por correo, WhatsApp o Telegram.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center justify-center">
+          <div class="text-center p-8 rounded-2xl bg-gradient-to-br from-cyan-400/10 to-cyan-600/5 border border-cyan-400/20">
+            <div class="text-6xl font-black text-cyan-300">5 min</div>
+            <div class="mt-2 text-lg text-slate-400">de arqueo automático</div>
+            <div class="mt-1 text-sm text-slate-500">vs 2 horas manual</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculadora -->
+  <section id="calculadora" class="py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold mb-3">CALCULADORA</div>
+        <h2 class="text-4xl font-black text-white">¿Cuánto pierdes cada mes?</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-6 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] space-y-4">
+          <div><label class="block text-xs text-slate-500 mb-1">Efectivo diario promedio (COP)</label><input type="number" id="efectivo_diario" placeholder="2000000" min="0" class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none"></div>
+          <div><label class="block text-xs text-slate-500 mb-1"># Empleados que manejan caja</label><input type="number" id="empleados" placeholder="3" min="1" class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none"></div>
+          <div><label class="block text-xs text-slate-500 mb-1">Horas de arqueo manual por día</label><input type="number" id="horas_arqueo" placeholder="2" min="0" step="0.5" class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none"></div>
+          <div><label class="block text-xs text-slate-500 mb-1">Costo hora empleado (COP)</label><input type="number" id="costo_hora" placeholder="8000" min="0" class="w-full px-4 py-3 rounded-xl bg-[#0B1220] border border-[#1E2A4A] text-white placeholder-slate-600 focus:border-cyan-400/50 focus:outline-none"></div>
+          <button onclick="calcularAPC()" class="w-full py-3.5 rounded-xl bg-cyan-400 text-black font-semibold hover:bg-cyan-300 shadow shadow-cyan-500/20 transition-all">Calcular mi pérdida ahora</button>
+        </div>
+        <div id="calcResult" class="calc-result p-6 rounded-2xl bg-gradient-to-br from-[#111A2E] to-[#0B1220] border border-[#1E2A4A]">
+          <div class="text-slate-400 text-sm">Tu pérdida mensual estimada</div>
+          <div class="text-4xl font-black text-cyan-300 mt-1" id="result_total">$0</div>
+          <div class="grid grid-cols-2 gap-3 mt-4">
+            <div class="rounded-xl bg-[#0B1220] border border-[#1E2A4A] p-3"><div class="text-lg font-bold text-white" id="res_tiempo">0h</div><div class="text-[11px] text-slate-500 mt-1">Horas ahorradas/mes</div></div>
+            <div class="rounded-xl bg-[#0B1220] border border-[#1E2A4A] p-3"><div class="text-lg font-bold text-white" id="res_costo">$0</div><div class="text-[11px] text-slate-500 mt-1">Ahorro en personal</div></div>
+          </div>
+          <div class="mt-5 p-4 rounded-xl bg-[#0B1220] border border-[#1E2A4A]">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="size-9 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 grid place-items-center text-white font-bold text-sm">APC</div>
+              <div><div class="font-semibold text-white text-sm">APC Arqueo</div><div class="text-[11px] text-cyan-300/70">Analizando tu pérdida</div></div>
+            </div>
+            <div class="text-sm text-slate-300 leading-relaxed" id="aiMessage"><span class="text-slate-500">Tu análisis aparecerá aquí.</span></div>
+          </div>
+          <a href="https://wa.me/573337450634?text=Hola%2C%20quiero%20mi%20demo%20de%20arqueo%20inteligente" target="_blank" class="mt-5 block w-full py-3.5 rounded-xl bg-emerald-500 text-white font-bold text-center hover:bg-emerald-400 transition-all">
+            📱 Hablar por WhatsApp AHORA
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="py-20 px-6 bg-[#0B1220]">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-4xl font-black text-white">¿Listo para saber <span class="text-cyan-300">la verdad</span>?</h2>
+      <p class="mt-4 text-lg text-slate-400">Te llevamos la mini PC, la configuramos y en 48 horas tu arqueo se resuelve solo.</p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/573337450634?text=Hola%2C%20quiero%20una%20demo%20de%20arqueo%20inteligente" target="_blank" class="px-8 py-4 rounded-xl bg-emerald-500 text-white font-bold hover:bg-emerald-400 shadow-lg transition-all">
+          📱 WhatsApp: +57 333 745 0634
+        </a>
+        <a href="mailto:serviciosapcsoporte@gmail.com" class="px-8 py-4 rounded-xl border border-[#1E2A4A] text-slate-300 font-semibold hover:bg-[#111A2E] hover:text-white transition-all">
+          ✉️ serviciosapcsoporte@gmail.com
+        </a>
+      </div>
+      <p class="mt-6 text-sm text-slate-500">Sin compromiso. Garantía de 7 días. O lo retiramos sin costo.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#050914]/90 border-t border-[#1E2A4A] py-8 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-[12px] text-slate-600">
+      <div>© 2026 APC VisionIA — Todos los derechos reservados.</div>
+      <div><span class="text-cyan-300">Bogotá</span> — <a href="/" class="text-cyan-300 hover:text-cyan-200">apcvisionai.site</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+
+      function revealSections() {
+        document.querySelectorAll('.reveal').forEach(function(el) {
+          if (el.getBoundingClientRect().top < window.innerHeight * 0.85) el.classList.add('active');
+        });
+      }
+      window.addEventListener('scroll', revealSections, { passive: true });
+      revealSections();
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('active'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+    });
+
+    function calcularAPC() {
+      var efectivo = parseFloat(document.getElementById('efectivo_diario').value) || 0;
+      var empleados = parseInt(document.getElementById('empleados').value) || 1;
+      var horas = parseFloat(document.getElementById('horas_arqueo').value) || 0;
+      var costoHora = parseFloat(document.getElementById('costo_hora').value) || 8000;
+      var diasMes = 30;
+      var horasMes = horas * diasMes;
+      var ahorroHoras = horasMes * 0.9;
+      var costoPersonal = horasMes * costoHora * Math.min(empleados, 3);
+      var ahorroCosto = costoPersonal * 0.9;
+
+      document.getElementById('result_total').textContent = '$' + Math.round(ahorroCosto).toLocaleString('es-CO');
+      document.getElementById('res_tiempo').textContent = Math.round(ahorroHoras) + 'h';
+      document.getElementById('res_costo').textContent = '$' + Math.round(ahorroCosto).toLocaleString('es-CO');
+      document.getElementById('calcResult').classList.add('show');
+
+      var aiMsg = document.getElementById('aiMessage');
+      aiMsg.innerHTML = '<div class="animate-pulse text-slate-500">Analizando...</div>';
+
+      setTimeout(function() {
+        var msg = 'Con <strong>' + horas + ' horas diarias</strong> de arqueo manual y <strong>' + empleados + ' empleado(s)</strong>, tu sistema actual te cuesta <span class="text-cyan-300 font-semibold">' + Math.round(costoPersonal).toLocaleString('es-CO') + ' COP/mes</span>.';
+        if (efectivo > 0) {
+          var riesgo = efectivo * 0.03 * diasMes;
+          msg += '<br><br>El 3% de discrepancy con <strong>' + efectivo.toLocaleString('es-CO') + ' COP diarios</strong> representa <span class="text-amber-400 font-semibold">' + Math.round(riesgo).toLocaleString('es-CO') + ' COP/mes</span> en pérdidas potenciales.';
+        }
+        msg += '<br><br><strong>Arqueo Inteligente</strong> reduce esto a <strong>5 minutos</strong>. El Excel se genera solo.';
+        aiMsg.innerHTML = msg;
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>

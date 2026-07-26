@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post 2 — ¿Qué Esconde tu POS? | Dueño Operativo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 40px; }
+  .slide {
+    width: 1080px; height: 1080px; position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #0a0a1a 0%, #0d1b2a 50%, #1b2838 100%);
+    display: flex; flex-direction: column; justify-content: center; padding: 80px;
+    border: 2px solid rgba(34, 211, 238, 0.15);
+  }
+  .slide-label { position: absolute; top: 20px; left: 20px; background: rgba(34,211,238,0.2); color: #67e8f9; font-size: 12px; padding: 4px 12px; border-radius: 20px; font-weight: 600; }
+  .badge { display: inline-block; background: rgba(248,113,113,0.15); color: #f87171; font-size: 14px; font-weight: 600; padding: 8px 20px; border-radius: 30px; letter-spacing: 0.1em; margin-bottom: 24px; }
+  h1 { color: #ffffff; font-size: 56px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+  h1 .highlight { color: #67e8f9; }
+  h1 .red { color: #f87171; }
+  .subtitle { color: #94a3b8; font-size: 24px; line-height: 1.5; max-width: 700px; }
+  .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 30px; }
+  .stat { background: rgba(34,211,238,0.08); border: 1px solid rgba(34,211,238,0.2); border-radius: 20px; padding: 36px; text-align: center; }
+  .stat-number { font-size: 56px; font-weight: 900; color: #67e8f9; }
+  .stat-label { font-size: 18px; color: #94a3b8; margin-top: 8px; }
+  .flow { display: flex; flex-direction: column; gap: 16px; margin-top: 30px; }
+  .flow-step { display: flex; align-items: center; gap: 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 20px 28px; }
+  .flow-num { width: 44px; height: 44px; background: rgba(34,211,238,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #67e8f9; font-weight: 800; font-size: 18px; flex-shrink: 0; }
+  .flow-text { color: #e2e8f0; font-size: 20px; }
+  .flow-arrow { text-align: center; color: #67e8f9; font-size: 24px; }
+  .cta-box { background: #22d3ee; border-radius: 20px; padding: 30px 50px; text-align: center; margin-top: 30px; }
+  .cta-box h3 { color: #0a0a1a; font-size: 28px; font-weight: 800; }
+  .cta-box p { color: #0a0a1a; font-size: 18px; opacity: 0.8; margin-top: 8px; }
+  .logo { position: absolute; bottom: 40px; right: 40px; }
+  .logo-text { color: #ffffff; font-size: 18px; font-weight: 700; }
+  .logo-sub { color: #67e8f9; font-size: 11px; letter-spacing: 0.15em; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 -->
+<div class="slide">
+  <span class="slide-label">Slide 1/5</span>
+  <div class="badge">PARA DUEÑOS DE NEGOCIO</div>
+  <h1>Tu POS dice <span class="highlight">$850.000</span><br>tu cajero dice <span class="highlight">$820.000</span><br><span class="red">¿Quién miente?</span></h1>
+  <p class="subtitle" style="margin-top: 30px;">Ninguno. El problema es que no tienes evidencia de lo que pasó entre la apertura y el cierre.</p>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">ARQUEO INTELIGENTE</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+  <span class="slide-label">Slide 2/5</span>
+  <div class="badge">EL DATO QUE NADIE TE DA</div>
+  <h1>El POS registra <span class="highlight">ventas</span>, pero no registra <span class="red">qué pasó con el efectivo</span></h1>
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-number">30%</div>
+      <div class="stat-label">de las discrepancies son por error humano</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">45%</div>
+      <div class="stat-label">son por procesos sin supervisión</div>
+    </div>
+  </div>
+  <p class="subtitle" style="margin-top: 30px;">El POS no sabe cuánto dinero hay en la caja. Solo sabe cuánto debería haber.</p>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">ARQUEO INTELIGENTE</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+  <span class="slide-label">Slide 3/5</span>
+  <div class="badge">LA CUESTIÓN</div>
+  <h1>¿Qué <span class="highlight">esconde</span> tu POS?</h1>
+  <div class="flow">
+    <div class="flow-step">
+      <div class="flow-num">1</div>
+      <div class="flow-text">Empleado cobra en efectivo → POS no registra</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <div class="flow-text">Cajero da cambio de más → pérdida no detectada</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">3</div>
+      <div class="flow-text">Descuento no autorizado → nadie lo vio</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">4</div>
+      <div class="flow-text">Venta cancelada → efectivo ya no está</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">5</div>
+      <div class="flow-text">Cierre de caja → POS dice una cosa, caja otra</div>
+    </div>
+  </div>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">ARQUEO INTELIGENTE</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+  <span class="slide-label">Slide 4/5</span>
+  <div class="badge">LA SOLUCIÓN</div>
+  <h1>Arqueo Inteligente: <span class="highlight">evidencia</span> de cada peso</h1>
+  <div class="flow">
+    <div class="flow-step">
+      <div class="flow-num">🎙️</div>
+      <div class="flow-text"><strong>Audio:</strong> Cada conversación del punto de venta queda transcrita</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">📹</div>
+      <div class="flow-text"><strong>Video:</strong> Grabación del mostrador durante todo el turno</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">📊</div>
+      <div class="flow-text"><strong>Excel:</strong> Comparación automática POS vs conteo físico</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">📱</div>
+      <div class="flow-text"><strong>Entrega:</strong> Reporte por correo, WhatsApp o Telegram</div>
+    </div>
+  </div>
+  <p class="subtitle" style="margin-top: 24px;">Sin cámaras nuevas. Con tu infraestructura existente. Mini PC + Checkpoint configurados.</p>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">ARQUEO INTELIGENTE</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide">
+  <span class="slide-label">Slide 5/5</span>
+  <div class="badge">TU DECISIÓN</div>
+  <h1>¿Cuánto <span class="highlight">dejas de perder</span> cada mes?</h1>
+  <p class="subtitle" style="font-size: 28px; margin-top: 20px;">Calcula tu pérdida potencial en 30 segundos.</p>
+  <div class="cta-box">
+    <h3>Usa nuestra calculadora GRATIS</h3>
+    <p>apcvisionai.site/arqueo.html → sección Calculadora</p>
+  </div>
+  <div style="margin-top: 30px; text-align: center;">
+    <p style="color: #67e8f9; font-size: 22px; font-weight: 600;">📱 WhatsApp: +57 333 745 0634</p>
+    <p style="color: #94a3b8; font-size: 18px; margin-top: 8px;">Menciónale: "Vi el post de la caja"</p>
+  </div>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">BOGOTÁ — COLOMBIA</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

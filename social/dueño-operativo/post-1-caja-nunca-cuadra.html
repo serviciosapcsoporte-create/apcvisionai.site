@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post 1 — La Caja Nunca Cuadra | Dueño Operativo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a2e; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 40px; }
+  .slide {
+    width: 1080px; height: 1080px; position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #0a0a1a 0%, #0d1b2a 50%, #1b2838 100%);
+    display: flex; flex-direction: column; justify-content: center; padding: 80px;
+    border: 2px solid rgba(34, 211, 238, 0.15);
+  }
+  .slide-label { position: absolute; top: 20px; left: 20px; background: rgba(34,211,238,0.2); color: #67e8f9; font-size: 12px; padding: 4px 12px; border-radius: 20px; font-weight: 600; }
+  .badge { display: inline-block; background: rgba(34,211,238,0.15); color: #67e8f9; font-size: 14px; font-weight: 600; padding: 8px 20px; border-radius: 30px; letter-spacing: 0.1em; margin-bottom: 24px; }
+  h1 { color: #ffffff; font-size: 58px; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+  h1 .highlight { color: #67e8f9; }
+  h1 .red { color: #f87171; }
+  .subtitle { color: #94a3b8; font-size: 24px; line-height: 1.5; max-width: 700px; }
+  .stat { background: rgba(34,211,238,0.08); border: 1px solid rgba(34,211,238,0.2); border-radius: 20px; padding: 40px; margin-top: 30px; }
+  .stat-number { font-size: 72px; font-weight: 900; color: #67e8f9; }
+  .stat-label { font-size: 22px; color: #94a3b8; margin-top: 8px; }
+  .pain-list { list-style: none; margin-top: 30px; }
+  .pain-list li { color: #e2e8f0; font-size: 24px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; gap: 16px; }
+  .pain-list li::before { content: "❌"; font-size: 20px; }
+  .solution-box { background: linear-gradient(135deg, rgba(34,211,238,0.1) 0%, rgba(34,211,238,0.03) 100%); border: 1px solid rgba(34,211,238,0.3); border-radius: 24px; padding: 50px; margin-top: 30px; }
+  .solution-box h2 { color: #ffffff; font-size: 36px; font-weight: 800; margin-bottom: 20px; }
+  .feature { display: flex; align-items: center; gap: 16px; margin: 16px 0; }
+  .feature-icon { width: 48px; height: 48px; background: rgba(34,211,238,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  .feature-text { color: #e2e8f0; font-size: 22px; }
+  .cta-box { background: #22d3ee; border-radius: 20px; padding: 30px 50px; text-align: center; margin-top: 40px; }
+  .cta-box h3 { color: #0a0a1a; font-size: 28px; font-weight: 800; }
+  .cta-box p { color: #0a0a1a; font-size: 18px; opacity: 0.8; margin-top: 8px; }
+  .logo { position: absolute; bottom: 40px; right: 40px; display: flex; align-items: center; gap: 12px; }
+  .logo-text { color: #ffffff; font-size: 18px; font-weight: 700; }
+  .logo-sub { color: #67e8f9; font-size: 11px; letter-spacing: 0.15em; }
+  .divider { width: 60px; height: 4px; background: #22d3ee; border-radius: 2px; margin: 20px 0; }
+  .quote { border-left: 4px solid #f87171; padding-left: 24px; margin: 24px 0; }
+  .quote p { color: #f87171; font-size: 26px; font-style: italic; font-weight: 600; }
+  .quote cite { color: #94a3b8; font-size: 16px; font-style: normal; display: block; margin-top: 8px; }
+  .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 30px; }
+  .comparison-card { border-radius: 16px; padding: 30px; }
+  .comparison-card.bad { background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.3); }
+  .comparison-card.good { background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.3); }
+  .comparison-card h4 { font-size: 18px; margin-bottom: 16px; }
+  .comparison-card.bad h4 { color: #f87171; }
+  .comparison-card.good h4 { color: #67e8f9; }
+  .comparison-card ul { list-style: none; }
+  .comparison-card ul li { color: #e2e8f0; font-size: 18px; padding: 8px 0; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Hook -->
+<div class="slide">
+  <span class="slide-label">Slide 1/6</span>
+  <div class="badge">PARA DUEÑOS DE NEGOCIO</div>
+  <h1>La caja <span class="red">nunca</span> cuadra.<br><span class="highlight">¿Y si no es error?</span></h1>
+  <div class="divider"></div>
+  <p class="subtitle">Si cada fin de mes la caja tiene un faltante diferente, el problema no es tu empleado. Es tu sistema de control.</p>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">ARQUEO INTELIGENTE</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 2: Dato impactante -->
+<div class="slide">
+  <span class="slide-label">Slide 2/6</span>
+  <div class="badge">EL PROBLEMA REAL</div>
+  <h1>El <span class="highlight">73%</span> de los negocios en Colombia tienen discrepancies en caja</h1>
+  <div class="stat">
+    <div class="stat-number">$2.4M COP</div>
+    <div class="stat-label">Promedio mensual que pierde un restaurante por discrepancies no detectadas</div>
+  </div>
+  <p class="subtitle" style="margin-top: 30px;">Y la mayoría no lo sabe porque el POS dice una cosa y el cajero dice otra.</p>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">ARQUEO INTELIGENTE</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: El problema de las cámaras -->
+<div class="slide">
+  <span class="slide-label">Slide 3/6</span>
+  <div class="badge">LA VERDAD INCOMODA</div>
+  <h1>Las cámaras <span class="highlight">graban</span>, pero no te dicen <span class="red">qué pasó</span> en el arqueo</h1>
+  <div class="quote">
+    <p>"Siento que me roban, pero no tengo pruebas."</p>
+    <cite>— Dueño de restaurante, Bogotá</cite>
+  </div>
+  <p class="subtitle" style="margin-top: 30px;">Tienes 8 cámaras, DVR con 30 días de grabación, y aun así no puedes saber cuánto dinero se perdió, en qué turno, ni quién lo hizo.</p>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">ARQUEO INTELIGENTE</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: El problema del arqueo manual -->
+<div class="slide">
+  <span class="slide-label">Slide 4/6</span>
+  <div class="badge">PIERDES TIEMPO</div>
+  <h1>El arqueo manual toma <span class="highlight">2 horas</span> y <span class="red">nadie lo verifica</span></h1>
+  <ul class="pain-list">
+    <li>Cajero cierra caja → cuenta → escribe en papel</li>
+    <li>Supervisor revisa → compara con POS → cuadra (o no)</li>
+    <li>Si no cuadra → "seguro fue el cambio"</li>
+    <li>Al día siguiente → el mismo problema se repite</li>
+  </ul>
+  <p class="subtitle" style="margin-top: 30px;">Cada turno tiene su versión. Nadie tiene la verdad completa.</p>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">ARQUEO INTELIGENTE</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: La solución -->
+<div class="slide">
+  <span class="slide-label">Slide 5/6</span>
+  <div class="badge">LA SOLUCIÓN</div>
+  <h1><span class="highlight">Arqueo Inteligente</span> APC</h1>
+  <div class="solution-box">
+    <div class="feature">
+      <div class="feature-icon">🖥️</div>
+      <div class="feature-text">Mini PC configurada — la conectas y funciona</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🎙️</div>
+      <div class="feature-text">Transcripción de audio — cada conversación queda registrada</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📹</div>
+      <div class="feature-text">Grabación de video — evidencia visual del arqueo</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📊</div>
+      <div class="feature-text">Excel automático — comparación POS vs físico al final del día</div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔒</div>
+      <div class="feature-text">Checkpoint de red — seguridad integral</div>
+    </div>
+  </div>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">ARQUEO INTELIGENTE</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 6: CTA -->
+<div class="slide">
+  <span class="slide-label">Slide 6/6</span>
+  <div class="badge">TU DECISIÓN</div>
+  <h1>¿Tu caja <span class="highlight">cuadra</span>?</h1>
+  <p class="subtitle" style="font-size: 28px; margin-top: 20px;">Si no estás 100% seguro, necesitas hablar con nosotros.</p>
+  <div class="cta-box">
+    <h3>Agenda tu demo GRATIS</h3>
+    <p>Te mostramos cómo funciona en tu negocio. Sin compromiso.</p>
+  </div>
+  <div style="margin-top: 30px; text-align: center;">
+    <p style="color: #67e8f9; font-size: 22px; font-weight: 600;">📱 WhatsApp: +57 333 745 0634</p>
+    <p style="color: #94a3b8; font-size: 18px; margin-top: 8px;">o escribe a serviciosapcsoporte@gmail.com</p>
+  </div>
+  <div class="logo">
+    <div>
+      <div class="logo-text">APC VisionIA</div>
+      <div class="logo-sub">BOGOTÁ — COLOMBIA</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
