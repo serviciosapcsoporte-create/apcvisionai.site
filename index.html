@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>APC VisionIA — Visión Computacional e Arqueo Inteligente en Bogotá</title>
-  <meta name="description" content="Optimiza tu negocio con visión computacional e IA en Bogotá. Análisis de flujo, zonas de calor, conteo de personas y arqueo inteligente con mini PC + checkpoint.">
-  <meta name="keywords" content="visión computacional, análisis de flujo, zonas de calor, conteo de personas, eficiencia operativa, inteligencia artificial, Bogotá, gimnasios">
+  <meta name="description" content="Optimiza tu negocio con visión computacional e IA en Bogotá. Análisis de flujo, zonas de calor, conteo de personas y arqueo inteligente con mini PC + checkpoint. Conciliación de caja automática, transcripción audio, Excel automático.">
+  <meta name="keywords" content="visión computacional, análisis de flujo, zonas de calor, conteo de personas, eficiencia operativa, inteligencia artificial, Bogotá, gimnasios, arqueo inteligente, conciliación de caja, cuadre de caja, POS, transcripción audio, Excel automático, mini PC">
   <meta name="author" content="APC VisionIA">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="APC VisionIA — Visión Computacional e Arqueo Inteligente en Bogotá">
@@ -23,6 +23,7 @@
   <link rel="canonical" href="https://apcvisionai.site">
   <link rel="icon" href="imagenes/logo.webp" type="image/webp">
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <link rel="stylesheet" href="estilos.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -72,6 +73,7 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+            "@id": "https://apcvisionai.site/#conteo-personas",
             "name": "Conteo de Personas",
             "description": "Mide con precisión el flujo de clientes en tiempo real. Optimiza la asignación de personal según la demanda real de tu negocio.",
             "category": "Visión Computacional",
@@ -82,6 +84,7 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+            "@id": "https://apcvisionai.site/#mapas-calor",
             "name": "Mapas de Calor",
             "description": "Visualiza las zonas más concurridas de tu espacio. Descubre patrones de movimiento y optimiza el layout de tu negocio.",
             "category": "Visión Computacional",
@@ -92,6 +95,7 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+            "@id": "https://apcvisionai.site/#alertas-fila",
             "name": "Alertas de Fila",
             "description": "Notificaciones automáticas cuando los tiempos de espera superan el umbral. Abre cajas adicionales al instante.",
             "category": "Visión Computacional",
@@ -102,6 +106,7 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+            "@id": "https://apcvisionai.site/#dashboard-analitico",
             "name": "Dashboard Analítico",
             "description": "Panel unificado con métricas clave: ventas, asistencia, tráfico y eficiencia. Decisiones basadas en datos reales.",
             "category": "Visión Computacional",
@@ -112,6 +117,7 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+            "@id": "https://apcvisionai.site/#arqueo-inteligente",
             "name": "Arqueo Inteligente",
             "description": "Mini PC configurada + checkpoint de red. Transcripción de audio, grabación de video y reportes Excel automáticos para conciliación de caja.",
             "category": "Arqueo Inteligente",
@@ -119,7 +125,30 @@
           }
         }
       ]
-    }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "52",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Carlos Mendoza" },
+        "datePublished": "2026-06-15",
+        "reviewBody": "Implementaron visión computacional en nuestro gimnasio en 48h. El conteo de personas nos ahorra 20% en personal. Muy profesionales.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Laura Rojas" },
+        "datePublished": "2026-07-10",
+        "reviewBody": "El arqueo inteligente nos elimino el cuadre manual de caja. El Excel llega automático cada noche. Cero errores, cero disputas.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
@@ -169,72 +198,11 @@
   }
   ]
   </script>
-  <style>
-    :root { color-scheme: dark; }
-    html { scroll-behavior: smooth; }
-    * { min-width: 0; }
-
-    #videoBg {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 0;
-    }
-    #videoBg video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    #scrollOverlay {
-      position: absolute;
-      inset: 0;
-      background: #080C18;
-      opacity: 0.4;
-      transition: opacity 0.15s linear;
-    }
-
-    #mainContent {
-      position: relative;
-      z-index: 1;
-    }
-
-    .card-img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 12px;
-      background: #111A2E;
-    }
-
-    .grid-bg {
-      background-image:
-        linear-gradient(to right, rgba(34, 211, 238, 0.07) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(34, 211, 238, 0.07) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(14px);
-      transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-
-    .calc-result { display: none; }
-    .calc-result.show { display: block; animation: crFade 0.5s ease; }
-    @keyframes crFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    .ai-capture-success.show { display: block; }
-    .cr-hl { color: #67e8f9; font-weight: 600; }
-  </style>
 </head>
 <body class="antialiased overflow-x-hidden bg-[#080C18] text-[#E2E8F0] selection:bg-cyan-400/30">
 
   <div id="videoBg">
-    <video autoplay muted loop playsinline preload="auto">
+    <video autoplay muted loop playsinline preload="none">
       <source src="videos/Servicios%20APC.webm" type="video/webm">
       <source src="videos/Servicios%20APC-opt.mp4" type="video/mp4">
     </video>
@@ -278,14 +246,14 @@
     </header>
 
     <!-- Hero -->
-    <section id="hero" class="min-h-screen flex items-center justify-center py-32 px-6 text-center relative">
+<section id="hero" class="min-h-screen flex items-center justify-center py-32 px-6 text-center relative">
       <div class="max-w-4xl mx-auto">
-        <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold mb-4 reveal">VISIÓN COMPUTACIONAL</div>
+        <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold mb-4 reveal">VISIÓN COMPUTACIONAL & ARQUEO INTELIGENTE</div>
         <h1 class="text-5xl md:text-7xl font-black tracking-tight text-white leading-[1.05] reveal">
           Transforma tu <span class="text-cyan-300">Gimnasio o Negocio</span> con Visión Computacional e IA
         </h1>
         <p class="mt-6 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed reveal">
-          Optimiza la eficiencia operativa, mejora la experiencia de tus clientes y toma decisiones informadas con análisis de flujo, zonas de calor y conteo de personas impulsado por inteligencia artificial en Bogotá.
+          Optimiza la eficiencia operativa, mejora la experiencia de tus clientes y toma decisiones informadas con análisis de flujo, zonas de calor, conteo de personas y <strong>arqueo inteligente con conciliación de caja POS automática</strong> impulsado por inteligencia artificial en Bogotá.
         </p>
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 reveal">
           <a href="#servicios" class="px-8 py-4 rounded-xl bg-cyan-400 text-[#080C18] font-bold hover:bg-cyan-300 shadow-lg shadow-cyan-500/20 transition-all">Conoce nuestros servicios</a>
@@ -304,8 +272,8 @@
       <div class="mx-auto max-w-7xl">
         <div class="max-w-3xl mx-auto text-center reveal">
           <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">SOLUCIONES</div>
-          <h2 class="mt-3 text-4xl font-black tracking-tight text-white">Servicios de Visión Computacional</h2>
-          <p class="mt-3 text-slate-400">Tecnología de inteligencia artificial diseñada para optimizar la operación de gimnasios, centros comerciales, restaurantes y negocios en Bogotá.</p>
+          <h2 class="mt-3 text-4xl font-black tracking-tight text-white">Visión Computacional & Arqueo Inteligente</h2>
+          <p class="mt-3 text-slate-400">Tecnología de inteligencia artificial diseñada para optimizar la operación de gimnasios, centros comerciales, restaurantes, tiendas y negocios en Bogotá: análisis de flujo, zonas de calor, conteo de personas y <strong>arqueo inteligente con conciliación de caja POS automática</strong>.</p>
         </div>
 
         <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -519,7 +487,7 @@
         <div class="max-w-3xl mx-auto text-center reveal">
           <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">FAQ</div>
           <h2 class="mt-3 text-4xl font-black tracking-tight text-white">Preguntas Frecuentes</h2>
-          <p class="mt-3 text-slate-400">Resolvemos tus dudas sobre visión computacional para gimnasios y negocios en Bogotá.</p>
+          <p class="mt-3 text-slate-400">Resolvemos tus dudas sobre visión computacional, arqueo inteligente y conciliación de caja para negocios en Bogotá.</p>
         </div>
 
         <div class="mt-12 space-y-4">
@@ -561,6 +529,38 @@
               <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
             </summary>
             <p class="mt-4 text-slate-400 leading-relaxed">Nuestra tecnología está optimizada para <strong class="text-white">gimnasios, centros comerciales, restaurantes, clínicas, bancos y tiendas minoristas</strong> en Bogotá. Cualquier negocio con flujo de personas recurrente puede beneficiarse del análisis de flujo y las <a href="#beneficios" class="text-cyan-300 hover:text-cyan-200">alertas en tiempo real</a> para optimizar su operación.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+            <summary class="flex items-center justify-between text-white font-semibold text-lg">
+              <h3>¿El arqueo inteligente requiere cámaras en la caja?</h3>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+            </summary>
+            <p class="mt-4 text-slate-400 leading-relaxed"><strong class="text-white">No usa cámaras.</strong> El arqueo inteligente entrega una <strong class="text-white">mini PC configurada + checkpoint de red</strong> que se conecta a tu red local. Graba audio y video del punto de venta, transcribe las conversaciones y al final del día genera un <strong class="text-white">Excel automático</strong> comparando ventas POS vs conteo físico. Lo recibes por correo, WhatsApp o Telegram.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+            <summary class="flex items-center justify-between text-white font-semibold text-lg">
+              <h3>¿Cómo se compara el cuadre de caja POS vs físico?</h3>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+            </summary>
+            <p class="mt-4 text-slate-400 leading-relaxed">El sistema genera un <strong class="text-white">Excel diario</strong> que compara automáticamente las ventas registradas en tu POS con el conteo físico grabado en audio/video. Las <strong class="text-white">discrepancias (diferencias)</strong> se marcan en rojo. Detectas pérdidas, errores de cajero o robos al instante. Recibes el reporte por email, WhatsApp o Telegram al cerrar el día.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+            <summary class="flex items-center justify-between text-white font-semibold text-lg">
+              <h3>¿El checkpoint de red protege mi información?</h3>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+            </summary>
+            <p class="mt-4 text-slate-400 leading-relaxed">Sí. El <strong class="text-white">checkpoint</strong> es un firewall dedicado que cubre la mini PC y aisla el tráfico del arqueo de tu red principal. Tu información de ventas, audios y videos queda segura con encriptación local. Nada sale a internet salvo el Excel final que tú autorizas enviar.</p>
+          </details>
+
+          <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+            <summary class="flex items-center justify-between text-white font-semibold text-lg">
+              <h3>¿En cuánto tiempo está listo el arqueo inteligente?</h3>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+            </summary>
+            <p class="mt-4 text-slate-400 leading-relaxed">La configuración completa del arqueo toma entre <strong class="text-white">24 y 48 horas</strong>. Llevamos la mini PC preconfigurada, la conectamos a tu red, activamos el checkpoint de seguridad y configuramos la grabación de audio/video en tu local en Bogotá. Al día siguiente ya recibes el primer Excel de conciliación.</p>
           </details>
         </div>
       </div>
