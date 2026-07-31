@@ -1,3 +1,16 @@
 User-agent: *
 Allow: /
+
+# Permitir indexación de Google (esencial para búsqueda)
+User-agent: Googlebot
+Allow: /
+
+# Permitir Bing
+User-agent: bingbot
+Allow: /
+
+# Permitir indexación de YouTube
+User-agent: Googlebot-Image
+Allow: /
+
 Sitemap: https://apcvisionai.site/sitemap.xml
