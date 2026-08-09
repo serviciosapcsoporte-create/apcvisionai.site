@@ -202,25 +202,6 @@
       z-index: 1;
     }
 
-    .hero-logo-ring {
-      position: relative;
-      width: 168px;
-      height: 168px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.08), rgba(17, 26, 46, 0.9));
-      border: 1px solid rgba(34, 211, 238, 0.45);
-      box-shadow:
-        0 0 0 1px rgba(15, 23, 42, 0.4) inset,
-        0 0 60px rgba(34, 211, 238, 0.22),
-        0 0 120px rgba(6, 182, 212, 0.12);
-    }
-    .hero-logo {
-      width: 108px;
-      height: auto;
-      filter: drop-shadow(0 0 18px rgba(34, 211, 238, 0.45));
-    }
     .hero-orb {
       position: absolute;
       border-radius: 9999px;
@@ -315,6 +296,8 @@
 
     <!-- Hero -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center py-32 px-6 text-center overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('imagenes/Hero%20Image.webp')"></div>
+      <div class="absolute inset-0 bg-[#080C18]/70"></div>
       <div class="absolute inset-0 grid-bg opacity-70"></div>
       <div class="hero-orb top-[-120px] left-[-80px] w-[480px] h-[480px] bg-cyan-500/25"></div>
       <div class="hero-orb bottom-[-160px] right-[-120px] w-[560px] h-[560px] bg-indigo-600/20"></div>
@@ -322,12 +305,7 @@
 
       <div class="relative max-w-4xl mx-auto">
         <div class="flex flex-col items-center reveal">
-          <div class="hero-logo-ring hero-pulse">
-            <div class="hero-orbit"></div>
-            <img src="imagenes/logo.webp" alt="APC VisionIA logo" class="hero-logo">
-          </div>
-
-          <div class="mt-10 text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">ARQUEO INTELIGENTE</div>
+          <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">ARQUEO INTELIGENTE</div>
           <h1 class="mt-4 text-5xl md:text-7xl font-black tracking-tight text-white leading-[1.05]">
             Arqueo de Caja <span class="text-cyan-300">con IA</span> en Bogotá — Conciliación Automática POS
           </h1>
