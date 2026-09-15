@@ -13,4 +13,21 @@ Allow: /
 User-agent: Googlebot-Image
 Allow: /
 
+# Permitir que las IA lean el sitio (llms 2026)
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: ClaudeBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 10
+
 Sitemap: https://apcvisionai.site/sitemap.xml

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conteo y Aforo de Gimnasio con Cámaras IA | APC VisionIA</title>
+  <meta name="description" content="Conteo de personas y control de aforo de gimnasio en tiempo real con las cámaras que ya tienes. Software de visión computacional con 98% de precisión: ocupación por franja horaria, zonas saturadas y decisiones de horario y staffing. Sin obras.">
+  <meta name="keywords" content="sistema conteo personas gimnasio con camaras, software conteo aforo gym, control aforo gimnasio ia, conteo personas camara ia, ocupacion gimnasio tiempo real, analitica video gimnasio, conteo clases gimnasio vision computacional, aforo gym bogota">
+  <meta name="author" content="APC VisionIA">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Conteo y Aforo de Gimnasio con Cámaras IA | APC VisionIA">
+  <meta property="og:description" content="Mide con 98% de precisión cuántas personas hay en tu gimnasio y en cada zona, por franja horaria. Decide horarios, staffing y capacidad con datos reales.">
+  <meta property="og:image" content="https://apcvisionai.site/imagenes/panel-analitico.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://apcvisionai.site/conteo-aforo-gym-yolo.html">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="APC VisionIA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Conteo y Aforo de Gimnasio con IA | APC VisionIA">
+  <meta name="twitter:description" content="Control de aforo y ocupación por zona de tu gimnasio, en tiempo real y con las cámaras actuales.">
+  <link rel="canonical" href="https://apcvisionai.site/conteo-aforo-gym-yolo.html">
+  <link rel="icon" href="imagenes/logo.webp" type="image/webp">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "APC VisionIA — Conteo y Aforo de Gimnasio con Cámaras IA",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Mini PC local, sin internet",
+    "description": "Software de visión computacional que cuenta personas en tiempo real sobre las cámaras del gimnasio, controla el aforo por zona y franja horaria, y detecta saturación. Con datos reales para ajustar horarios, clases y staffing.",
+    "url": "https://apcvisionai.site/conteo-aforo-gym-yolo.html",
+    "logo": "https://apcvisionai.site/imagenes/logo.webp",
+    "image": "https://apcvisionai.site/imagenes/panel-analitico.webp",
+    "offers": {
+      "@type": "Offer",
+      "price": "290000",
+      "priceCurrency": "COP",
+      "description": "Plan mensual de conteo y aforo con dashboard en tiempo real. Diagnóstico piloto de 7 días sin compromiso."
+    },
+    "featureList": [
+      "Conteo en tiempo real de personas en el gimnasio",
+      "Aforo por zona y por franja horaria",
+      "Alertas de saturación (fill rate > 95%)",
+      "Ocupación real vs reservas y membresías",
+      "Reporte Excel automático",
+      "98% de precisión en conteo verificado"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "12"
+    },
+    "areaServed": "Bogotá"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo cuenta las personas el sistema?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Con visión computacional sobre tus cámaras: detecta a cada persona, la rastrea y registra cuántas hay por zona y por franja horaria, con 98% de precisión."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Necesito cámaras nuevas o puertas inteligentes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Usamos las cámaras que ya tienes en las zonas del gimnasio. También contamos clases y zonas sin instalar torniquetes ni sensores."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es el fill rate y por qué importa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es la tasa de ocupación real: cuánto de tu capacidad se está usando. Si muchas franjas pasan de 95%, estás saturado y pierdes membresías por esperas; si nunca llegan a 40%, tienes espacio desaprovechado."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tarda la implementación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El piloto de conteo se activa en 48 horas y en 7 días tienes el reporte de ocupación por franja. Sin obras ni cambios en tu operación."
+        }
+      }
+    ]
+  }
+  ]
+  </script>
+  <style>
+    :root { color-scheme: dark; }
+    * { min-width: 0; }
+    .grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(34, 211, 238, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(34, 211, 238, 0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .reveal { opacity: 0; transform: translateY(14px); transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWFDLTCM8R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EWFDLTCM8R');
+</script>
+</head>
+<body class="antialiased overflow-x-hidden bg-[#080C18] text-[#E2E8F0] selection:bg-cyan-400/30">
+
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-[#080C18]/80 border-b border-[#1E2A4A]">
+    <div class="mx-auto max-w-7xl px-6 h-[68px] flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="imagenes/logo.webp" alt="APC VisionIA logo" class="h-9 w-auto">
+        <div class="leading-tight">
+          <div class="font-extrabold tracking-tight text-white text-[15px]">APC VisionIA</div>
+          <div class="text-[10px] tracking-[0.22em] text-cyan-300/70">BOGOTÁ</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-1">
+        <a href="/" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Arqueo Inteligente</a>
+        <a href="/cctv-vision-ia.html" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Visión IA</a>
+        <a href="/sistema-pos-para-negocio.html" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Sistema POS</a>
+        <a href="#como-funciona" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">Cómo funciona</a>
+        <a href="#faq" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-[#111A2E]">FAQ</a>
+        <a href="#cotizar" class="ml-2 px-4 py-2 rounded-xl bg-cyan-400 text-[#080C18] text-sm font-semibold hover:bg-cyan-300 shadow shadow-cyan-500/20">Cotizar ahora</a>
+      </nav>
+      <button id="mb" class="md:hidden size-10 grid place-items-center rounded-xl bg-[#111A2E] border border-[#1E2A4A]">
+        <i data-lucide="menu" class="w-5 h-5 text-slate-300"></i>
+      </button>
+    </div>
+    <div id="mm" class="hidden md:hidden border-t border-[#1E2A4A] bg-[#080C18] px-4 py-3 space-y-1">
+      <a href="/" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Arqueo Inteligente</a>
+      <a href="/cctv-vision-ia.html" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Visión IA</a>
+      <a href="/sistema-pos-para-negocio.html" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Sistema POS</a>
+      <a href="#como-funciona" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">Cómo funciona</a>
+      <a href="#faq" class="block px-3 py-2.5 rounded-lg hover:bg-[#111A2E]">FAQ</a>
+      <a href="#cotizar" class="block mt-2 text-center px-4 py-3 rounded-xl bg-cyan-400 text-black font-semibold">Cotizar ahora</a>
+    </div>
+  </header>
+
+  <section id="hero" class="relative min-h-[88vh] flex items-center justify-center py-32 px-6 text-center overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-70"></div>
+    <div class="absolute top-[-120px] left-[-80px] w-[480px] h-[480px] rounded-full bg-cyan-500/20 blur-[90px]"></div>
+    <div class="absolute bottom-[-160px] right-[-120px] w-[560px] h-[560px] rounded-full bg-indigo-600/20 blur-[90px]"></div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold reveal">OCUPACIÓN EN TIEMPO REAL</div>
+      <h1 class="mt-4 text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.05] reveal">
+        Cuenta cada persona de tu gimnasio <span class="text-cyan-300">con las cámaras que ya tienes</span>
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed reveal">
+        Conteo y aforo por zona y por franja horaria con <strong class="text-white">98% de precisión</strong>. Sabes en vivo cuánta gente hay, cuándo saturestás tu capacidad y qué horarios liberan espacio. Decisiones de horarios y staffing con datos.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 reveal">
+        <a href="#cotizar" class="px-8 py-4 rounded-xl bg-cyan-400 text-[#080C18] font-bold hover:bg-cyan-300 shadow-lg shadow-cyan-500/20 transition-all">Diagnóstico de 7 días gratis</a>
+        <a href="#como-funciona" class="px-8 py-4 rounded-xl border border-[#1E2A4A] text-slate-300 font-semibold hover:bg-[#111A2E] hover:text-white transition-all">Cómo funciona</a>
+      </div>
+      <div class="mt-16 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-slate-500 reveal">
+        <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> 98% de precisión</div>
+        <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Sin puertas inteligentes</div>
+        <div class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Alertas de saturación</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contexto" class="py-24 px-6 border-t border-[#1E2A4A]/60">
+    <div class="mx-auto max-w-7xl">
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">EL PROBLEMA</div>
+        <h2 class="mt-3 text-3xl md:text-4xl font-black tracking-tight text-white">No sabes cuánta gente hay de verdad</h2>
+        <p class="mt-3 text-slate-400 leading-relaxed">El contador de la puerta no te dice cuántas personas hay <strong class="text-white">en cada zona</strong> ni en qué franja tu gimnasio se satura. Sin esa curva de ocupación real, ajustas horarios y clase a ciegas — y pierdes membresías en las horas pico.</p>
+      </div>
+
+      <div class="mt-16 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl bg-[#111A2E] border border-[#1E2A4A] p-8 reveal">
+          <div class="size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center mb-4"><i data-lucide="activity" class="w-6 h-6 text-cyan-300"></i></div>
+          <h3 class="text-lg font-bold text-white">Curva de ocupación diaria</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Personas por hora, por día y por zona. Sabes exactamente cuándo tu capacidad se llena y cuándo se desaprovecha, para mover horarios de clases y tiendas.</p>
+        </div>
+        <div class="rounded-2xl bg-[#111A2E] border border-[#1E2A4A] p-8 reveal">
+          <div class="size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center mb-4"><i data-lucide="bell-ring" class="w-6 h-6 text-cyan-300"></i></div>
+          <h3 class="text-lg font-bold text-white">Alertas de saturación</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Aviso automático cuando una zona pasa el 95% de su capacidad. Activas canales, reabres clases o gestionas la fila antes de que pierdan la membreía.</p>
+        </div>
+        <div class="rounded-2xl bg-[#111A2E] border border-[#1E2A4A] p-8 reveal">
+          <div class="size-12 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center mb-4"><i data-lucide="users" class="w-6 h-6 text-cyan-300"></i></div>
+          <h3 class="text-lg font-bold text-white">Ocupación real vs reservas</h3>
+          <p class="mt-2 text-sm text-slate-400 leading-relaxed">Comparas lo que reservan contra lo que realmente llega. Sabes la verdadera tasa de no-show de tu gimnasio y cuánta capacidad estás dejando sobre la mesa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="py-24 px-6 grid-bg">
+    <div class="mx-auto max-w-7xl">
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">CÓMO FUNCIONA</div>
+        <h2 class="mt-3 text-3xl md:text-4xl font-black tracking-tight text-white">En 48 horas estás contando personas</h2>
+        <p class="mt-3 text-slate-400">Sin obras, sin torniquetes, sin cambiar tu operación.</p>
+      </div>
+
+      <div class="mt-16 grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal text-center">
+          <div class="size-16 mx-auto rounded-2xl bg-gradient-to-br from-cyan-400 to-cyan-600 text-white grid place-items-center text-2xl font-black">1</div>
+          <h3 class="mt-6 text-xl font-bold text-white">Conectamos la Mini PC a tu red</h3>
+          <p class="mt-3 text-slate-400 leading-relaxed">La conectamos a tu red local y a las cámaras que ya tienes. Sin pasar por la nube, los datos se procesan localmente en tu gimnasio.</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal text-center">
+          <div class="size-16 mx-auto rounded-2xl bg-gradient-to-br from-cyan-400 to-cyan-600 text-white grid place-items-center text-2xl font-black">2</div>
+          <h3 class="mt-6 text-xl font-bold text-white">Contamos personas por zona</h3>
+          <p class="mt-3 text-slate-400 leading-relaxed">Cada cámara se transforma en un contador de personas con 98% de precisión. Aprendemos tu espacio automáticamente en horas.</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal text-center">
+          <div class="size-16 mx-auto rounded-2xl bg-gradient-to-br from-cyan-400 to-cyan-600 text-white grid place-items-center text-2xl font-black">3</div>
+          <h3 class="mt-6 text-xl font-bold text-white">Recibes dashboard + Excel</h3>
+          <p class="mt-3 text-slate-400 leading-relaxed">Dashboard en tiempo real con ocupación por zona y franja, alertas de saturación y reporte Excel automático semanal para tu equipo.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 p-8 rounded-2xl bg-gradient-to-br from-[#111A2E] to-[#0B1220] border border-[#1E2A4A] text-center reveal">
+        <div class="grid md:grid-cols-3 gap-8 items-center">
+          <div class="text-center">
+            <div class="text-[11px] tracking-widest text-slate-500">IMPLEMENTACIÓN</div>
+            <div class="mt-2 text-4xl font-black text-cyan-300">48 horas</div>
+            <div class="mt-1 text-sm text-slate-400">Desde la conexión inicial</div>
+          </div>
+          <div class="text-center">
+            <div class="text-[11px] tracking-widest text-slate-500">PRECISIÓN</div>
+            <div class="mt-2 text-4xl font-black text-cyan-300">98%</div>
+            <div class="mt-1 text-sm text-slate-400">En conteo de personas</div>
+          </div>
+          <div class="text-center">
+            <div class="text-[11px] tracking-widest text-slate-500">DESDE</div>
+            <div class="mt-2 text-4xl font-black text-cyan-300">$290k/mes</div>
+            <div class="mt-1 text-sm text-slate-400">Plan mensual de analítica</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios" class="py-24 px-6">
+    <div class="mx-auto max-w-7xl">
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">BENEFICIOS</div>
+        <h2 class="mt-3 text-3xl md:text-4xl font-black tracking-tight text-white">Lo que cambia cuando cuentas con datos</h2>
+      </div>
+
+      <div class="mt-16 grid md:grid-cols-2 gap-8">
+        <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal">
+          <div class="size-14 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="calendar-clock" class="w-7 h-7 text-cyan-300"></i></div>
+          <h3 class="mt-5 text-xl font-bold text-white">Horarios de clases con base real</h3>
+          <p class="mt-3 text-slate-400 leading-relaxed">Mueve clases a franjas con capacidad y elimina las que siempre se llenan al 40%. Menos clases vacías, menos horas de entrenador pagadas sin socios.</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal">
+          <div class="size-14 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="badge-dollar-sign" class="w-7 h-7 text-cyan-300"></i></div>
+          <h3 class="mt-5 text-xl font-bold text-white">Vende memberships en franjas libres</h3>
+          <p class="mt-3 text-slate-400 leading-relaxed">Sabes cuándo realmente puedes aceptar más socios sin saturar. Focaliza tus ventas en los horarios con espacio y evita quejas por espera.</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal">
+          <div class="size-14 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="clipboard-check" class="w-7 h-7 text-cyan-300"></i></div>
+          <h3 class="mt-5 text-xl font-bold text-white">Cumple aforo sin conflictos</h3>
+          <p class="mt-3 text-slate-400 leading-relaxed">Tienes el número exacto por zona. Evitas estar en límites de capacidad por sorpresa y demuestras con datos que cumples normativa de capacidad operativa.</p>
+        </div>
+        <div class="p-8 rounded-2xl bg-[#111A2E] border border-[#1E2A4A] hover:border-cyan-400/30 transition-all reveal">
+          <div class="size-14 rounded-xl bg-[#0B1220] border border-[#1E2A4A] grid place-items-center"><i data-lucide="chart-no-axes-combined" class="w-7 h-7 text-cyan-300"></i></div>
+          <h3 class="mt-5 text-xl font-bold text-white">Dashboards que tu administrador entiende</h3>
+          <p class="mt-3 text-slate-400 leading-relaxed">Un panel en tiempo real con lo importante: gente por zona, saturación, picos del día. Y reporte Excel para que tu gerente lo lea en un minuto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-24 px-6 border-t border-[#1E2A4A]/60">
+    <div class="mx-auto max-w-4xl">
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">FAQ</div>
+        <h2 class="mt-3 text-3xl md:text-4xl font-black tracking-tight text-white">Preguntas frecuentes</h2>
+      </div>
+
+      <div class="mt-12 space-y-4">
+        <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+          <summary class="flex items-center justify-between text-white font-semibold text-lg">
+            ¿Cómo cuenta personas sin que entren por un torniquete?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+          </summary>
+          <p class="mt-4 text-slate-400 leading-relaxed">La visión computacional detecta y rastrea a cada persona desde la cámara. No necesitamos que pase por un punto único: contamos en cada zona y en clases, donde esté la cámara.</p>
+        </details>
+        <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+          <summary class="flex items-center justify-between text-white font-semibold text-lg">
+            ¿Con cuáles cámaras funciona?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+          </summary>
+          <p class="mt-4 text-slate-400 leading-relaxed">Con las cámaras IP, DVR o NVR que ya tengas instaladas. Las conectamos vía RTSP y empezamos a contar. Si no tienes, vendemos el mínimo necesario a bajo costo.</p>
+        </details>
+        <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+          <summary class="flex items-center justify-between text-white font-semibold text-lg">
+            ¿Y la privacidad de los socios?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+          </summary>
+          <p class="mt-4 text-slate-400 leading-relaxed">Solo contamos personas como métrica agregada, no identificamos individuos ni grabamos rostros en alta definición. Procesamos localmente y respetamos la Ley 1581 de 2012. Tu información y la de tus socios se queda en tu red.</p>
+        </details>
+        <details class="group rounded-2xl border border-[#1E2A4A] bg-[#111A2E] p-6 cursor-pointer reveal">
+          <summary class="flex items-center justify-between text-white font-semibold text-lg">
+            ¿Funciona si mi gimnasio no está en Bogotá?
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform shrink-0"></i>
+          </summary>
+          <p class="mt-4 text-slate-400 leading-relaxed">Cubrimos Bogotá y Sabana: implementación presencial. Para otras ciudades lo hacemos con soporte remoto guiado. Escríbenos tu caso.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="cotizar" class="py-24 px-6">
+    <div class="mx-auto max-w-5xl">
+      <div class="p-10 md:p-14 rounded-3xl bg-gradient-to-br from-[#111A2E] to-[#0B1220] border border-[#1E2A4A] text-center reveal">
+        <div class="text-[11px] tracking-[0.2em] text-cyan-300 font-semibold">DIAGNÓSTICO GRATIS</div>
+        <h2 class="mt-3 text-3xl md:text-4xl font-black tracking-tight text-white">Cuenta por franja gratis durante 7 días</h2>
+        <p class="mt-4 text-slate-400 max-w-2xl mx-auto leading-relaxed">Te entregamos el conteo real de tu gimnasio por franja horaria y la curva de ocupación. Si en una semana no te sirve, lo apagamos sin costo.</p>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/573337450634?text=Hola%20APC%20VisionIA%2C%20quiero%20el%20diagn%C3%B3stico%20gratis%20de%20conteo%20y%20aforo%20de%20mi%20gimnasio%20para%20ver%20mi%20ocupaci%C3%B3n%20por%20franja."
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 text-[#080C18] font-bold hover:bg-emerald-400 shadow-lg shadow-emerald-500/20 transition-all">
+            <i data-lucide="message-circle" class="w-5 h-5"></i> Pedir conteo de 7 días
+          </a>
+          <a href="tel:+573337450634" class="px-8 py-4 rounded-xl border border-[#1E2A4A] text-slate-300 font-semibold hover:bg-[#111A2E] hover:text-white transition-all">+57 333 745 0634</a>
+        </div>
+        <p class="mt-6 text-xs text-slate-500">Respuesta en <strong class="text-slate-400">menos de 24 horas</strong>. Sin permanencia, sin cláusulas complicadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-[#050914]/90 border-t border-[#1E2A4A] py-10">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="grid md:grid-cols-3 gap-8 text-[12px] text-slate-500">
+        <div>
+          <div class="font-bold text-white text-sm">APC VisionIA</div>
+          <p class="mt-2 leading-relaxed">Ocupación, aforo, zonas muertas y arqueo de caja con IA. Convierte las cámaras que ya tienes en decisiones con datos.</p>
+        </div>
+        <div>
+          <div class="font-bold text-white text-sm">Cómo profundizar</div>
+          <ul class="mt-2 space-y-1">
+            <li><a href="/articulos/5-formas-analisis-flujo.html" class="hover:text-slate-300">Análisis de flujo y zonas de calor</a></li>
+            <li><a href="/articulos/como-implementar-analisis-flujo.html" class="hover:text-slate-300">Cómo implementar el análisis</a></li>
+            <li><a href="/zonas-muertas-maquinas-zombie-gym.html" class="hover:text-slate-300">Máquinas zombie y zonas muertas</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-bold text-white text-sm">Contacto</div>
+          <p class="mt-2 leading-relaxed">Bogotá, Colombia · Cra. 52c #39b-22 · +57 333 745 0634</p>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-[#1E2A4A] flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-600">
+        <div>© 2026 APC VisionIA · Servicios APC. Datos y eficiencia para pymes de Bogotá.</div>
+        <div class="flex gap-6">
+          <a href="/sitemap.xml" class="hover:text-slate-400">Sitemap</a>
+          <a href="/llms.txt" class="hover:text-slate-400">llms.txt</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.reveal').forEach(el => {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); io.unobserve(e.target); } });
+      }, { threshold: 0.08 });
+      io.observe(el);
+    });
+    document.getElementById('mb').addEventListener('click', () => document.getElementById('mm').classList.toggle('hidden'));
+    lucide.createIcons();
+  </script>
+</body>
+</html>

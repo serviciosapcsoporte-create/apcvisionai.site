@@ -1,0 +1,36 @@
+# APC VisionIA
+
+> Socio tecnológico de automatización para pymes en Bogotá. Visualización por visión computacional sobre las cámaras que ya tienes: conteo de personas, ocupación por franja, zonas muertas, mapas de calor y arqueo de caja con IA. Datos y eficiencia, sin cargar con nuevos equipos ni obras.
+
+- Página principal: https://apcvisionai.site/
+- Mapa del sitio: https://apcvisionai.site/sitemap.xml
+- NAP: APC VisionIA, Cra. 52c #39b-22, Bogotá D.C., Colombia · +57 333 745 0634 · serviciosapcsoporte@gmail.com
+
+## Servicios
+
+- [Arqueo de Caja con IA](https://apcvisionai.site/): cierre de caja diario automático, conciliación POS vs conteo físico, reporte Excel con semáforo Caja Cuadrada/Sobrante/Faltante. Mini PC en comodato + checkpoint de red.
+- [CCTV Vision IA](https://apcvisionai.site/cctv-vision-ia.html): convierte cámaras CCTV ya instaladas en sensores de datos: conteo de personas, mapas de calor, alertas de fila y dashboard en tiempo real. Motor YOLO, 98% de precisión, implementación 48h.
+- [Sistema POS para Negocio](https://apcvisionai.site/sistema-pos-para-negocio.html): punto de venta integrado con conciliación automática de caja.
+
+## Contenido educativo
+
+### Arqueo de caja
+- [Arqueo de Caja: Qué Es, Cómo Se Hace y Cómo Automatizarlo](https://apcvisionai.site/articulos/arqueo-de-caja-que-es.html)
+- [Arqueo de Caja Menor](https://apcvisionai.site/articulos/arqueo-de-caja-menor.html)
+- [Arqueo de Caja en Excel: Guía Completa](https://apcvisionai.site/articulos/arqueo-de-caja-excel.html)
+- [Cuadre de Caja Diario en Excel](https://apcvisionai.site/articulos/cuadre-de-caja-diario-excel.html)
+- [Cuadres de Caja en Excel con IA](https://apcvisionai.site/articulos/cuadres-de-caja-excel-ia.html)
+- [IA para Excel: Automatizar tu Arqueo de Caja](https://apcvisionai.site/articulos/ia-para-excel-arqueo.html)
+
+### Sistema POS
+- [Costo de un Sistema POS en Colombia](https://apcvisionai.site/articulos/costo-sistema-pos-colombia.html)
+- [Sistema POS para Restaurantes](https://apcvisionai.site/articulos/sistema-pos-para-restaurantes.html)
+
+### Visión computacional
+- [5 Formas en que el Análisis de Flujo y Zonas de Calor Mejoran tu Negocio](https://apcvisionai.site/articulos/5-formas-analisis-flujo.html)
+- [Cómo Implementar un Análisis de Flujo y Zonas de Calor](https://apcvisionai.site/articulos/como-implementar-analisis-flujo.html)
+
+### Próximas guías (En preparación)
+- Zonas muertas y máquinas zombie en gimnasios: cómo detectarlas con datos reales
+- Conteo y ocupación de gimnasios por franja horaria con visión computacional
+- Plantilla de arqueo de caja en Excel con fórmulas automáticas (descarga gratuita)
