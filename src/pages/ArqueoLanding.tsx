@@ -767,7 +767,7 @@ function Footer() {
           <div className="font-bold text-white">Enlaces</div>
           <nav className="mt-3 flex flex-col gap-2">
             <a href="/" className="hover:text-cy transition-colors">Arqueo Inteligente</a>
-            <a href="/cctv-vision-ia.html" className="hover:text-cy transition-colors">CCTV Vision IA</a>
+            <a href="/cctv-vision-ia.html" className="hover:text-cy transition-colors">Visión IA</a>
             <a href="/sistema-pos-para-negocio.html" className="hover:text-cy transition-colors">Sistema POS</a>
             <a href="/arqueo.html" className="hover:text-cy transition-colors">Arqueo de Caja</a>
           </nav>

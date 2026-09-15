@@ -9,7 +9,7 @@
 ## Servicios
 
 - [Arqueo de Caja con IA](https://apcvisionai.site/): cierre de caja diario automático, conciliación POS vs conteo físico, reporte Excel con semáforo Caja Cuadrada/Sobrante/Faltante. Mini PC en comodato + checkpoint de red.
-- [CCTV Vision IA](https://apcvisionai.site/cctv-vision-ia.html): convierte cámaras CCTV ya instaladas en sensores de datos: conteo de personas, mapas de calor, alertas de fila y dashboard en tiempo real. Motor YOLO, 98% de precisión, implementación 48h.
+- [Visión IA](https://apcvisionai.site/cctv-vision-ia.html): análisis de video con modelos YOLO sobre las cámaras que ya tienes: conteo de personas, mapas de calor, alertas de fila y dashboard en tiempo real. Visión computacional como herramienta de datos y eficiencia, implementación 48h.
 - [Sistema POS para Negocio](https://apcvisionai.site/sistema-pos-para-negocio.html): punto de venta integrado con conciliación automática de caja.
 
 ## Contenido educativo
@@ -27,10 +27,10 @@
 - [Sistema POS para Restaurantes](https://apcvisionai.site/articulos/sistema-pos-para-restaurantes.html)
 
 ### Visión computacional
+- [Zonas muertas y máquinas zombie en gimnasios](https://apcvisionai.site/zonas-muertas-maquinas-zombie-gym.html): cómo detectarlas con datos reales y recuperar espacio muerto.
+- [Conteo y aforo de gimnasios por franja horaria](https://apcvisionai.site/conteo-aforo-gym-yolo.html): ocupación en tiempo real con visión computacional.
 - [5 Formas en que el Análisis de Flujo y Zonas de Calor Mejoran tu Negocio](https://apcvisionai.site/articulos/5-formas-analisis-flujo.html)
 - [Cómo Implementar un Análisis de Flujo y Zonas de Calor](https://apcvisionai.site/articulos/como-implementar-analisis-flujo.html)
 
-### Próximas guías (En preparación)
-- Zonas muertas y máquinas zombie en gimnasios: cómo detectarlas con datos reales
-- Conteo y ocupación de gimnasios por franja horaria con visión computacional
-- Plantilla de arqueo de caja en Excel con fórmulas automáticas (descarga gratuita)
+### Plantilla Excel
+- [Plantilla de arqueo de caja en Excel con fórmulas automáticas](https://apcvisionai.site/plantilla-excel-arqueo-caja.html) (descarga gratuita)
