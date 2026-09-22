@@ -182,13 +182,13 @@ function SectionHead({ v, kicker, title, sub }: { v: VariantTheme; kicker: strin
 /* ─── Hero ─────────────────────────────────────────────────── */
 
 const HERO_CHECKS = [
-  'Encendido y listo en 5 minutos',
-  'Excel automático todos los días',
-  'Audio y video del conteo grabados'
+  'Piloto vivo en tus cámaras actuales',
+  'Aforo y mapa de calor en tiempo real',
+  'Instalación 48h sin obras'
 ]
 
 function Hero({ v }: { v: VariantTheme }) {
-  const title = 'Arqueo de Caja con IA en Bogotá'
+  const title = 'Conteo de Personas YOLO + Mapa de Calor | Gym y Retail Bogotá'
   const isQuiet = v.id === 'quiet'
 
   return (
@@ -197,7 +197,7 @@ function Hero({ v }: { v: VariantTheme }) {
         <Reveal y={v.motionPx} duration={durationOf(v)}>
           {v.shiny ? (
             <ShinyText
-              text="ARQUEO INTELIGENTE PARA TU NEGOCIO"
+              text="VISIÓN IA YOLO — PILOTO GRATIS 7 DÍAS"
               speed={2.5}
               color="#38bdf8"
               shineColor="#ffffff"
@@ -206,7 +206,7 @@ function Hero({ v }: { v: VariantTheme }) {
             />
           ) : (
             <div className="chip text-cy uppercase tracking-[0.24em]">
-              <Sparkles className="h-3.5 w-3.5" /> Arqueo inteligente para tu negocio
+              <Sparkles className="h-3.5 w-3.5" /> Visión IA YOLO — Piloto gratis 7 días
             </div>
           )}
         </Reveal>
@@ -225,13 +225,13 @@ function Hero({ v }: { v: VariantTheme }) {
           ) : (
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">{title}</h1>
           )}
-          <p className="mt-3 text-xl md:text-2xl font-bold txt-grad">Conciliación Automática POS</p>
+          <p className="mt-3 text-xl md:text-2xl font-bold txt-grad">Mapas de Calor y Control de Aforo</p>
         </div>
 
         <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 40 : 160} duration={durationOf(v)}>
           <p className="mt-5 text-slate-300 max-w-2xl mx-auto text-[15px] md:text-base leading-relaxed">
-            Convierte el conteo de efectivo en un proceso automático. Mínimo esfuerzo, cero errores y
-            reportes Excel listos al instante. Arqueo inteligente con IA, sin cámaras tradicionales.
+            Sistema en vivo sobre tus cámaras existentes: cuántas personas entran, dónde se quedan y qué zonas son
+            muertas. Piloto gratis 7 días, instalación 48h sin obras. Gym y retail en Bogotá.
           </p>
         </Reveal>
 
@@ -264,36 +264,36 @@ function Hero({ v }: { v: VariantTheme }) {
 
 const SERVICES = [
   {
-    icon: Cpu,
-    tag: 'Arqueo de Caja con IA',
-    title: 'Mini PC Configurada',
-    desc: 'Preconfigurada para la conciliación automática. Instálala, conéctala y olvídate.',
-    chips: ['Plug & Play', 'Sin obras'],
+    icon: ScanSearch,
+    tag: 'YOLO en vivo · Gym & Retail',
+    title: 'Conteo de Personas YOLO',
+    desc: 'Cuántas personas entran, cuánto tiempo se quedan y aforo por franja. Sobre tus cámaras actuales, sin obras.',
+    chips: ['YOLOv8', 'Tiempo real'],
     cta: 'Saber más → #servicios'
   },
   {
-    icon: ShieldCheck,
-    tag: 'Red sin Gestionar. Con Checkpoint.',
-    title: 'Checkpoint de Red',
-    desc: 'Firewall y checkpoint para que ninguna operación de caja se vea comprometida por tu red.',
-    chips: ['Flexibilidad', 'Cobertura'],
+    icon: TrendingUp,
+    tag: 'Zonas muertas · Optimiza layout',
+    title: 'Mapas de Calor',
+    desc: 'Detecta zonas muertas, máquinas zombie y vitrinas frías. Sube ticket y rotación con datos, no intuición.',
+    chips: ['Heatmap', 'Layout'],
     cta: 'Saber más → #servicios'
   },
   {
-    icon: Mic,
-    tag: 'Entrenamiento continuo',
-    title: 'Transcripción de Audio',
-    desc: 'Transcribe las conversaciones del momento del conteo a texto. La transcripción se entrena continuamente.',
-    chips: ['Inteligencia', 'Precisión'],
+    icon: Clock,
+    tag: 'Control de aforo · Alertas',
+    title: 'Control de Aforo',
+    desc: 'Aforo en vivo con alertas WhatsApp y dashboard. Cumplimiento y staff óptimo para gyms y tiendas Bogotá.',
+    chips: ['Alertas', 'Dashboard'],
     cta: 'Saber más → #servicios'
   },
   {
     icon: FileSpreadsheet,
-    tag: 'Todos los días',
-    title: 'Reporte Excel Automático',
-    desc: 'Reporte Excel de conciliación automático. Todo al mismo tiempo y en el mismo lugar.',
-    chips: ['Eficiencia', 'Ahorro de tiempo'],
-    cta: 'Saber más → #servicios'
+    tag: 'Módulo secundario',
+    title: 'Arqueo de Caja con IA',
+    desc: 'Conciliación POS vs efectivo con Mini PC + Excel automático. Disponible como módulo secundario → /arqueo.html',
+    chips: ['POS', 'Excel'],
+    cta: 'Ver arqueo → /arqueo.html'
   }
 ]
 
@@ -456,7 +456,7 @@ const ARTICLES = [
   { slug: 'ia-para-excel-arqueo', cat: 'IA', title: 'IA para Excel: Cómo la Inteligencia Artificial Automatiza tu Arqueo de Caja' },
   { slug: 'costo-sistema-pos-colombia', cat: 'POS', title: 'Costo de Sistema POS en Colombia: Guía de Precios 2026' },
   { slug: 'sistema-pos-para-restaurantes', cat: 'POS', title: 'Sistema POS para Restaurantes en Colombia: Guía Completa 2026' },
-  { slug: '5-formas-analisis-flujo', cat: 'Datos', title: '5 Formas en que el Análisis de Flujo y Zonas de Calor Mejoran la Eficiencia' }
+  { slug: 'arqueo-contable', cat: 'Guía', title: 'Arqueo Contable: Cómo Conciliar Efectivo y Cerrar el Mes en Excel' }
 ]
 
 function Articles({ v }: { v: VariantTheme }) {

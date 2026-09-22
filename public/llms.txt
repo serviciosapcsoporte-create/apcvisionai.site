@@ -1,20 +1,28 @@
 # APC VisionIA
 
-> Socio tecnológico de automatización para pymes en Bogotá. Visualización por visión computacional sobre las cámaras que ya tienes: conteo de personas, ocupación por franja, zonas muertas, mapas de calor y arqueo de caja con IA. Datos y eficiencia, sin cargar con nuevos equipos ni obras.
+> Sistema YOLO en vivo para gyms y retail en Bogotá: conteo de personas, mapas de calor, control de aforo y analítica de video sobre tus cámaras existentes. Piloto gratis 7 días, instalación 48h sin obras. Módulo secundario: arqueo de caja con IA.
 
 - Página principal: https://apcvisionai.site/
 - Mapa del sitio: https://apcvisionai.site/sitemap.xml
 - NAP: APC VisionIA, Cra. 52c #39b-22, Bogotá D.C., Colombia · +57 333 745 0634 · serviciosapcsoporte@gmail.com
 
-## Servicios
+## Servicios principales YOLO
 
-- [Arqueo de Caja con IA](https://apcvisionai.site/): cierre de caja diario automático, conciliación POS vs conteo físico, reporte Excel con semáforo Caja Cuadrada/Sobrante/Faltante. Mini PC en comodato + checkpoint de red.
-- [Visión IA](https://apcvisionai.site/cctv-vision-ia.html): análisis de video con modelos YOLO sobre las cámaras que ya tienes: conteo de personas, mapas de calor, alertas de fila y dashboard en tiempo real. Visión computacional como herramienta de datos y eficiencia, implementación 48h.
-- [Sistema POS para Negocio](https://apcvisionai.site/sistema-pos-para-negocio.html): punto de venta integrado con conciliación automática de caja.
+- [YOLO Conteo de Personas + Mapas de Calor](https://apcvisionai.site/): cuántas personas entran, dónde se quedan, aforo por franja y zonas muertas. YOLO sobre cámaras existentes. Piloto gratis 7 días Bogotá.
+- [Visión IA](https://apcvisionai.site/cctv-vision-ia.html): análisis de video con modelos YOLO: conteo, heatmaps, alertas de fila y dashboard tiempo real. Implementación 48h.
+- [Zonas Muertas y Máquinas Zombie Gym](https://apcvisionai.site/zonas-muertas-maquinas-zombie-gym.html): detecta espacio muerto en gyms y recupera m2 con datos.
+- [Conteo y Aforo Gym YOLO](https://apcvisionai.site/conteo-aforo-gym-yolo.html): ocupación en tiempo real por franja horaria para gimnasios.
+- [Arqueo de Caja con IA](https://apcvisionai.site/arqueo.html): módulo secundario — conciliación POS vs conteo físico con Mini PC y Excel automático.
+- [Sistema POS](https://apcvisionai.site/sistema-pos-para-negocio.html): punto de venta integrado con analítica.
 
 ## Contenido educativo
 
-### Arqueo de caja
+### Visión computacional YOLO
+- [Zonas muertas y máquinas zombie en gimnasios](https://apcvisionai.site/zonas-muertas-maquinas-zombie-gym.html)
+- [Conteo y aforo de gimnasios por franja horaria](https://apcvisionai.site/conteo-aforo-gym-yolo.html)
+- [5 Formas en que el Análisis de Flujo y Zonas de Calor Mejoran la Eficiencia](https://apcvisionai.site/articulos/5-formas-analisis-flujo.html)
+
+### Arqueo de caja (silo secundario)
 - [Arqueo de Caja: Qué Es, Cómo Se Hace y Cómo Automatizarlo](https://apcvisionai.site/articulos/arqueo-de-caja-que-es.html)
 - [Arqueo de Caja Menor](https://apcvisionai.site/articulos/arqueo-de-caja-menor.html)
 - [Arqueo de Caja en Excel: Guía Completa](https://apcvisionai.site/articulos/arqueo-de-caja-excel.html)
@@ -25,12 +33,6 @@
 ### Sistema POS
 - [Costo de un Sistema POS en Colombia](https://apcvisionai.site/articulos/costo-sistema-pos-colombia.html)
 - [Sistema POS para Restaurantes](https://apcvisionai.site/articulos/sistema-pos-para-restaurantes.html)
-
-### Visión computacional
-- [Zonas muertas y máquinas zombie en gimnasios](https://apcvisionai.site/zonas-muertas-maquinas-zombie-gym.html): cómo detectarlas con datos reales y recuperar espacio muerto.
-- [Conteo y aforo de gimnasios por franja horaria](https://apcvisionai.site/conteo-aforo-gym-yolo.html): ocupación en tiempo real con visión computacional.
-- [5 Formas en que el Análisis de Flujo y Zonas de Calor Mejoran tu Negocio](https://apcvisionai.site/articulos/5-formas-analisis-flujo.html)
-- [Cómo Implementar un Análisis de Flujo y Zonas de Calor](https://apcvisionai.site/articulos/como-implementar-analisis-flujo.html)
 
 ### Plantilla Excel
 - [Plantilla de arqueo de caja en Excel con fórmulas automáticas](https://apcvisionai.site/plantilla-excel-arqueo-caja.html) (descarga gratuita)

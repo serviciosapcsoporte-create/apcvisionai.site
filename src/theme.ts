@@ -90,7 +90,7 @@ export const VARIANTS: VariantTheme[] = [
 ]
 
 export const VIDEO_SRC = '/videos/Servicios%20APC-opt.mp4'
-export const VIDEO_POSTER = '/imagenes/Hero%20Image.webp'
+export const VIDEO_POSTER = '/imagenes/hero-yolo.webp'
 export const WHATSAPP =
   'https://wa.me/573337450634?text=' +
-  encodeURIComponent('Hola Alejandro, quiero un diagnóstico gratuito de arqueo de caja con IA para mi negocio.')
+  encodeURIComponent('Hola Alejandro, quiero el piloto gratis 7 días de YOLO (conteo + mapa de calor) para mi gym/tienda en Bogotá.')

@@ -28,11 +28,11 @@
 
 ---
 
-### Story Sequence 2: "3 señales de que te roban"
+### Story Sequence 2: "3 señales de que tu caja no cuadra"
 **Formato:** 4 stories de 15 seg cada una
 
 #### Story 1 — Hook
-- **Texto:** "3 señales de que te roban en la caja"
+- **Texto:** "3 señales de que tu caja no cuadra"
 - **Sticker:** "Desliza para ver →"
 
 #### Story 2 — Señal 1

@@ -41,7 +41,7 @@
 | cuadre de caja excel | 50 | ✅ Cubierto | articulos/cuadres-de-caja-excel-ia.html |
 | cierre de caja excel | 50 | ⚠️ Parcial | Enriquecer meta |
 | arqueo diario de caja | 50 | ✅ Cubierto | Meta + FAQ |
-| arqueo contable | 50 | ⚠️ No cubierto | Meta keywords |
+| **arqueo contable** | 50 | ✅ Cubierto | articulos/arqueo-contable.html |
 | arqueo de efectivo | 50 | ✅ Cubierto | Meta keywords |
 | cuadre caja / cuadre de cajas | 50 | ✅ Cubierto | Meta |
 | conteo de dinero / conteo de efectivo | 50 | ✅ Cubierto | Hero + meta |
@@ -61,15 +61,14 @@
 
 El sitio es UN sistema (misma estética/template), dividido en 3 clústeres de contenido:
 
-### Clúster A: Arqueo Inteligente (9 piezas)
+### Clúster A: Arqueo Inteligente (10 piezas)
 - Página del sistema: `/` (home SPA), `arqueo-dueños.html`, `plantilla-excel-arqueo-caja.html`
-- Artículos: arqueo-de-caja-que-es, arqueo-de-caja-excel, arqueo-de-caja-menor, cuadre-de-caja-diario-excel, cuadres-de-caja-excel-ia, ia-para-excel-arqueo
+- Artículos: arqueo-de-caja-que-es, arqueo-de-caja-excel, arqueo-de-caja-menor, cuadre-de-caja-diario-excel, cuadres-de-caja-excel-ia, ia-para-excel-arqueo, arqueo-contable
 - Posts redes: admin-financiera (post-1 a post-4), dueño-operativo (post-1, post-2, post-4)
 
-### Clúster B: Visión IA / Visión Computacional (5 piezas)
+### Clúster B: Visión IA / Visión Computacional (3 piezas)
 - Página del sistema: `cctv-vision-ia.html` (URL fija, etiqueta visible "Visión IA")
 - Landings gym: `zonas-muertas-maquinas-zombie-gym.html`, `conteo-aforo-gym-yolo.html`
-- Artículos: 5-formas-analisis-flujo, como-implementar-analisis-flujo
 - Posts redes: dueño-operativo (post-3-mini-pc-vs-camaras)
 
 ### Clúster C: Sistema POS (3 piezas)
@@ -86,7 +85,7 @@ El sitio es UN sistema (misma estética/template), dividido en 3 clústeres de c
 3. **Regenerar sitemap.xml**: lastmod único y verificar conteo real (25–28 URLs, confirmar al regenerar)
 4. **Monitorear posiciones** para arqueo de caja (5,000/mes), arqueo de caja menor (+900%), y arqueo de caja que es
 5. **GBP** (Ficha Google Business): reforzar con palabras clave de arqueo de caja + visión computacional
-6. **Ideas futuras de contenido** (long-tail no cubierto): arqueo contable, cierre de caja excel enriquecido
+6. **Ideas futuras de contenido** (long-tail no cubierto): cierre de caja excel enriquecido, arqueo para clínicas/consultorios
 
 ---
 

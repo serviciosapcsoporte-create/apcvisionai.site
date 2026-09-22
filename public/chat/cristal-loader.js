@@ -21,7 +21,7 @@
       { label: "Checkpoint de red", step: "pain_red" },
       { label: "Otro", step: "pain_otro" },
     ] : [
-      { label: "Cámaras / CCTV", step: "pain_camaras" },
+      { label: "Visión IA", step: "pain_camaras" },
       { label: "Flujo de clientes", step: "pain_flujo" },
       { label: "Página web / SEO", step: "pain_web" },
       { label: "Bot WhatsApp", step: "pain_ia" },
@@ -36,7 +36,7 @@
       red: "<strong>Checkpoint de red:</strong> firewall y protección para tu computador y red. Seguridad integral.",
       otro: "Reviso tu caso y te propongo la mejor solución de arqueo inteligente para tu negocio.",
     } : {
-      camaras: "<strong>Analítica de Video con IA + CCTV inteligente:</strong> detección de personas, alertas y revisión remota desde tu celular. Desde Bogotá.",
+      camaras: "<strong>Visión IA sobre tus cámaras:</strong> conteo de personas, detección de anomalías y revisión remota desde tu celular. Desde Bogotá.",
       flujo: "<strong>Conteo de personas + Mapas de calor:</strong> ves dónde se pierden clientes y abres caja antes de que se vayan. 98% de precisión.",
       web: "<strong>Páginas web + SEO local:</strong> para que te encuentren en Bogotá cuando buscan tu servicio.",
       ia: "<strong>Bots de WhatsApp con IA:</strong> atención 24/7, agenda y pedidos automáticos.",

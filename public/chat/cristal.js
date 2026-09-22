@@ -175,7 +175,7 @@
   // --- Dolor: Cámaras / CCTV ---
   function painCamaras() {
     clearQuick();
-    pushMsg("bot", "Las cámaras que no sirven son un gasto que se ve todos los días y no avisa cuando falla. En Bogotá instalamos <strong>CCTV inteligente</strong> que no solo graba: <strong>detecta</strong>, alerta en tiempo real y se integra con tu celular.")
+    pushMsg("bot", "Las cámaras que no sirven son un gasto que se ve todos los días y no avisa cuando falla. En Bogotá activamos <strong>Visión IA</strong> sobre las que ya tienes: <strong>detecta</strong>, alerta en tiempo real y se ve desde tu celular.")
       .then(function () {
         pushMsg("bot", "Mientras lo piensas, la competencia que ya tiene visión activa está viendo lo que tú no. ¿Quieres que te muestre cómo quedaría en tu local?");
       })
