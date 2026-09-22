@@ -228,7 +228,16 @@ function Hero({ v }: { v: VariantTheme }) {
           <p className="mt-3 text-xl md:text-2xl font-bold txt-grad">Mapas de Calor y Control de Aforo</p>
         </div>
 
-        <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 40 : 160} duration={durationOf(v)}>
+        <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 40 : 140} duration={durationOf(v)}>
+          <img
+            src="/imagenes/zonas-calor.webp"
+            alt="Mapa de calor YOLO y control de aforo en gimnasio Bogotá"
+            className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl border border-slate-800 my-8"
+            loading="lazy"
+          />
+        </Reveal>
+
+        <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 80 : 200} duration={durationOf(v)}>
           <p className="mt-5 text-slate-300 max-w-2xl mx-auto text-[15px] md:text-base leading-relaxed">
             Sistema en vivo sobre tus cámaras existentes: cuántas personas entran, dónde se quedan y qué zonas son
             muertas. Piloto gratis 7 días, instalación 48h sin obras. Gym y retail en Bogotá.
