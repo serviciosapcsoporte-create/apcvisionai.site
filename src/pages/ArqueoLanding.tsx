@@ -1,8 +1,7 @@
 import { useEffect, useState, type ReactNode, type CSSProperties } from 'react'
 import {
-  Menu, X, Cpu, ShieldCheck, Mic, FileSpreadsheet, Check, ChevronRight,
-  Clock, AlertTriangle, ScanSearch, TrendingUp, ArrowUpRight, Calculator as CalcIcon,
-  MessageCircle, MapPin, Phone, Mail, Send, Sparkles
+  Menu, X, Cpu, ShieldCheck, Users, ScanSearch, TrendingUp, ArrowUpRight, Calculator as CalcIcon,
+  MessageCircle, MapPin, Phone, Mail, Send, Sparkles, Check, Clock, AlertTriangle, Flame, BarChart3
 } from 'lucide-react'
 import { motion } from 'motion/react'
 
@@ -20,14 +19,12 @@ import DarkVeil from '../components/rbits/DarkVeil'
 
 const NAV_LINKS = [
   { href: '#servicios', label: 'Servicios' },
-  { href: '#como-funciona', label: 'Proceso' },
+  { href: '#como-funciona', label: 'Cómo funciona' },
   { href: '#beneficios', label: 'Beneficios' },
   { href: '#calculadora', label: 'Calculadora' },
   { href: '#faq', label: 'FAQ' },
   { href: '#contacto', label: 'Contacto' }
 ]
-
-const checkIcons = { Cpu, ShieldCheck, Mic, FileSpreadsheet }
 
 function cardSurface(v: VariantTheme): string {
   if (v.card === 'glass') return 'glass border border-line rounded-[20px]'
@@ -120,7 +117,7 @@ function Nav({ v }: { v: VariantTheme }) {
             rel="noopener noreferrer"
             className="btn-cta px-4 py-2 text-[13px]"
           >
-            <MessageCircle className="h-4 w-4" /> Hablar ahora
+            <MessageCircle className="h-4 w-4" /> Demo en vivo
           </a>
         </div>
         <button
@@ -140,7 +137,7 @@ function Nav({ v }: { v: VariantTheme }) {
               </a>
             ))}
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-cta px-4 py-2.5 mt-1">
-              <MessageCircle className="h-4 w-4" /> Hablar ahora
+              <MessageCircle className="h-4 w-4" /> Demo en vivo
             </a>
           </nav>
         </div>
@@ -182,13 +179,13 @@ function SectionHead({ v, kicker, title, sub }: { v: VariantTheme; kicker: strin
 /* ─── Hero ─────────────────────────────────────────────────── */
 
 const HERO_CHECKS = [
-  'Piloto vivo en tus cámaras actuales',
-  'Aforo y mapa de calor en tiempo real',
-  'Instalación 48h sin obras'
+  'Demo en vivo sin costo con nuestra cámara',
+  'PC en comodato · sin comprar hardware',
+  'Instalación 48h sin obras sobre tus cámaras',
 ]
 
 function Hero({ v }: { v: VariantTheme }) {
-  const title = 'Conteo de Personas YOLO + Mapa de Calor | Gym y Retail Bogotá'
+  const title = 'Conteo de Personas con YOLO + Mapa de Calor para tu Gym y Tienda'
   const isQuiet = v.id === 'quiet'
 
   return (
@@ -197,7 +194,7 @@ function Hero({ v }: { v: VariantTheme }) {
         <Reveal y={v.motionPx} duration={durationOf(v)}>
           {v.shiny ? (
             <ShinyText
-              text="VISIÓN IA YOLO — PILOTO GRATIS 7 DÍAS"
+              text="CONTEO DE PERSONAS YOLO — DEMO EN VIVO SIN COSTO"
               speed={2.5}
               color="#38bdf8"
               shineColor="#ffffff"
@@ -206,7 +203,7 @@ function Hero({ v }: { v: VariantTheme }) {
             />
           ) : (
             <div className="chip text-cy uppercase tracking-[0.24em]">
-              <Sparkles className="h-3.5 w-3.5" /> Visión IA YOLO — Piloto gratis 7 días
+              <Sparkles className="h-3.5 w-3.5" /> Conteo de personas YOLO — Demo en vivo sin costo
             </div>
           )}
         </Reveal>
@@ -225,29 +222,29 @@ function Hero({ v }: { v: VariantTheme }) {
           ) : (
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">{title}</h1>
           )}
-          <p className="mt-3 text-xl md:text-2xl font-bold txt-grad">Mapas de Calor y Control de Aforo</p>
+          <p className="mt-3 text-xl md:text-2xl font-bold txt-grad">Sistema de conteo + sensor + cámara + control de aforo en Bogotá</p>
         </div>
 
         <img
           src="/imagenes/zonas-calor.webp"
-          alt="Mapa de calor YOLO y control de aforo en gimnasio Bogotá"
+          alt="Conteo de personas con YOLO y mapa de calor en gimnasio Bogotá — zonas muertas y aforo en vivo"
           className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl border border-slate-800 my-8"
         />
 
         <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 80 : 200} duration={durationOf(v)}>
           <p className="mt-5 text-slate-300 max-w-2xl mx-auto text-[15px] md:text-base leading-relaxed">
-            Sistema en vivo sobre tus cámaras existentes: cuántas personas entran, dónde se quedan y qué zonas son
-            muertas. Piloto gratis 7 días, instalación 48h sin obras. Gym y retail en Bogotá.
+            Llevamos <strong className="text-white">nuestra cámara y la muestra en vivo</strong> a tu gym/tienda: ves el conteo de personas, mapa de calor y aforo en tiempo real sobre tu espacio.
+            Sin piloto de 7 días: <strong className="text-white">demo en vivo sin costo</strong>. Si te sirve, instalamos el sistema en 48h — <strong className="text-white">PC en comodato</strong>, mensualidad por sistema + PC + administración y mantenimiento. Atacamos el costo de V-Count y similares: sin sensores de $1.000 USD, usamos tus cámaras.
           </p>
         </Reveal>
 
         <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 80 : 260} duration={durationOf(v)}>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-cta px-6 py-3 text-sm">
-              <MessageCircle className="h-4 w-4" /> Hablar ahora
+              <MessageCircle className="h-4 w-4" /> Quiero la demo en vivo
             </a>
-            <a href="#servicios" className="px-6 py-3 rounded-[14px] border border-line text-sm font-semibold text-slate-200 hover:border-cy/50 hover:text-white transition-colors">
-              Ver servicios
+            <a href="#como-funciona" className="px-6 py-3 rounded-[14px] border border-line text-sm font-semibold text-slate-200 hover:border-cy/50 hover:text-white transition-colors">
+              Cómo instalamos
             </a>
           </div>
         </Reveal>
@@ -270,37 +267,26 @@ function Hero({ v }: { v: VariantTheme }) {
 
 const SERVICES = [
   {
-    icon: ScanSearch,
-    tag: 'YOLO en vivo · Gym & Retail',
-    title: 'Conteo de Personas YOLO',
-    desc: 'Cuántas personas entran, cuánto tiempo se quedan y aforo por franja. Sobre tus cámaras actuales, sin obras.',
-    chips: ['YOLOv8', 'Tiempo real'],
-    cta: 'Saber más → #servicios'
+    icon: Users,
+    tag: 'SISTEMA DE CONTEO · YOLOv8',
+    title: 'Conteo de Personas',
+    desc: 'Cuántas personas entran, por hora, por día y por zona. Sensor de conteo + cámara de conteo con 98% precisión. Sin torniquetes.',
+    chips: ['YOLOv8', '98% precisión', 'Tiempo real'],
   },
   {
-    icon: TrendingUp,
-    tag: 'Zonas muertas · Optimiza layout',
-    title: 'Mapas de Calor',
-    desc: 'Detecta zonas muertas, máquinas zombie y vitrinas frías. Sube ticket y rotación con datos, no intuición.',
-    chips: ['Heatmap', 'Layout'],
-    cta: 'Saber más → #servicios'
+    icon: Flame,
+    tag: 'MAPA DE CALOR · ZONAS',
+    title: 'Mapa de Calor y Zonas Muertas',
+    desc: 'Detecta máquinas zombie y vitrinas frías. Mapa de calor por franja para subir rotación y ticket con layout basado en datos.',
+    chips: ['Heatmap', 'Zonas muertas', 'Layout'],
   },
   {
-    icon: Clock,
-    tag: 'Control de aforo · Alertas',
-    title: 'Control de Aforo',
-    desc: 'Aforo en vivo con alertas WhatsApp y dashboard. Cumplimiento y staff óptimo para gyms y tiendas Bogotá.',
-    chips: ['Alertas', 'Dashboard'],
-    cta: 'Saber más → #servicios'
+    icon: BarChart3,
+    tag: 'CONTROL AFORO · ALERTAS',
+    title: 'Control de Aforo en Vivo',
+    desc: 'Aforo por zona con alertas y dashboard. Evita saturación, cumple normativa y optimiza staff del gym/tienda en Bogotá.',
+    chips: ['Aforo vivo', 'Alertas', 'Dashboard'],
   },
-  {
-    icon: FileSpreadsheet,
-    tag: 'Módulo secundario',
-    title: 'Arqueo de Caja con IA',
-    desc: 'Conciliación POS vs efectivo con Mini PC + Excel automático. Disponible como módulo secundario → /arqueo.html',
-    chips: ['POS', 'Excel'],
-    cta: 'Ver arqueo → /arqueo.html'
-  }
 ]
 
 function ServiceCard({ v, item, i }: { v: VariantTheme; item: (typeof SERVICES)[number]; i: number }) {
@@ -322,7 +308,7 @@ function ServiceCard({ v, item, i }: { v: VariantTheme; item: (typeof SERVICES)[
         ))}
       </div>
       <a href="#contacto" className="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-cy hover:text-sky-300 transition-colors">
-        Saber más <ArrowUpRight className="h-3.5 w-3.5" />
+        Ver demo en vivo <ArrowUpRight className="h-3.5 w-3.5" />
       </a>
     </div>
   )
@@ -332,7 +318,7 @@ function ServiceCard({ v, item, i }: { v: VariantTheme; item: (typeof SERVICES)[
       {inner}
     </ElectricBorder>
   ) : (
-    <div className={`h-full ${cardSurface(v)} ${i % 2 ? '' : ''}`}>{inner}</div>
+    <div className={`h-full ${cardSurface(v)}`}>{inner}</div>
   )
 
   return (
@@ -349,13 +335,22 @@ function Services({ v }: { v: VariantTheme }) {
         <SectionHead
           v={v}
           kicker="Servicios"
-          title={<>Incluye todo lo que necesitas para un <span className="txt-grad">arqueo automático</span></>}
+          title={<>Todo el <span className="txt-grad">conteo de personas</span> que necesitas — sin comprar sensores</>}
+          sub="Instalamos el sistema sobre tus cámaras existentes. La competencia vende sensores Nano por $1.000+ USD. Nosotros usamos lo que ya tienes + una PC en comodato."
         />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
             <ServiceCard key={s.title} v={v} item={s} i={i} />
           ))}
         </div>
+        <Reveal y={v.motionPx} delay={0} duration={durationOf(v)}>
+          <div className={`mt-8 ${cardSurface(v)} px-6 py-4 flex flex-wrap items-center justify-center gap-3 text-[13px]`}>
+            <span className="font-bold text-white">Qué incluye la mensualidad:</span>
+            {['PC en comodato', 'Sistema YOLO + dashboard', 'Administración y mantenimiento', 'Soporte <30 min'].map((t) => (
+              <span key={t} className="chip text-slate-200">{t}</span>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   )
@@ -364,9 +359,9 @@ function Services({ v }: { v: VariantTheme }) {
 /* ─── Cómo funciona ────────────────────────────────────────── */
 
 const STEPS = [
-  { n: '01', t: 'Entregamos la Mini PC', d: 'Te entregamos una Mini PC ya configurada para que puedas iniciar tu arqueo automático.' },
-  { n: '02', t: 'Configuramos Audio y Video', d: 'Ajustamos el servidor de audio y video para que el conteo quede grabado.' },
-  { n: '03', t: 'Recibes tu Excel', d: 'El sistema detecta las conciliaciones y entrega un Excel listo para revisar.' }
+  { n: '01', t: 'Demo en vivo sin costo con nuestra cámara', d: 'Llevamos nuestra cámara a tu gym/tienda y te mostramos el conteo de personas + mapa de calor en vivo sobre tu espacio real. Ves aforo, flujo y zonas muertas antes de decidir.' },
+  { n: '02', t: 'Instalamos el sistema en 48h (PC en comodato)', d: 'Conectamos una PC en comodato a tu red local y a tus cámaras vía RTSP/DVR. Corre YOLOv8 local (sin comprar sensores V-Count), cuenta personas por zona y genera mapa de calor. Sin obras.' },
+  { n: '03', t: 'Dashboard en vivo + Excel automático + mantenimiento', d: 'Recibes dashboard con ocupación por franja, alertas de aforo y Excel semanal automático. La mensualidad cubre sistema + PC + administración y mantenimiento. Nos encargamos de todo.' }
 ]
 
 function Workflow({ v }: { v: VariantTheme }) {
@@ -375,9 +370,9 @@ function Workflow({ v }: { v: VariantTheme }) {
       <div className="mx-auto max-w-6xl">
         <SectionHead
           v={v}
-          kicker="Proceso"
-          title={<>Cómo funciona en <span className="txt-grad">3 pasos</span></>}
-          sub="En menos de 48 horas tienes tu punto listo para conciliar automáticamente."
+          kicker="Cómo funciona"
+          title={<>Instalamos el <span className="txt-grad">sistema YOLO</span> en 3 pasos</>}
+          sub="No vendemos hardware. Te prestamos la PC en comodato y te cobramos la mensualidad por sistema + equipo + mantenimiento."
         />
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {STEPS.map((s, i) => (
@@ -395,10 +390,14 @@ function Workflow({ v }: { v: VariantTheme }) {
         </div>
         <Reveal y={v.motionPx} delay={0} duration={durationOf(v)}>
           <div className={`mt-10 ${cardSurface(v)} px-6 py-5 flex flex-wrap items-center justify-center gap-3 text-[13px]`}>
-            <span className="font-bold text-white">Cada plan incluye:</span>
-            {['Instalación en Bogotá y Sabana', 'Soporte <30 min', 'Garantía 7 días'].map((t) => (
-              <span key={t} className="chip text-slate-200">{t}</span>
-            ))}
+            <span className="font-bold text-white">Para qué sirve:</span>
+            <span className="text-slate-300">Saber cuántas personas entran, dónde se quedan, qué zonas son muertas y cuándo tu gym/tienda se satura — para mover layout, staffing y horarios con datos, no a ojo.</span>
+          </div>
+        </Reveal>
+        <Reveal y={v.motionPx} delay={0} duration={durationOf(v)}>
+          <div className={`mt-4 ${cardSurface(v)} px-6 py-5 flex flex-wrap items-center justify-center gap-3 text-[13px]`}>
+            <span className="font-bold text-white">Cómo lo hace:</span>
+            <span className="text-slate-300">YOLOv8 sobre tus cámaras (RTSP) → cuenta personas por zona → genera mapa de calor + aforo en vivo → dashboard + Excel. PC local en comodato, 98% precisión.</span>
           </div>
         </Reveal>
       </div>
@@ -409,10 +408,10 @@ function Workflow({ v }: { v: VariantTheme }) {
 /* ─── Beneficios ───────────────────────────────────────────── */
 
 const BENEFITS = [
-  { icon: Clock, value: 90, suffix: '%', label: 'Tiempo de arqueo', desc: 'Deja de destinar 45 minutos a cada cierre de caja.' },
-  { icon: AlertTriangle, value: 0, suffix: '', label: 'Errores de caja', desc: 'Detección de diferencias automática entre POS y conteo físico.' },
-  { icon: ScanSearch, value: 100, suffix: '%', label: 'Trazabilidad', desc: 'Grabación y transcripción de cada evento del conteo.' },
-  { icon: TrendingUp, value: null, suffix: '', label: 'ROI desde el día 1', desc: 'Ahorro de personal y tiempo visible desde la primera conciliación.' }
+  { icon: Users, value: 98, suffix: '%', label: 'Precisión conteo', desc: 'Cuenta personas vs tu contador manual de puerta. Valida aforo real por zona.' },
+  { icon: Flame, value: 30, suffix: '%', label: 'Zonas muertas detectadas', desc: 'Espacio que hoy pagas y no convierte. Reubícalo donde sí hay flujo.' },
+  { icon: Clock, value: 24, suffix: '/7', label: 'Aforo en vivo', desc: 'Dashboard + alertas cuando una zona supera 95% capacidad.' },
+  { icon: TrendingUp, value: null, suffix: '', label: 'ROI desde semana 1', desc: 'Mueve layout y staffing con datos de 7 días de demo.' }
 ]
 
 function Benefits({ v }: { v: VariantTheme }) {
@@ -422,8 +421,8 @@ function Benefits({ v }: { v: VariantTheme }) {
         <SectionHead
           v={v}
           kicker="Beneficios"
-          title={<>Datos que sientan <span className="txt-grad">orden en tu caja</span></>}
-          sub="No vendemos equipos. Instalamos orden: tu tiempo vuelve a tu negocio y tus cuadres se vuelven automáticos."
+          title={<>Datos que convierten tu <span className="txt-grad">conteo en ventas</span></>}
+          sub="No vendemos cámaras. Convertimos las que ya tienes en un sistema de conteo de personas, mapa de calor y control de aforo para gym y tienda en Bogotá."
         />
         <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
           {BENEFITS.map((b, i) => {
@@ -432,14 +431,14 @@ function Benefits({ v }: { v: VariantTheme }) {
               <Reveal key={b.label} y={v.motionPx} scale={v.scale} delay={cardDelay(v, i)} duration={durationOf(v)} className="h-full">
                 <div className={`h-full ${cardSurface(v)} p-6 flex flex-col ${v.id === 'cinematic' ? 'items-center text-center' : ''}`}>
                   <Icon className="h-5 w-5 text-cy" />
-                  <div className={`mt-4 font-mono font-extrabold text-2xl md:text-3xl text-white ${v.countup ? '' : ''}`}>
+                  <div className={`mt-4 font-mono font-extrabold text-2xl md:text-3xl text-white`}>
                     {v.countup && b.value !== null ? (
                       <>
                         <CountUp to={b.value as number} duration={2} separator="." className="tabular-nums" />
                         <span>{b.suffix}</span>
                       </>
                     ) : (
-                      <span className="tabular-nums">{b.value !== null ? `${b.value}${b.suffix}` : 'Día 1'}</span>
+                      <span className="tabular-nums">{b.value !== null ? `${b.value}${b.suffix}` : 'Día 7'}</span>
                     )}
                   </div>
                   <div className="mt-1 text-[13px] font-semibold text-slate-200">{b.label}</div>
@@ -457,12 +456,12 @@ function Benefits({ v }: { v: VariantTheme }) {
 /* ─── Artículos ────────────────────────────────────────────── */
 
 const ARTICLES = [
-  { slug: 'arqueo-de-caja-que-es', cat: 'Guía', title: 'Arqueo de Caja: Qué Es, Cómo Se Hace y Cómo Automatizarlo' },
-  { slug: 'arqueo-de-caja-excel', cat: 'Guía', title: 'Arqueo de Caja Excel: Guía Completa para Automatizar tu Negocio en 2026' },
-  { slug: 'ia-para-excel-arqueo', cat: 'IA', title: 'IA para Excel: Cómo la Inteligencia Artificial Automatiza tu Arqueo de Caja' },
-  { slug: 'costo-sistema-pos-colombia', cat: 'POS', title: 'Costo de Sistema POS en Colombia: Guía de Precios 2026' },
-  { slug: 'sistema-pos-para-restaurantes', cat: 'POS', title: 'Sistema POS para Restaurantes en Colombia: Guía Completa 2026' },
-  { slug: 'arqueo-contable', cat: 'Guía', title: 'Arqueo Contable: Cómo Conciliar Efectivo y Cerrar el Mes en Excel' }
+  { slug: 'conteo-aforo-gym-yolo', cat: 'Conteo', title: 'Conteo y Aforo de Gimnasio con Cámaras IA: Guía 2026', href: '/conteo-aforo-gym-yolo.html' },
+  { slug: 'zonas-muertas-gym', cat: 'Heatmap', title: 'Zonas Muertas y Máquinas Zombie: Mapa de Calor para Gym', href: '/zonas-muertas-maquinas-zombie-gym.html' },
+  { slug: 'cctv-vision-ia', cat: 'Sistema', title: 'Sistema de Conteo de Personas con Cámaras: Qué Es y Cómo Instalarlo', href: '/cctv-vision-ia.html' },
+  { slug: '5-formas-analisis-flujo', cat: 'Guía', title: '5 Formas en que el Análisis de Flujo y Zonas de Calor Mejora tu Tienda', href: '/articulos/5-formas-analisis-flujo.html' },
+  { slug: 'como-implementar-analisis-flujo', cat: 'Guía', title: 'Cómo Implementar Análisis de Flujo con YOLO en tu Negocio', href: '/articulos/como-implementar-analisis-flujo.html' },
+  { slug: 'sistema-pos-para-restaurantes', cat: 'POS', title: 'Sistema POS + Conteo de Personas: Cierra el Círculo con Datos', href: '/articulos/sistema-pos-para-restaurantes.html' }
 ]
 
 function Articles({ v }: { v: VariantTheme }) {
@@ -472,18 +471,19 @@ function Articles({ v }: { v: VariantTheme }) {
         <SectionHead
           v={v}
           kicker="Aprende más"
-          title={<>Artículos y guías de <span className="txt-grad">arqueo inteligente</span></>}
+          title={<>Guías de <span className="txt-grad">conteo de personas</span> y mapa de calor</>}
+          sub="Long-tail barato para posicionar donde V-Count paga caro. Contenido que convierte visitas informacionales en demo en vivo."
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {ARTICLES.map((a, i) => (
             <Reveal key={a.slug} y={v.motionPx} delay={cardDelay(v, i)} duration={durationOf(v)} className="h-full">
-              <a href={`/articulos/${a.slug}.html`} className={`h-full ${cardSurface(v)} p-6 flex flex-col hover:border-cy/40 transition-colors group`}>
+              <a href={a.href} className={`h-full ${cardSurface(v)} p-6 flex flex-col hover:border-cy/40 transition-colors group`}>
                 <span className="chip font-mono text-[10px] text-cy w-fit">{a.cat}</span>
                 <h3 className="mt-4 text-[15px] font-semibold text-white leading-snug group-hover:text-cy transition-colors">
                   {a.title}
                 </h3>
                 <span className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-slate-400 group-hover:text-cy transition-colors">
-                  Leer guía <ChevronRight className="h-3.5 w-3.5" />
+                  Leer guía <ArrowUpRight className="h-3.5 w-3.5" />
                 </span>
               </a>
             </Reveal>
@@ -497,12 +497,12 @@ function Articles({ v }: { v: VariantTheme }) {
 /* ─── FAQ ──────────────────────────────────────────────────── */
 
 const FAQS = [
-  { q: '¿Qué es el arqueo de caja?', a: 'Es la verificación del efectivo en caja frente a lo registrado en el sistema POS. Con arqueo IA se hace automático, en segundos y sin errores de cálculo.' },
-  { q: '¿Cuánto tiempo toma un arqueo manual?', a: 'En promedio 40 minutos o más por cierre. Con el sistema de APC VisionIA la conciliación se genera en segundos y el conteo queda respaldado con audio y video.' },
-  { q: '¿Cómo se genera el Excel?', a: 'La mini PC graba el momento del conteo, transcribe el audio, y el reporte de conciliación POS vs conteo físico se entrega automáticamente al final del día, listo para revisar.' },
-  { q: '¿Son cámaras de seguridad?', a: 'No vendemos vigilancia. La cámara es una herramienta más del ecosistema: lo que entregamos es orden, datos y eficiencia en tu operación de caja.' },
-  { q: '¿Cuánto cuesta implementarlo?', a: 'Cada punto de venta es distinto. Agenda un diagnóstico gratuito y te damos la inversión exacta con la proyección de ahorro de tu negocio.' },
-  { q: '¿Qué pasa si hay diferencias entre POS y conteo?', a: 'El sistema marca la diferencia automáticamente y deja la grabación y transcripción como evidencia, para resolverla en minutos y no en días.' }
+  { q: '¿Qué es el conteo de personas con YOLO y para qué sirve?', a: 'Es un sistema que cuenta cuántas personas entran a tu gym/tienda por hora, día y zona usando tus cámaras + YOLOv8. Sirve para saber aforo real, detectar zonas muertas, mover layout y staffing, y cumplir aforo sin comprar sensores de $1.000 USD como V-Count.' },
+  { q: '¿Necesito comprar cámaras o sensores nuevos?', a: 'No. Usamos tus cámaras existentes vía RTSP/DVR. La PC que corre el sistema te la prestamos en comodato. La mensualidad cubre sistema + PC + administración y mantenimiento. Sin obras.' },
+  { q: '¿Cómo es la demo en vivo sin costo?', a: 'Llevamos nuestra propia cámara a tu local y te mostramos el conteo + mapa de calor + aforo en vivo sobre tu espacio real. Ves los datos antes de decidir. Si te sirve, instalamos en 48h.' },
+  { q: '¿Qué incluye la mensualidad?', a: 'Sistema YOLO + dashboard en vivo + Excel automático semanal + la PC en comodato + administración y mantenimiento del sistema. Hardware no lo compras, lo usas mientras estés suscrito.' },
+  { q: '¿Cuánto tarda la instalación y qué precisión tiene?', a: 'Demo en vivo el mismo día de la visita. Instalación completa en 48h. Precisión 98% en conteo de personas verificado vs conteo manual. Reporte por franja horaria desde el día 1.' },
+  { q: '¿Funciona si mi gym/tienda no está en Bogotá?', a: 'Demo presencial en Bogotá y Sabana. Otras ciudades con soporte remoto guiado. Escríbenos tu caso por WhatsApp y te decimos viabilidad.' }
 ]
 
 function Faq({ v }: { v: VariantTheme }) {
@@ -516,7 +516,7 @@ function Faq({ v }: { v: VariantTheme }) {
               <details className={`${cardSurface(v)} group`}>
                 <summary className="cursor-pointer list-none px-6 py-4 flex items-center justify-between gap-4 font-semibold text-[15px] text-white">
                   {f.q}
-                  <ChevronRight className="h-4 w-4 text-cy transition-transform group-open:rotate-90 shrink-0" />
+                  <ArrowUpRight className="h-4 w-4 text-cy transition-transform group-open:rotate-45 shrink-0" />
                 </summary>
                 <p className="px-6 pb-5 text-sm text-slate-400 leading-relaxed">{f.a}</p>
               </details>
@@ -531,38 +531,35 @@ function Faq({ v }: { v: VariantTheme }) {
 /* ─── Calculadora ──────────────────────────────────────────── */
 
 function Calculator({ v }: { v: VariantTheme }) {
-  const [result, setResult] = useState<null | { total: number; ahorroHoras: number; ahorroCosto: number; costoPersonal: number; riesgo: number | null }>(null)
+  const [result, setResult] = useState<null | { ahorro: number; personasMes: number; horasPico: number; ticket: number }>(null)
   const [pending, setPending] = useState(false)
   const [msg, setMsg] = useState('')
   const [captured, setCaptured] = useState(false)
-  const [inputs, setInputs] = useState({ efectivo_diario: '', empleados: '1', horas_arqueo: '', costo_hora: '8000' })
+  const [inputs, setInputs] = useState({ personas_dia: '80', ticket_promedio: '15000', horas_pico: '3', empleados: '2' })
 
   const set = (k: keyof typeof inputs) => (e: React.ChangeEvent<HTMLInputElement>) =>
     setInputs((s) => ({ ...s, [k]: e.target.value }))
 
   const calc = () => {
-    const efectivo = parseFloat(inputs.efectivo_diario) || 0
+    const personas = parseFloat(inputs.personas_dia) || 0
+    const ticket = parseFloat(inputs.ticket_promedio) || 0
+    const horasPico = parseFloat(inputs.horas_pico) || 0
     const empleados = parseInt(inputs.empleados) || 1
-    const horas = parseFloat(inputs.horas_arqueo) || 0
-    const costoHora = parseFloat(inputs.costo_hora) || 8000
-    const horasMes = horas * 30
-    const ahorroHoras = horasMes * 0.9
-    const costoPersonal = horasMes * costoHora * Math.min(empleados, 3)
-    const ahorroCosto = costoPersonal * 0.9
-    const total = ahorroCosto
-    const r = { total, ahorroHoras, ahorroCosto, costoPersonal, riesgo: efectivo > 0 ? efectivo * 0.03 * 30 : null }
+    const personasMes = personas * 30
+    // estimacion: 15% de personas no convierten por zonas muertas / saturacion
+    const mejora = personasMes * 0.15 * ticket * 0.3 // 30% de la mejora capturable
+    const ahorroStaff = horasPico * 30 * 12000 * empleados * 0.2 // 20% optimizacion staff
+    const total = mejora + ahorroStaff
+    const r = { ahorro: total, personasMes, horasPico, ticket }
     setResult(r)
     setPending(true)
     setMsg('')
     setTimeout(() => {
       setPending(false)
       setMsg(
-        `Con ${horas} horas diarias de arqueo manual y ${empleados} empleado(s) en caja, tu sistema actual te cuesta ${Math.round(costoPersonal).toLocaleString('es-CO')} COP/mes en tiempo de personal. ` +
-        `Nuestro arqueo inteligente reduce esto a 5 minutos: la mini PC graba audio, transcribe, graba video y genera el Excel automáticamente. ` +
-        `Tu ahorro potencial: ${Math.round(total).toLocaleString('es-CO')} COP/mes + ${Math.round(ahorroHoras)} horas de personal liberadas.` +
-        (r.riesgo ? ` Con ${efectivo.toLocaleString('es-CO')} COP diarios en efectivo, el 3% de discrepancia representa ${Math.round(r.riesgo).toLocaleString('es-CO')} COP/mes en pérdidas que tu POS no detecta.` : '')
+        `Con ${personas} personas/día y ticket $${ticket.toLocaleString('es-CO')}, mueves ~${personasMes.toLocaleString('es-CO')} personas/mes. Si el 15% no convierte por zonas muertas o saturación en tus ${horasPico}h pico, el mapa de calor te deja recuperar parte. Ahorro estimado por layout + staff: $${Math.round(total).toLocaleString('es-CO')} COP/mes (sin comprar sensores, PC en comodato).`
       )
-    }, 1500)
+    }, 1200)
   }
 
   const capture = () => {
@@ -576,13 +573,14 @@ function Calculator({ v }: { v: VariantTheme }) {
     form.method = 'POST'
     form.style.display = 'none'
     const data: Record<string, string> = {
-      _subject: 'APC Arqueo Inteligente — Lead Calculadora',
+      _subject: 'APC VisionIA — Lead Calculadora Conteo Personas',
       email,
-      efectivo_diario: inputs.efectivo_diario || 'no especificado',
+      personas_dia: inputs.personas_dia || 'no especificado',
+      ticket_promedio: inputs.ticket_promedio || 'no especificado',
+      horas_pico: inputs.horas_pico || 'no especificado',
       empleados: inputs.empleados || 'no especificado',
-      horas_arqueo: inputs.horas_arqueo || 'no especificado',
-      ahorro_estimado: result ? Math.round(result.total).toLocaleString('es-CO') : 'no calculado',
-      fuente: 'calculadora_arqueo_apcvisionai'
+      ahorro_estimado: result ? Math.round(result.ahorro).toLocaleString('es-CO') : 'no calculado',
+      fuente: 'calculadora_conteo_apcvisionai'
     }
     Object.keys(data).forEach((k) => {
       const i = document.createElement('input')
@@ -604,23 +602,23 @@ function Calculator({ v }: { v: VariantTheme }) {
         <SectionHead
           v={v}
           kicker="Calculadora"
-          title={<>Calcula tu <span className="txt-grad">ahorro mensual</span></>}
-          sub="Estima cuánto te cuesta el arqueo manual hoy y cuánto ahorrarías automatizándolo."
+          title={<>Calcula tu <span className="txt-grad">ahorro con conteo</span></>}
+          sub="Cuánto dejas de vender por zonas muertas y saturación. Estima el retorno de instalar el sistema (PC en comodato)."
         />
         <Reveal y={v.motionPx} duration={durationOf(v)}>
           <div className={`mt-12 ${cardSurface(v)} p-0 overflow-hidden grid lg:grid-cols-2`}>
             <div className="p-7 md:p-9 border-b lg:border-b-0 lg:border-r border-line space-y-4">
-              <label className="block"><span className="text-xs text-slate-400 mb-1 block">Efectivo diario promedio (COP)</span>
-                <input className={inputCls} id="efectivo_diario" type="number" placeholder="600000" value={inputs.efectivo_diario} onChange={set('efectivo_diario')} />
+              <label className="block"><span className="text-xs text-slate-400 mb-1 block">Personas por día (promedio)</span>
+                <input className={inputCls} type="number" placeholder="80" value={inputs.personas_dia} onChange={set('personas_dia')} />
               </label>
-              <label className="block"><span className="text-xs text-slate-400 mb-1 block">Personas que arquean</span>
-                <input className={inputCls} id="empleados" type="number" min="1" max="9" value={inputs.empleados} onChange={set('empleados')} />
+              <label className="block"><span className="text-xs text-slate-400 mb-1 block">Ticket promedio (COP)</span>
+                <input className={inputCls} type="number" placeholder="15000" value={inputs.ticket_promedio} onChange={set('ticket_promedio')} />
               </label>
-              <label className="block"><span className="text-xs text-slate-400 mb-1 block">Horas de arqueo al día</span>
-                <input className={inputCls} id="horas_arqueo" type="number" min="0" step="0.25" placeholder="0.7" value={inputs.horas_arqueo} onChange={set('horas_arqueo')} />
+              <label className="block"><span className="text-xs text-slate-400 mb-1 block">Horas pico al día</span>
+                <input className={inputCls} type="number" min="0" step="0.5" placeholder="3" value={inputs.horas_pico} onChange={set('horas_pico')} />
               </label>
-              <label className="block"><span className="text-xs text-slate-400 mb-1 block">Costo de la hora del empleado (COP)</span>
-                <input className={inputCls} id="costo_hora" type="number" min="0" placeholder="8000" value={inputs.costo_hora} onChange={set('costo_hora')} />
+              <label className="block"><span className="text-xs text-slate-400 mb-1 block">Empleados en piso en pico</span>
+                <input className={inputCls} type="number" min="1" max="10" value={inputs.empleados} onChange={set('empleados')} />
               </label>
               <button onClick={calc} className="btn-cta w-full px-6 py-3.5 text-sm">
                 <CalcIcon className="h-4 w-4" /> Calcular ahorro
@@ -633,21 +631,21 @@ function Calculator({ v }: { v: VariantTheme }) {
                   <div>
                     <div className="text-xs text-slate-400 font-semibold uppercase tracking-widest">Ahorro mensual estimado</div>
                     <div className="mt-2 font-mono font-extrabold text-4xl text-cy tabular-nums">
-                      {v.countup ? <CountUp to={result.total} duration={2.2} /> : '$' + Math.round(result.total).toLocaleString('es-CO')}
+                      {v.countup ? <CountUp to={result.ahorro} duration={2.2} /> : '$' + Math.round(result.ahorro).toLocaleString('es-CO')}
                     </div>
                     <div className="mt-6 grid grid-cols-2 gap-4">
                       <div className={cardSurface(v) + ' !rounded-xl p-4'}>
-                        <div className="text-[11px] text-slate-400">Tiempo liberado</div>
-                        <div className="font-mono font-bold text-xl text-white mt-1">{Math.round(result.ahorroHoras)}h <span className="text-xs text-slate-400">/mes</span></div>
+                        <div className="text-[11px] text-slate-400">Personas / mes</div>
+                        <div className="font-mono font-bold text-xl text-white mt-1">{Math.round(result.personasMes).toLocaleString('es-CO')}</div>
                       </div>
                       <div className={cardSurface(v) + ' !rounded-xl p-4'}>
-                        <div className="text-[11px] text-slate-400">Costo de personal hoy</div>
-                        <div className="font-mono font-bold text-xl text-white mt-1">{Math.round(result.ahorroCosto).toLocaleString('es-CO')}</div>
+                        <div className="text-[11px] text-slate-400">Horas pico / mes</div>
+                        <div className="font-mono font-bold text-xl text-white mt-1">{Math.round(result.horasPico * 30)}h</div>
                       </div>
                     </div>
                   </div>
                   <div className={`${cardSurface(v)} !rounded-2xl p-5 text-sm text-slate-300 leading-relaxed relative min-h-[130px]`}>
-                    <span className="chip font-mono text-[10px] text-cy absolute -top-3 left-4">APC Arqueo</span>
+                    <span className="chip font-mono text-[10px] text-cy absolute -top-3 left-4">APC VisionIA</span>
                     {pending ? (
                       <div className="flex gap-1.5 items-center h-full pt-4">
                         <span className="w-2 h-2 rounded-full bg-cy/70 animate-bounce" />
@@ -666,7 +664,7 @@ function Calculator({ v }: { v: VariantTheme }) {
                       </button>
                     </div>
                   ) : (
-                    <div className="text-sm text-cy">Enviado. Te contactaremos pronto con tu análisis de arqueo.</div>
+                    <div className="text-sm text-cy">Enviado. Te contactaremos con tu análisis de conteo.</div>
                   )}
                 </>
               ) : (
@@ -691,23 +689,25 @@ function Contact({ v }: { v: VariantTheme }) {
         <SectionHead
           v={v}
           kicker="Contacto"
-          title={<>¿Listo para dejar de <span className="txt-grad">arquearte mentalmente</span>?</>}
-          sub="Agenda un diagnóstico gratuito y recibe una cotización con la proyección de ahorro de tu punto de venta."
+          title={<>¿Cuántas personas entran a tu <span className="txt-grad">gym o tienda</span> hoy?</>}
+          sub="Agenda la demo en vivo sin costo: llevamos nuestra cámara, ves el conteo + mapa de calor en tu espacio, y decides. Sin piloto de 7 días."
         />
         <div className="mt-12 grid lg:grid-cols-2 gap-5">
           <Reveal y={v.motionPx} duration={durationOf(v)}>
             <div className={`h-full ${cardSurface(v)} p-8 flex flex-col`}>
-              <h3 className="text-lg font-bold text-white">Hablemos de tu punto de venta</h3>
+              <h3 className="text-lg font-bold text-white">Demo en vivo en tu local</h3>
               <p className="mt-2 text-sm text-slate-400 leading-relaxed">
-                Cuéntanos tu caso y te respondemos en menos de 30 minutos en hora hábil.
+                Llevamos la muestra con nuestra cámara. Ves el sistema YOLO contando personas en tu gym/tienda en vivo, sin costo. Respuesta en 24h.
               </p>
-              <ul className="mt-6 space-y-4 text-sm text-slate-300">
-                <li className="flex items-center gap-3"><MapPin className="h-4 w-4 text-cy shrink-0" /> Región Bogotá — Cra 52c #39b-22</li>
+              <ul className="mt-6 space-y-3 text-sm text-slate-300">
+                <li className="flex items-center gap-3"><Cpu className="h-4 w-4 text-cy shrink-0" /> PC en comodato — no compras hardware</li>
+                <li className="flex items-center gap-3"><ShieldCheck className="h-4 w-4 text-cy shrink-0" /> Mensualidad: sistema + PC + administración</li>
+                <li className="flex items-center gap-3"><MapPin className="h-4 w-4 text-cy shrink-0" /> Bogotá y Sabana — presencial 48h</li>
                 <li className="flex items-center gap-3"><Phone className="h-4 w-4 text-cy shrink-0" /> +57 333 745 0634</li>
                 <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-cy shrink-0" /> serviciosapcsoporte@gmail.com</li>
               </ul>
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-cta px-6 py-3.5 text-sm mt-6">
-                <MessageCircle className="h-4 w-4" /> Escríbeme tu caso por WhatsApp
+                <MessageCircle className="h-4 w-4" /> Quiero la demo en vivo
               </a>
               <div className="mt-6 rounded-2xl overflow-hidden border border-line">
                 <iframe
@@ -723,27 +723,55 @@ function Contact({ v }: { v: VariantTheme }) {
 
           <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 40 : 120} duration={durationOf(v)}>
             <div className={`h-full ${cardSurface(v)} p-8`}>
-              <h3 className="text-lg font-bold text-white">Envíanos un mensaje</h3>
+              <h3 className="text-lg font-bold text-white">Cuéntanos tu caso</h3>
+              <p className="text-xs text-slate-500 mt-1">Te calificamos para la demo en vivo (cámaras, tipo negocio, aforo). Sin spam.</p>
               <form
                 className="mt-5 space-y-4"
                 action="https://formsubmit.co/serviciosapcsoporte@gmail.com"
                 method="POST"
               >
-                <input type="hidden" name="_subject" value="Nuevo contacto APC Arqueo Inteligente" />
+                <input type="hidden" name="_subject" value="APC VisionIA — Demo en vivo conteo de personas" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="text" name="_honey" style={{ display: 'none' as CSSProperties['display'] }} />
                 <input type="hidden" name="_captcha" value="true" />
                 <input type="hidden" name="_next" value="https://apcvisionai.site/" />
                 <div><label className="block text-xs text-slate-500 mb-1">Nombre</label>
                   <input type="text" name="nombre" required className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white placeholder-slate-600 focus:border-cy/50 focus:outline-none" placeholder="Tu nombre" /></div>
-                <div><label className="block text-xs text-slate-500 mb-1">Correo electrónico</label>
-                  <input type="email" name="email" required className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white placeholder-slate-600 focus:border-cy/50 focus:outline-none" placeholder="tu@correo.com" /></div>
-                <div><label className="block text-xs text-slate-500 mb-1">Teléfono / WhatsApp</label>
-                  <input type="tel" name="contacto" required className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white placeholder-slate-600 focus:border-cy/50 focus:outline-none" placeholder="+57 333 745 0634" /></div>
-                <div><label className="block text-xs text-slate-500 mb-1">¿Qué necesitas?</label>
-                  <textarea name="mensaje" rows={4} required className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white placeholder-slate-600 focus:border-cy/50 focus:outline-none" placeholder="Cuéntanos sobre tu negocio y qué arqueo necesitas automatizar..." /></div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div><label className="block text-xs text-slate-500 mb-1">WhatsApp</label>
+                    <input type="tel" name="contacto" required className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white placeholder-slate-600 focus:border-cy/50 focus:outline-none" placeholder="+57 3XX XXX XXXX" /></div>
+                  <div><label className="block text-xs text-slate-500 mb-1">Correo</label>
+                    <input type="email" name="email" required className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white placeholder-slate-600 focus:border-cy/50 focus:outline-none" placeholder="tu@correo.com" /></div>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div><label className="block text-xs text-slate-500 mb-1">Tipo de negocio</label>
+                    <select name="tipo_negocio" required className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white focus:border-cy/50 focus:outline-none">
+                      <option value="">Selecciona</option>
+                      <option value="gimnasio">Gimnasio / Box / Studio</option>
+                      <option value="tienda_retail">Tienda retail</option>
+                      <option value="supermercado">Supermercado</option>
+                      <option value="restaurante">Restaurante / Bar</option>
+                      <option value="otro">Otro</option>
+                    </select></div>
+                  <div><label className="block text-xs text-slate-500 mb-1">¿Cuántas cámaras tienes?</label>
+                    <select name="num_camaras" required className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white focus:border-cy/50 focus:outline-none">
+                      <option value="">Selecciona</option>
+                      <option value="0">0 — no tengo</option>
+                      <option value="1-2">1-2</option>
+                      <option value="3-5">3-5</option>
+                      <option value="6+">6+</option>
+                    </select></div>
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  <div><label className="block text-xs text-slate-500 mb-1">Zonas a cubrir</label>
+                    <input type="text" name="zonas" className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white placeholder-slate-600 focus:border-cy/50 focus:outline-none" placeholder="Ej: peso libre, cardio, entrada" /></div>
+                  <div><label className="block text-xs text-slate-500 mb-1">Aforo aprox / día</label>
+                    <input type="number" name="aforo_dia" min="0" className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white placeholder-slate-600 focus:border-cy/50 focus:outline-none" placeholder="Ej: 120" /></div>
+                </div>
+                <div><label className="block text-xs text-slate-500 mb-1">Cuéntanos tu caso</label>
+                  <textarea name="mensaje" rows={3} required className="w-full px-4 py-3 rounded-xl bg-abyss-2 border border-line text-white placeholder-slate-600 focus:border-cy/50 focus:outline-none" placeholder="Qué quieres medir: conteo, mapa de calor, aforo, zonas muertas... ¿Qué cámaras/DVR tienes?" /></div>
                 <button type="submit" className="btn-cta w-full px-6 py-3.5 text-sm">
-                  <Send className="h-4 w-4" /> Enviar mensaje
+                  <Send className="h-4 w-4" /> Solicitar demo en vivo sin costo
                 </button>
               </form>
             </div>
@@ -766,16 +794,16 @@ function Footer() {
             <span className="font-mono font-bold text-sm text-white">APC<span className="text-cy"> VisionIA</span></span>
           </div>
           <p className="mt-3 leading-relaxed max-w-sm">
-            Arqueo inteligente y visión computacional para negocios en Bogotá. Automatiza tu operación con datos en tiempo real.
+            Sistema de conteo de personas con YOLO, mapa de calor y control de aforo para gyms y retail en Bogotá. Demo en vivo sin costo. PC en comodato + sistema + mantenimiento.
           </p>
         </div>
         <div>
           <div className="font-bold text-white">Enlaces</div>
           <nav className="mt-3 flex flex-col gap-2">
-            <a href="/" className="hover:text-cy transition-colors">Arqueo Inteligente</a>
+            <a href="/" className="hover:text-cy transition-colors">Conteo de Personas</a>
+            <a href="/conteo-aforo-gym-yolo.html" className="hover:text-cy transition-colors">Aforo Gym YOLO</a>
+            <a href="/zonas-muertas-maquinas-zombie-gym.html" className="hover:text-cy transition-colors">Zonas Muertas Gym</a>
             <a href="/cctv-vision-ia.html" className="hover:text-cy transition-colors">Visión IA</a>
-            <a href="/sistema-pos-para-negocio.html" className="hover:text-cy transition-colors">Sistema POS</a>
-            <a href="/arqueo.html" className="hover:text-cy transition-colors">Arqueo de Caja</a>
           </nav>
         </div>
         <div>
@@ -789,7 +817,7 @@ function Footer() {
       </div>
       <div className="mx-auto max-w-6xl mt-10 pt-6 border-t border-line/60 text-[12px] text-slate-600 flex flex-wrap gap-x-4 gap-y-2 justify-between">
         <span>© {new Date().getFullYear()} Servicios APC. Todos los derechos reservados.</span>
-        <span className="font-mono">apcvisionai.site</span>
+        <span className="font-mono">apcvisionai.site — conteo de personas · mapa de calor · control de aforo</span>
       </div>
     </footer>
   )

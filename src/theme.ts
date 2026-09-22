@@ -93,4 +93,6 @@ export const VIDEO_SRC = '/videos/Servicios%20APC-opt.mp4'
 export const VIDEO_POSTER = '/imagenes/hero-yolo.webp'
 export const WHATSAPP =
   'https://wa.me/573337450634?text=' +
-  encodeURIComponent('Hola Alejandro, quiero el piloto gratis 7 días de YOLO (conteo + mapa de calor) para mi gym/tienda en Bogotá.')
+  encodeURIComponent(
+    'Hola Alejandro, quiero la demo en vivo de conteo de personas + mapa de calor YOLO para mi gym/tienda en Bogotá. Llévame la muestra con tu cámara sin costo para ver el sistema en vivo (PC en comodato).'
+  )

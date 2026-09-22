@@ -1,26 +1,27 @@
 # APC VisionIA
 
-> Sistema YOLO en vivo para gyms y retail en Bogotá: conteo de personas, mapas de calor, control de aforo y analítica de video sobre tus cámaras existentes. Piloto gratis 7 días, instalación 48h sin obras. Módulo secundario: arqueo de caja con IA.
+> Sistema de conteo de personas con YOLOv8 para gyms y retail en Bogotá: conteo de personas, sensor de conteo, cámara de conteo, mapas de calor y control de aforo sobre tus cámaras existentes. Demo en vivo sin costo con nuestra cámara. PC en comodato + sistema + administración y mantenimiento. Instalación 48h sin obras. Atacamos costo de V-Count: sin sensores de $1.000 USD.
 
 - Página principal: https://apcvisionai.site/
 - Mapa del sitio: https://apcvisionai.site/sitemap.xml
 - NAP: APC VisionIA, Cra. 52c #39b-22, Bogotá D.C., Colombia · +57 333 745 0634 · serviciosapcsoporte@gmail.com
 
-## Servicios principales YOLO
+## Servicios principales YOLO — 100% conteo de personas
 
-- [YOLO Conteo de Personas + Mapas de Calor](https://apcvisionai.site/): cuántas personas entran, dónde se quedan, aforo por franja y zonas muertas. YOLO sobre cámaras existentes. Piloto gratis 7 días Bogotá.
-- [Visión IA](https://apcvisionai.site/cctv-vision-ia.html): análisis de video con modelos YOLO: conteo, heatmaps, alertas de fila y dashboard tiempo real. Implementación 48h.
-- [Zonas Muertas y Máquinas Zombie Gym](https://apcvisionai.site/zonas-muertas-maquinas-zombie-gym.html): detecta espacio muerto en gyms y recupera m2 con datos.
+- [Conteo de Personas YOLO + Mapa de Calor](https://apcvisionai.site/): sistema de conteo de personas, sensor y cámara de conteo, mapa de calor y control de aforo. Demo en vivo sin costo Bogotá. PC en comodato.
+- [Visión IA](https://apcvisionai.site/cctv-vision-ia.html): análisis de video YOLO: conteo, heatmaps, alertas de fila y dashboard tiempo real. Implementación 48h.
+- [Zonas Muertas y Máquinas Zombie Gym](https://apcvisionai.site/zonas-muertas-maquinas-zombie-gym.html): mapa de calor por franja, detecta máquinas zombie con datos.
 - [Conteo y Aforo Gym YOLO](https://apcvisionai.site/conteo-aforo-gym-yolo.html): ocupación en tiempo real por franja horaria para gimnasios.
-- [Arqueo de Caja con IA](https://apcvisionai.site/arqueo.html): módulo secundario — conciliación POS vs conteo físico con Mini PC y Excel automático.
+- [Instalación Sistema + PC Comodato](https://apcvisionai.site/#como-funciona): PC en comodato que corre YOLOv8 local. Mensualidad incluye sistema + PC + administración y mantenimiento.
 - [Sistema POS](https://apcvisionai.site/sistema-pos-para-negocio.html): punto de venta integrado con analítica.
 
 ## Contenido educativo
 
-### Visión computacional YOLO
+### Visión computacional YOLO — conteo de personas long-tail
 - [Zonas muertas y máquinas zombie en gimnasios](https://apcvisionai.site/zonas-muertas-maquinas-zombie-gym.html)
 - [Conteo y aforo de gimnasios por franja horaria](https://apcvisionai.site/conteo-aforo-gym-yolo.html)
 - [5 Formas en que el Análisis de Flujo y Zonas de Calor Mejoran la Eficiencia](https://apcvisionai.site/articulos/5-formas-analisis-flujo.html)
+- [Cómo Implementar Análisis de Flujo con YOLO](https://apcvisionai.site/articulos/como-implementar-analisis-flujo.html) — sistema de conteo sin sensores dedicados
 
 ### Arqueo de caja (silo secundario)
 - [Arqueo de Caja: Qué Es, Cómo Se Hace y Cómo Automatizarlo](https://apcvisionai.site/articulos/arqueo-de-caja-que-es.html)
