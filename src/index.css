@@ -1,13 +1,12 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-abyss: #080c18;
-  --color-abyss-2: #0b1220;
-  --color-panel: #111a2e;
-  --color-line: #1e2a4a;
-  --color-cy: #D4FF32;
-  --color-cy-hover: #e2ff6b;
-  --color-green: #22FF44;
+  --color-abyss: #0F172A;
+  --color-abyss-2: #0B0F19;
+  --color-panel: #1e2a4a;
+  --color-line: rgba(255,255,255,0.06);
+  --color-accent: #2563EB;
+  --color-accent-soft: rgba(37,99,235,0.15);
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
 }
@@ -16,8 +15,8 @@
 
 @utility bg-grid {
   background-image:
-    linear-gradient(to right, rgba(212,255,50,0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(212,255,50,0.07) 1px, transparent 1px);
+    linear-gradient(to right, var(--color-accent-soft) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-accent-soft) 1px, transparent 1px);
     background-size: 56px 56px;
   }
 
@@ -45,21 +44,34 @@
   }
   body {
     background-color: var(--color-abyss);
-    color: #e2e8f0;
+    color: #F8FAFC;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
+  * {
+    word-break: keep-all;
+  }
   ::selection {
-    background: rgba(212,255,50,0.35);
-    color: #fff;
+    background: rgba(37,99,235,0.2);
+    color: #F8FAFC;
   }
 }
 
+@utility text-balanced {
+  text-wrap: balance;
+}
+
+@utility text-normal {
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 @utility glass {
-  backdrop-filter: blur(10px) saturate(1.15);
-  -webkit-backdrop-filter: blur(10px) saturate(1.15);
-  background: rgba(17, 26, 46, 0.62);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  background: rgba(30, 41, 59, 0.7);
 }
 
 @utility chip {
@@ -73,10 +85,11 @@
   letter-spacing: 0.04em;
   background: var(--color-abyss-2);
   border: 1px solid var(--color-line);
+  color: #F8FAFC;
 }
 
 @utility txt-grad {
-  background: linear-gradient(100deg, #D4FF32 0%, #22FF44 45%, #D4FF32 100%);
+  background: linear-gradient(100deg, #2563EB 0%, #F8FAFC 45%, #2563EB 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -88,18 +101,19 @@
   justify-content: center;
   gap: 0.5rem;
   border-radius: 14px;
-  background: var(--color-cy);
-  color: #062028;
+  background: var(--color-accent);
+  color: #F8FAFC;
   font-weight: 700;
   transition: background 180ms ease-out, transform 180ms ease-out, box-shadow 180ms ease-out;
 }
 .btn-cta:hover {
-  background: #22FF44;
+  background: #F8FAFC;
+  color: #0B0F19;
   transform: translateY(-1px);
-  box-shadow: 0 10px 30px -8px rgba(212,255,50,0.45);
+  box-shadow: 0 10px 30px -8px rgba(37,99,235,0.35);
 }
 .btn-cta:focus-visible {
-  outline: 2px solid var(--color-cy);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 

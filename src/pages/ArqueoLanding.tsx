@@ -185,7 +185,7 @@ const HERO_CHECKS = [
 ]
 
 function Hero({ v }: { v: VariantTheme }) {
-  const title = 'Tu gym o tienda pierde gente cada dia'
+  const title = 'Tu gym o tienda pierde gente cada día'
   const isQuiet = v.id === 'quiet'
 
   return (
@@ -222,7 +222,7 @@ function Hero({ v }: { v: VariantTheme }) {
           ) : (
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">{title}</h1>
           )}
-          <p className="mt-3 text-xl md:text-2xl font-bold txt-grad">Sin sensores dedicados. Sin obras. Demo en vivo gratis en 48h.</p>
+          <p className="mt-3 text-normal text-xl md:text-2xl font-bold txt-grad">Sin sensores dedicados. Sin obras. Demo en vivo gratis en 48h.</p>
         </div>
 
         <img
@@ -254,7 +254,7 @@ function Hero({ v }: { v: VariantTheme }) {
         </div>
 
         <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 80 : 200} duration={durationOf(v)}>
-          <p className="mt-5 text-slate-300 max-w-2xl mx-auto text-[15px] md:text-base leading-relaxed">
+          <p className="mt-5 text-normal text-slate-300 max-w-2xl mx-auto text-[15px] md:text-base leading-relaxed">
             Tu gym o tienda pierde gente cada dia y no sabes cuantas. Las zonas muertas se acumulan. El personal se coordina a ojo. Sin sensores dedicados. Sin obras. Sin interrupcion. Demo en vivo gratis con tu camara. PC en comodato. Mensualidad unica por sistema + PC + mantenimiento.
           </p>
         </Reveal>
@@ -317,7 +317,7 @@ function ServiceCard({ v, item, i }: { v: VariantTheme; item: (typeof SERVICES)[
   const Icon = item.icon
   const electric = v.card === 'electric' && i === 0
   const inner = (
-    <div className={`h-full flex flex-col ${electric ? 'p-8 md:p-10 pb-12' : 'p-7'}`}>
+    <div className={`h-full flex flex-col ${electric ? 'p-8 md:p-10 pb-12' : 'p-7 flex-1 justify-between'}`}>
       <div className="flex items-center justify-between">
         <span className={`p-3 rounded-2xl ${electric ? 'bg-cy/10 text-cy' : 'bg-abyss-2 text-cy'} border border-line h-fit flex items-center justify-center`}>
           {item.iconSrc ? <img src={item.iconSrc} alt={item.title} className="h-6 w-6 object-contain" loading="lazy" /> : <Icon className="h-6 w-6" />}
@@ -444,12 +444,12 @@ function Workflow({ v }: { v: VariantTheme }) {
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {STEPS.map((s, i) => (
             <Reveal key={s.n} y={v.motionPx} scale={v.scale} delay={cardDelay(v, i)} duration={durationOf(v)} className="h-full">
-              <div className={`h-full ${cardSurface(v)} p-7 relative overflow-hidden`}>
+              <div className={`h-full flex flex-col ${cardSurface(v)} p-7 relative overflow-hidden`}>
                 {v.id === 'data' && <div className="absolute inset-0 bg-grid opacity-40" />}
-                <div className="relative">
+                <div className="relative flex flex-col h-full">
                   <span className="font-mono text-cy text-3xl font-bold">{s.n}</span>
-                  <h3 className="mt-4 text-lg font-bold text-white">{s.t}</h3>
-                  <p className="mt-2 text-sm text-slate-400 leading-relaxed">{s.d}</p>
+                  <h3 className="mt-4 text-lg font-bold text-white flex-1">{s.t}</h3>
+                  <p className="mt-2 text-sm text-slate-400 leading-relaxed flex-1">{s.d}</p>
                 </div>
               </div>
             </Reveal>
@@ -489,16 +489,16 @@ function Benefits({ v }: { v: VariantTheme }) {
           v={v}
           kicker="Beneficios"
           title={<>Datos que convierten tu <span className="txt-grad">conteo en ventas</span></>}
-          sub="No vendemos cámaras ni sensores. Convertimos las que ya tienes en un sistema de conteo de personas, mapa de calor y control de aforo para gimnasios y retail en Bogotá. Demo en vivo sin costo."
+          sub="No vendemos cámaras ni sensores. Convertimos las que ya tienes en un sistema de conteo de personas, mapa de calor y control de aforo para gyms y retail en Bogotá. Demo en vivo sin costo."
         />
         <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
           {BENEFITS.map((b, i) => {
             const Icon = b.icon
             return (
-              <Reveal key={b.label} y={v.motionPx} scale={v.scale} delay={cardDelay(v, i)} duration={durationOf(v)} className="h-full">
-                <div className={`h-full ${cardSurface(v)} p-6 flex flex-col ${v.id === 'cinematic' ? 'items-center text-center' : ''}`}>
-                  <Icon className="h-5 w-5 text-cy" />
-                  <div className={`mt-4 font-mono font-extrabold text-2xl md:text-3xl text-white`}>
+              <Reveal key={b.label} y={v.motionPx} scale={v.scale} delay={cardDelay(v, i)} duration={durationOf(v)} className="h-full flex-1">
+                <div className={`h-full flex flex-col ${v.id === 'cinematic' ? 'items-center text-center' : 'p-6'}`}>
+                  <Icon className="h-5 w-5 text-cy mx-auto my-4" />
+                  <div className={`mt-4 font-mono font-extrabold text-2xl md:text-3xl text-white mx-auto ${v.id === 'cinematic' ? 'w-full' : 'max-w-80'}`}>
                     {v.countup && b.value !== null ? (
                       <>
                         <CountUp to={b.value as number} duration={2} separator="." className="tabular-nums" />
