@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conteo de Personas YOLO + Mapa de Calor | Gimnasios y Retail Bogotá</title>
+<meta name="description" content="Sistema YOLOv8 que cuenta personas, genera mapa de calor y controla el aforo sobre tus cámaras actuales. Demo en vivo gratis. PC en comodato. Instalación en 48h sin obras.">
+<link rel="icon" href="imagenes/logo.webp" type="image/webp">
+<style>
+:root{
+  --bg:#070A12; --bg2:#0B1220; --panel:#0E1628; --line:rgba(255,255,255,.09);
+  --txt:#E9EEF6; --mut:#9AA6B8; --dim:#6B7688;
+  --acc:#D4FF32; --acc-ink:#101600;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --r:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+section{scroll-margin-top:76px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.sec{padding:64px 0}
+.kick{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:var(--bg2)}
+h1{font-size:clamp(2rem,6.4vw,3.6rem);line-height:1.08;letter-spacing:-.02em;margin-top:18px}
+h2{font-size:clamp(1.5rem,4.6vw,2.2rem);line-height:1.15;letter-spacing:-.01em;margin-top:14px}
+.grad{background:linear-gradient(100deg,#D4FF32,#8FE83B 55%,#D4FF32);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mut);font-size:1.02rem;margin-top:12px;max-width:44rem}
+.gradline{font-size:clamp(1.05rem,3.4vw,1.4rem);font-weight:800;margin-top:10px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(7,10,18,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:.9rem}
+.brand img{width:34px;height:34px;object-fit:contain}
+.brand b{color:var(--acc);font-weight:800}
+.links{display:none;gap:22px;font-size:.83rem;color:var(--mut)}
+.links a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--acc);color:var(--acc-ink);font-weight:800;border:0;border-radius:14px;padding:13px 22px;font-size:.92rem;text-decoration:none;cursor:pointer;transition:transform 160ms var(--ease-out),background 160ms ease,box-shadow 160ms ease-out}
+.btn:active{transform:scale(.97)}
+.btn.small{padding:9px 16px;font-size:.8rem}
+.ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);color:var(--txt);border-radius:14px;padding:13px 22px;font-size:.92rem;text-decoration:none;font-weight:700;transition:transform 160ms var(--ease-out),border-color 160ms ease}
+.ghost:active{transform:scale(.97)}
+.menu-btn{display:inline-flex;background:none;border:1px solid var(--line);border-radius:10px;color:var(--txt);padding:8px 10px;cursor:pointer;font-size:1.1rem}
+/* hero */
+.hero{padding:44px 0 56px;text-align:center;background:radial-gradient(60% 40% at 50% 0%,rgba(212,255,50,.07),transparent 70%)}
+.hero p.lead{color:var(--mut);max-width:42rem;margin:18px auto 0;font-size:.98rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px}
+.hero-img{margin:28px auto 0;border-radius:18px;border:1px solid var(--line);box-shadow:0 24px 60px -24px rgba(0,0,0,.7);max-width:880px;width:100%}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:880px;margin:10px auto 0}
+.thumbs img{border-radius:12px;border:1px solid var(--line);aspect-ratio:4/3;object-fit:cover;width:100%}
+.checks{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;margin-top:26px;font-size:.83rem;color:var(--mut);list-style:none}
+.checks li::before{content:"✓";color:var(--acc);font-weight:800;margin-right:7px}
+/* cards + grids */
+.grid{display:grid;gap:14px;margin-top:32px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.card img.ic{width:40px;height:40px;object-fit:contain;margin-bottom:14px}
+.card h3{font-size:1.08rem}
+.card p{color:var(--mut);font-size:.9rem;margin-top:8px}
+.tag{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chip{font-size:.7rem;border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--mut)}
+.card .cta{display:inline-block;margin-top:16px;color:var(--acc);font-weight:700;font-size:.85rem;text-decoration:none}
+.strip{margin-top:14px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;font-size:.88rem;color:var(--mut)}
+.strip b{color:var(--txt)}
+.step-n{font-family:ui-monospace,monospace;color:var(--acc);font-size:1.9rem;font-weight:800}
+.banner{margin:26px auto 0;max-width:880px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.stat-num{font-family:ui-monospace,monospace;font-weight:800;font-size:1.9rem;color:#fff}
+.stat-lb{font-size:.82rem;font-weight:700;margin-top:2px}
+/* calculator */
+.calc{display:grid;gap:0;margin-top:32px;background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.calc>div{padding:26px}
+.calc label{display:block;font-size:.76rem;color:var(--mut);margin-bottom:12px}
+.calc input{width:100%;margin-top:5px;background:var(--bg2);border:1px solid var(--line);border-radius:12px;color:#fff;padding:12px 14px;font-size:.9rem}
+.calc input:focus{outline:2px solid var(--acc);outline-offset:1px;border-color:transparent}
+.calc .out{border-top:1px solid var(--line);min-height:220px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.big{font-family:ui-monospace,monospace;font-weight:800;font-size:2.2rem;color:var(--acc)}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mini{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.mini span{font-size:.68rem;color:var(--dim)}
+.mini b{display:block;font-size:1.05rem;margin-top:2px}
+/* faq */
+details{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-top:10px;overflow:hidden}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;font-weight:700;font-size:.93rem}
+summary::-webkit-details-marker{display:none}
+summary .pm{color:var(--acc);font-size:1.2rem;line-height:1;transition:transform 200ms var(--ease-out)}
+details[open] summary .pm{transform:rotate(45deg)}
+details p{padding:0 20px 18px;color:var(--mut);font-size:.88rem}
+/* articles */
+.art{display:block;text-decoration:none}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:#e2ff6b;transform:translateY(-1px);box-shadow:0 10px 30px -8px rgba(212,255,50,.45)}
+  .ghost:hover{border-color:rgba(212,255,50,.5)}
+  .links a:hover{color:var(--acc)}
+  .art:hover{border-color:rgba(212,255,50,.4)}
+  .card .cta:hover{text-decoration:underline}
+}
+/* contact */
+.contact-list{list-style:none;margin-top:18px;display:grid;gap:10px;font-size:.9rem;color:var(--mut)}
+.contact-list b{color:var(--txt)}
+form.f{display:grid;gap:12px;margin-top:18px}
+form.f input,form.f select,form.f textarea{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:12px;color:#fff;padding:12px 14px;font-size:.9rem;font-family:inherit}
+form.f input:focus,form.f select:focus,form.f textarea:focus{outline:2px solid var(--acc);outline-offset:1px;border-color:transparent}
+form.f label{font-size:.74rem;color:var(--mut)}
+.map{margin-top:18px;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.map iframe{width:100%;height:180px;border:0;filter:grayscale(1) contrast(.92);opacity:.85}
+/* footer + fab */
+footer{border-top:1px solid var(--line);padding:40px 0 110px;color:var(--dim);font-size:.82rem}
+footer .cols{display:grid;gap:24px}
+footer nav{display:grid;gap:8px;margin-top:10px}
+footer nav a{color:var(--dim);text-decoration:none}
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--acc-ink);font-weight:800;font-size:.85rem;border-radius:999px;padding:14px 20px;text-decoration:none;box-shadow:0 12px 32px -8px rgba(212,255,50,.5);transition:transform 160ms var(--ease-out)}
+.fab:active{transform:scale(.95)}
+/* reveal: only when JS runs */
+.js .rv{opacity:0;transform:translateY(12px);transition:opacity 220ms var(--ease-out),transform 220ms var(--ease-out)}
+.js .rv.on{opacity:1;transform:none}
+.js .rv.d1{transition-delay:60ms}.js .rv.d2{transition-delay:120ms}.js .rv.d3{transition-delay:180ms}
+@media (min-width:720px){
+  .links{display:flex}.menu-btn{display:none}
+  .grid.c3{grid-template-columns:repeat(3,1fr)}
+  .grid.c2{grid-template-columns:repeat(2,1fr)}
+  .calc{grid-template-columns:1fr 1fr}.calc .out{border-top:0;border-left:1px solid var(--line)}
+  footer .cols{grid-template-columns:1.4fr 1fr 1fr}
+  #mnav{display:none!important}
+}
+@media (min-width:1024px){.grid.c4{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:719px){
+  #mnav{display:none;border-top:1px solid var(--line);padding:10px 20px 16px}
+  #mnav.open{display:grid;gap:12px}
+  #mnav a.mlink{color:var(--mut);text-decoration:none;font-size:.92rem;padding:4px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .btn,.ghost,.fab{transition:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#hero"><img src="imagenes/logo.webp" alt="APC VisionIA">APC&nbsp;<b>VisionIA</b></a>
+    <nav class="links" aria-label="Principal">
+      <a href="#servicios">Servicios</a><a href="#dashboard">Dashboard</a><a href="#como-funciona">Cómo funciona</a><a href="#calculadora">Calculadora</a><a href="#faq">FAQ</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn small" href="https://wa.me/573337450634?text=Hola%20Alejandro%2C%20quiero%20mi%20demo%20en%20vivo%20gratis%20de%20conteo%20de%20personas%20%2B%20mapa%20de%20calor%20%2B%20control%20de%20aforo%20para%20mi%20negocio%20en%20Bogota." target="_blank" rel="noopener">Quiero mi demo gratis</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Abrir menú">☰</button>
+  </div>
+  <nav id="mnav" aria-label="Móvil">
+    <a class="mlink" href="#servicios">Servicios</a><a class="mlink" href="#dashboard">Dashboard</a><a class="mlink" href="#como-funciona">Cómo funciona</a><a class="mlink" href="#calculadora">Calculadora</a><a class="mlink" href="#faq">FAQ</a><a class="mlink" href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="hero"><div class="wrap">
+  <span class="kick rv">Conteo de personas YOLO — Demo en vivo gratis</span>
+  <h1 class="rv d1">Tu gym o tienda pierde gente cada día</h1>
+  <p class="grad gradline rv d1">Sin sensores dedicados. Sin obras. Demo en vivo gratis en 48h.</p>
+  <img class="hero-img rv d2" src="imagenes/hero-yolo.webp" alt="Sistema YOLO contando personas en vivo en un gimnasio de Bogotá">
+  <div class="thumbs rv d2">
+    <img src="imagenes/zonas-calor.webp" alt="Mapa de calor con zonas muertas en tienda" loading="lazy">
+    <img src="imagenes/flujo-personas.webp" alt="Flujo de personas por franja horaria" loading="lazy">
+    <img src="imagenes/panel-analitico.webp" alt="Panel analítico con ocupación en vivo" loading="lazy">
+  </div>
+  <p class="lead rv d2">Tu gym o tienda pierde gente cada día y no sabes cuántas. Las zonas muertas se acumulan. El personal se coordina a ojo. Demo en vivo gratis con tu cámara. PC en comodato. Mensualidad única por sistema + PC + mantenimiento.</p>
+  <div class="cta-row rv d3">
+    <a class="btn" href="https://wa.me/573337450634?text=Hola%20Alejandro%2C%20quiero%20mi%20demo%20en%20vivo%20gratis%20de%20conteo%20de%20personas%20%2B%20mapa%20de%20calor%20%2B%20control%20de%20aforo%20para%20mi%20negocio%20en%20Bogota." target="_blank" rel="noopener">Quiero mi demo gratis</a>
+    <a class="ghost" href="#como-funciona">Cómo instalamos</a>
+  </div>
+  <ul class="checks rv d3">
+    <li>Demo en vivo sin costo con nuestra cámara</li>
+    <li>PC en comodato · sin comprar hardware</li>
+    <li>Instalación 48h sin obras sobre tus cámaras</li>
+  </ul>
+</div></section>
+
+<section class="sec" id="servicios"><div class="wrap">
+  <span class="kick rv">Servicios</span>
+  <h2 class="rv d1">Todo el <span class="grad">conteo de personas</span> para tu negocio — sin sensores dedicados</h2>
+  <p class="sub rv d1">Instalamos el sistema sobre tus cámaras existentes. La competencia vende sensores V-Count por $1.000 USD. Nosotros usamos lo que ya tienes + una PC en comodato. Demo en vivo gratis sin compromiso.</p>
+  <div class="grid c3">
+    <article class="card rv"><img class="ic" src="imagenes/icon_yolo_cutout.png" alt="" loading="lazy"><span class="tag">Sistema de conteo · YOLOv8</span><h3>Conteo de Personas</h3><p>Cuenta cuántas personas entran y salen, por franja horaria y zona. Usa tus cámaras actuales — sin torniquetes, sin sensores.</p><div class="chips"><span class="chip">YOLOv8</span><span class="chip">98% precisión</span><span class="chip">Tiempo real</span></div><a class="cta" href="#contacto">Quiero probar gratis →</a></article>
+    <article class="card rv d1"><img class="ic" src="imagenes/icon_heatmap_cutout.png" alt="" loading="lazy"><span class="tag">Mapa de calor · Zonas</span><h3>Mapa de Calor y Zonas Muertas</h3><p>Ve dónde convergen las personas y dónde nadie pasa. Reubica productos, personal y ofertas donde sí hay flujo.</p><div class="chips"><span class="chip">Heatmap</span><span class="chip">Zonas muertas</span><span class="chip">Layout</span></div><a class="cta" href="#contacto">Quiero probar gratis →</a></article>
+    <article class="card rv d2"><img class="ic" src="imagenes/icon_bell_cutout.png" alt="" loading="lazy"><span class="tag">Control aforo · Alertas</span><h3>Control de Aforo en Vivo</h3><p>Alertas automáticas cuando el aforo supera el límite. Cumple la normativa y dimensiona tu personal con datos reales.</p><div class="chips"><span class="chip">Aforo vivo</span><span class="chip">Alertas</span><span class="chip">Dashboard</span></div><a class="cta" href="#contacto">Quiero probar gratis →</a></article>
+  </div>
+  <div class="strip rv"><b>Todo incluido en una sola mensualidad:</b> PC en comodato · Sistema YOLO + dashboard · Administración y mantenimiento · Soporte &lt;30 min</div>
+</div></section>
+
+<section class="sec" id="dashboard" style="background:var(--bg2)"><div class="wrap">
+  <span class="kick rv">Dashboard</span>
+  <h2 class="rv d1">Tu negocio en <span class="grad">un solo panel</span></h2>
+  <p class="sub rv d1">Ocupación por franja, alertas de aforo, mapa de calor y Excel automático — en tiempo real.</p>
+  <div class="grid c3">
+    <article class="card rv"><img class="ic" src="imagenes/icon_minipc_cutout.png" alt="" loading="lazy"><h3>Monitoreo en vivo</h3><p>Cuántas personas hay, dónde están y en qué zonas se concentran — desde cualquier dispositivo.</p></article>
+    <article class="card rv d1"><img class="ic" src="imagenes/icon_bell_cutout.png" alt="" loading="lazy"><h3>Alertas automáticas</h3><p>Notificaciones cuando el aforo supera el límite. Cumplimiento sin vigilar la pantalla.</p></article>
+    <article class="card rv d2"><img class="ic" src="imagenes/icon_pos_cutout.png" alt="" loading="lazy"><h3>Reportes automáticos</h3><p>Excel semanal con ocupación, flujo y zonas muertas. Sin configuración manual.</p></article>
+  </div>
+  <div class="banner rv"><img src="imagenes/Analitic.webp" alt="Dashboard de analítica en vivo" loading="lazy"></div>
+  <div class="thumbs rv" style="max-width:none"><img src="imagenes/espera-clientes.webp" alt="Fila de espera detectada" loading="lazy" style="aspect-ratio:16/9"><img src="imagenes/alertas-fila.webp" alt="Alerta de saturación en vivo" loading="lazy" style="aspect-ratio:16/9"><img src="imagenes/zonas-calor.webp" alt="Zonas de calor por franja" loading="lazy" style="aspect-ratio:16/9"></div>
+</div></section>
+
+<section class="sec" id="como-funciona"><div class="wrap">
+  <span class="kick rv">Cómo funciona</span>
+  <h2 class="rv d1">Instalamos el <span class="grad">sistema YOLO</span> en 48h — sin obras</h2>
+  <p class="sub rv d1">No vendemos hardware. Te prestamos la PC en comodato. La mensualidad incluye sistema + PC + administración y mantenimiento.</p>
+  <div class="grid c3">
+    <article class="card rv"><div class="step-n">01</div><h3>Demo en vivo sin costo</h3><p>Llevamos nuestra cámara a tu negocio y te mostramos conteo + mapa de calor + aforo en vivo sobre tu espacio real.</p></article>
+    <article class="card rv d1"><div class="step-n">02</div><h3>Instalación en 48h</h3><p>Conectamos una PC en comodato a tu red y a tus cámaras vía RTSP. YOLOv8 local, sin sensores dedicados, sin perforaciones.</p></article>
+    <article class="card rv d2"><div class="step-n">03</div><h3>Dashboard + mantenimiento</h3><p>Ocupación por franja, alertas de aforo y reportes automáticos. Nosotros nos encargamos de todo. Soporte &lt;30 min.</p></article>
+  </div>
+  <div class="strip rv"><b>Para qué sirve:</b> saber cuántas personas entran, dónde se quedan, qué zonas son muertas y cuándo te saturas — para mover layout, staffing y horarios con datos, no a ojo.</div>
+  <div class="strip rv"><b>Cómo lo hace:</b> YOLOv8 sobre tus cámaras (RTSP) → cuenta personas por zona → mapa de calor + aforo en vivo → dashboard + Excel. 98% precisión.</div>
+</div></section>
+
+<section class="sec" id="beneficios" style="background:var(--bg2)"><div class="wrap">
+  <span class="kick rv">Beneficios</span>
+  <h2 class="rv d1">Datos que convierten tu <span class="grad">conteo en ventas</span></h2>
+  <div class="grid c2 c4" style="grid-template-columns:repeat(2,1fr)">
+    <article class="card rv"><div class="stat-num">98%</div><div class="stat-lb">Precisión de conteo</div><p>Validado contra conteo manual de puerta, por zona.</p></article>
+    <article class="card rv d1"><div class="stat-num">30%</div><div class="stat-lb">Zonas muertas detectadas</div><p>Espacio que hoy pagas y no convierte. Reubícalo donde sí hay flujo.</p></article>
+    <article class="card rv d2"><div class="stat-num">24/7</div><div class="stat-lb">Aforo en vivo</div><p>Dashboard + alertas cuando una zona supera el 95% de capacidad.</p></article>
+    <article class="card rv d3"><div class="stat-num">Día 7</div><div class="stat-lb">ROI desde semana 1</div><p>Pruébalo 7 días con la demo en vivo y decide con datos.</p></article>
+  </div>
+</div></section>
+
+<section class="sec" id="calculadora"><div class="wrap">
+  <span class="kick rv">Calculadora</span>
+  <h2 class="rv d1">Calcula tu <span class="grad">ahorro con conteo</span></h2>
+  <p class="sub rv d1">Cada zona muerta y cada minuto de saturación cuesta dinero. Estima cuánto pierdes hoy.</p>
+  <div class="calc rv d1">
+    <div>
+      <label>Personas por día (promedio)<input id="cPersonas" type="number" value="80" min="0"></label>
+      <label>Ticket promedio (COP)<input id="cTicket" type="number" value="15000" min="0"></label>
+      <label>Horas pico al día<input id="cHoras" type="number" value="3" min="0" step="0.5"></label>
+      <label>Empleados en piso en pico<input id="cEmp" type="number" value="2" min="1" max="10"></label>
+      <button class="btn" id="cBtn" type="button" style="width:100%">Calcular ahorro</button>
+    </div>
+    <div class="out">
+      <div><div class="tag">Ahorro mensual estimado</div><div class="big" id="cOut">—</div></div>
+      <div class="mini-grid">
+        <div class="mini"><span>Personas / mes</span><b id="cMes">—</b></div>
+        <div class="mini"><span>Horas pico / mes</span><b id="cHp">—</b></div>
+      </div>
+      <p class="sub" id="cMsg" style="font-size:.85rem">Completa los datos y presiona <b>Calcular</b>.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <input id="cEmail" type="email" placeholder="tu@correo.com para tu reporte" style="flex:1;min-width:180px">
+        <button class="btn small" id="cSend" type="button">Recibir análisis</button>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="faq"><div class="wrap" style="max-width:760px">
+  <span class="kick rv">Preguntas frecuentes</span>
+  <h2 class="rv d1">Resolvemos tu <span class="grad">inquietud</span></h2>
+  <div class="rv d1">
+  <details open><summary>¿Necesito comprar cámaras o sensores nuevos?<span class="pm">+</span></summary><p>No. Usamos tus cámaras existentes vía RTSP/DVR. La PC te la prestamos en comodato y la mensualidad cubre sistema + equipo + mantenimiento. Sin obras.</p></details>
+  <details><summary>¿Cómo es la demo en vivo gratis?<span class="pm">+</span></summary><p>Llevamos nuestra cámara a tu local y ves conteo + mapa de calor + aforo en vivo sobre tu espacio real. Si te sirve, instalamos en 48h.</p></details>
+  <details><summary>¿Qué incluye la mensualidad?<span class="pm">+</span></summary><p>Sistema YOLO + dashboard en vivo + Excel semanal + PC en comodato + administración y mantenimiento. No compras hardware.</p></details>
+  <details><summary>¿Precisión e instalación?<span class="pm">+</span></summary><p>98% de precisión verificada contra conteo manual. Instalación completa en 48h, reporte por franja desde el día 1.</p></details>
+  <details><summary>¿Funciona fuera de Bogotá?<span class="pm">+</span></summary><p>Demo presencial en Bogotá y Sabana. Otras ciudades con soporte remoto guiado — escríbenos tu caso por WhatsApp.</p></details>
+  </div>
+</div></section>
+
+<section class="sec" id="articulos" style="background:var(--bg2)"><div class="wrap">
+  <span class="kick rv">Aprende más</span>
+  <h2 class="rv d1">Guías de <span class="grad">conteo y mapa de calor</span></h2>
+  <div class="grid c3">
+    <a class="card art rv" href="conteo-aforo-gym-yolo.html"><span class="tag">Conteo</span><h3>Conteo y Aforo de Gimnasio con Cámaras IA: Guía 2026</h3><span class="cta">Leer guía →</span></a>
+    <a class="card art rv d1" href="zonas-muertas-maquinas-zombie-gym.html"><span class="tag">Heatmap</span><h3>Zonas Muertas y Máquinas Zombie: Mapa de Calor para Gym</h3><span class="cta">Leer guía →</span></a>
+    <a class="card art rv d2" href="cctv-vision-ia.html"><span class="tag">Sistema</span><h3>Sistema de Conteo de Personas: Qué Es y Cómo Instalarlo</h3><span class="cta">Leer guía →</span></a>
+  </div>
+</div></section>
+
+<section class="sec" id="contacto"><div class="wrap">
+  <span class="kick rv">Contacto</span>
+  <h2 class="rv d1">¿Cuántas personas entran a tu <span class="grad">gym o tienda</span> hoy?</h2>
+  <p class="sub rv d1">Agenda la demo en vivo gratis: llevamos nuestra cámara, ves el sistema en tu espacio y decides.</p>
+  <div class="grid c2">
+    <div class="card rv">
+      <h3>Demo en vivo en tu local</h3>
+      <ul class="contact-list">
+        <li><b>PC en comodato</b> — no compras hardware</li>
+        <li><b>Mensualidad:</b> sistema + PC + administración</li>
+        <li><b>Bogotá y Sabana</b> — presencial 48h</li>
+        <li><b>+57 333 745 0634</b></li>
+        <li><b>serviciosapcsoporte@gmail.com</b></li>
+      </ul>
+      <div style="margin-top:18px"><a class="btn" href="https://wa.me/573337450634?text=Hola%20Alejandro%2C%20quiero%20mi%20demo%20en%20vivo%20gratis%20de%20conteo%20de%20personas%20%2B%20mapa%20de%20calor%20%2B%20control%20de%20aforo%20para%20mi%20negocio%20en%20Bogota." target="_blank" rel="noopener">Quiero mi demo gratis</a></div>
+      <div class="map"><iframe title="Ubicación APC VisionIA" src="https://www.google.com/maps?q=Cra+52c+%2339b-22,+Bogot%C3%A1&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+    <div class="card rv d1">
+      <h3>Cuéntanos tu caso</h3>
+      <form class="f" action="https://formsubmit.co/serviciosapcsoporte@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="APC VisionIA — Demo en vivo conteo de personas">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://apcvisionai.site/movil.html">
+        <label>Nombre<input type="text" name="nombre" required placeholder="Tu nombre"></label>
+        <label>WhatsApp<input type="tel" name="contacto" required placeholder="+57 3XX XXX XXXX"></label>
+        <label>Correo<input type="email" name="email" required placeholder="tu@correo.com"></label>
+        <label>Tipo de negocio<select name="tipo_negocio" required><option value="">Selecciona</option><option value="gimnasio">Gimnasio / Box / Studio</option><option value="tienda_retail">Tienda retail</option><option value="supermercado">Supermercado</option><option value="restaurante">Restaurante / Bar</option><option value="otro">Otro</option></select></label>
+        <label>¿Cuántas cámaras tienes?<select name="num_camaras" required><option value="">Selecciona</option><option value="0">0 — no tengo</option><option value="1-2">1-2</option><option value="3-5">3-5</option><option value="6+">6+</option></select></label>
+        <label>Cuéntanos tu caso<textarea name="mensaje" rows="3" required placeholder="Qué quieres medir: conteo, mapa de calor, aforo, zonas muertas..."></textarea></label>
+        <button class="btn" type="submit">Solicitar demo en vivo gratis</button>
+      </form>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><a class="brand" href="#hero"><img src="imagenes/logo.webp" alt="APC VisionIA">APC&nbsp;<b>VisionIA</b></a>
+    <p style="margin-top:12px;max-width:24rem">Conteo de personas con YOLO, mapa de calor y control de aforo para gyms y retail en Bogotá. Demo en vivo gratis. PC en comodato + sistema + mantenimiento.</p></div>
+    <div><b style="color:#fff">Enlaces</b><nav><a href="#hero">Conteo de Personas</a><a href="conteo-aforo-gym-yolo.html">Aforo Gym YOLO</a><a href="zonas-muertas-maquinas-zombie-gym.html">Zonas Muertas Gym</a><a href="cctv-vision-ia.html">Visión IA</a></nav></div>
+    <div><b style="color:#fff">Contacto</b><nav><span>+57 333 745 0634</span><span>serviciosapcsoporte@gmail.com</span><span>Bogotá — Cra 52c #39b-22</span></nav></div>
+  </div>
+  <p style="margin-top:28px;padding-top:18px;border-top:1px solid var(--line)">© <span id="yr">2026</span> Servicios APC · apcvisionai.site — conteo · mapa de calor · aforo</p>
+</div></footer>
+
+<a class="fab" href="https://wa.me/573337450634?text=Hola%20Alejandro%2C%20quiero%20mi%20demo%20en%20vivo%20gratis%20de%20conteo%20de%20personas%20%2B%20mapa%20de%20calor%20%2B%20control%20de%20aforo%20para%20mi%20negocio%20en%20Bogota." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">WhatsApp</a>
+
+<script>
+document.documentElement.classList.add('js');
+document.getElementById('yr').textContent = new Date().getFullYear();
+(function(){
+  var b=document.getElementById('menuBtn'),m=document.getElementById('mnav');
+  b.addEventListener('click',function(){
+    var o=m.classList.toggle('open');
+    b.setAttribute('aria-expanded',o?'true':'false');
+  });
+  m.addEventListener('click',function(e){
+    if(e.target.classList.contains('mlink')){m.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+})();
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){for(var i=0;i<els.length;i++){els[i].classList.add('on');}return;}
+  var io=new IntersectionObserver(function(es){
+    for(var i=0;i<es.length;i++){if(es[i].isIntersecting){es[i].target.classList.add('on');io.unobserve(es[i].target);}}
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  for(var j=0;j<els.length;j++){io.observe(els[j]);}
+})();
+(function(){
+  var fmt=function(n){return Math.round(n).toLocaleString('es-CO');};
+  var $=function(id){return document.getElementById(id);};
+  $('cBtn').addEventListener('click',function(){
+    var p=parseFloat($('cPersonas').value)||0,t=parseFloat($('cTicket').value)||0,
+        h=parseFloat($('cHoras').value)||0,e=parseInt($('cEmp').value,10)||1,
+        mes=p*30,mejora=mes*0.15*t*0.3,staff=h*30*12000*e*0.2,total=mejora+staff;
+    $('cOut').textContent='$'+fmt(total);
+    $('cMes').textContent=fmt(mes);
+    $('cHp').textContent=fmt(h*30)+'h';
+    $('cMsg').innerHTML='Con '+fmt(p)+' personas/día y ticket $'+fmt(t)+', mueves ~'+fmt(mes)+' personas/mes. Si el 15% no convierte por zonas muertas o saturación, el mapa de calor te deja recuperar parte. <b>Ahorro estimado: $'+fmt(total)+' COP/mes</b> (sin sensores, PC en comodato).';
+  });
+  $('cSend').addEventListener('click',function(){
+    var em=$('cEmail').value.trim();
+    if(!em||em.indexOf('@')<0){$('cEmail').focus();return;}
+    var f=document.createElement('form');
+    f.action='https://formsubmit.co/serviciosapcsoporte@gmail.com';f.method='POST';f.style.display='none';
+    var d={_subject:'APC VisionIA — Lead Calculadora (móvil)',email:em,
+      personas_dia:$('cPersonas').value||'no especificado',
+      ticket_promedio:$('cTicket').value||'no especificado',
+      horas_pico:$('cHoras').value||'no especificado',
+      empleados:$('cEmp').value||'no especificado',
+      ahorro_estimado:$('cOut').textContent||'no calculado',
+      fuente:'calculadora_movil_apcvisionai'};
+    for(var k in d){var i=document.createElement('input');i.type='hidden';i.name=k;i.value=d[k];f.appendChild(i);}
+    document.body.appendChild(f);f.submit();
+  });
+})();
+</script>
+</body>
+</html>
