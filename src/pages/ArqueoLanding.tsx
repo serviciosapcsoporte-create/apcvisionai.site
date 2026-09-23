@@ -185,7 +185,7 @@ const HERO_CHECKS = [
 ]
 
 function Hero({ v }: { v: VariantTheme }) {
-  const title = 'Conteo de Personas con YOLO + Mapa de Calor para tu Gym y Tienda'
+  const title = 'Conteo de Personas YOLO + Mapa de Calor | Gimnasios y Retail Bogota'
   const isQuiet = v.id === 'quiet'
 
   return (
@@ -222,7 +222,7 @@ function Hero({ v }: { v: VariantTheme }) {
           ) : (
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">{title}</h1>
           )}
-          <p className="mt-3 text-xl md:text-2xl font-bold txt-grad">Sistema de conteo + sensor + cámara + control de aforo en Bogotá</p>
+          <p className="mt-3 text-xl md:text-2xl font-bold txt-grad">Demo en vivo sin costo | PC en comodato | Sin sensores dedicados</p>
         </div>
 
         <img
@@ -233,15 +233,14 @@ function Hero({ v }: { v: VariantTheme }) {
 
         <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 80 : 200} duration={durationOf(v)}>
           <p className="mt-5 text-slate-300 max-w-2xl mx-auto text-[15px] md:text-base leading-relaxed">
-            Llevamos <strong className="text-white">nuestra cámara y la muestra en vivo</strong> a tu gym/tienda: ves el conteo de personas, mapa de calor y aforo en tiempo real sobre tu espacio.
-            Sin piloto de 7 días: <strong className="text-white">demo en vivo sin costo</strong>. Si te sirve, instalamos el sistema en 48h — <strong className="text-white">PC en comodato</strong>, mensualidad por sistema + PC + administración y mantenimiento. Atacamos el costo de V-Count y similares: sin sensores de $1.000 USD, usamos tus cámaras.
+            Cuenta cuantas personas entran a tu negocio cada dia. Detecta zonas muertas, mide ocupacion en tiempo real y aumenta tu ticket con datos de tus propias camaras. Sin sensores dedicados. Sin obras. Sin interrupcion. Demo en vivo sin costo. PC en comodato. Mensualidad por sistema + PC + administracion y mantenimiento.
           </p>
         </Reveal>
 
         <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 80 : 260} duration={durationOf(v)}>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-cta px-6 py-3 text-sm">
-              <MessageCircle className="h-4 w-4" /> Quiero la demo en vivo
+              <MessageCircle className="h-4 w-4" /> Quiero mi demo en vivo gratis
             </a>
             <a href="#como-funciona" className="px-6 py-3 rounded-[14px] border border-line text-sm font-semibold text-slate-200 hover:border-cy/50 hover:text-white transition-colors">
               Cómo instalamos
@@ -270,21 +269,21 @@ const SERVICES = [
     icon: Users,
     tag: 'SISTEMA DE CONTEO · YOLOv8',
     title: 'Conteo de Personas',
-    desc: 'Cuántas personas entran, por hora, por día y por zona. Sensor de conteo + cámara de conteo con 98% precisión. Sin torniquetes.',
+    desc: 'Sistema YOLOv8 que cuenta cada persona que entra y sale de tu negocio. Flujo, ocupacion por franja horaria y patron de visitas sobre tus camaras actuales. Sin torniquetes.',
     chips: ['YOLOv8', '98% precisión', 'Tiempo real'],
   },
   {
     icon: Flame,
     tag: 'MAPA DE CALOR · ZONAS',
     title: 'Mapa de Calor y Zonas Muertas',
-    desc: 'Detecta máquinas zombie y vitrinas frías. Mapa de calor por franja para subir rotación y ticket con layout basado en datos.',
+    desc: 'Visualiza donde convergen mas personas y donde nadie pasa. Detecta zonas muertas en tu tienda o gym y optimiza layout, productos y personal.',
     chips: ['Heatmap', 'Zonas muertas', 'Layout'],
   },
   {
     icon: BarChart3,
     tag: 'CONTROL AFORO · ALERTAS',
     title: 'Control de Aforo en Vivo',
-    desc: 'Aforo por zona con alertas y dashboard. Evita saturación, cumple normativa y optimiza staff del gym/tienda en Bogotá.',
+    desc: 'Alertas automaticas cuando el aforo supera el limite permitido. Cumplimiento normativo y toma de decisiones de personal basada en datos reales de ocupacion.',
     chips: ['Aforo vivo', 'Alertas', 'Dashboard'],
   },
 ]
@@ -308,7 +307,7 @@ function ServiceCard({ v, item, i }: { v: VariantTheme; item: (typeof SERVICES)[
         ))}
       </div>
       <a href="#contacto" className="mt-5 inline-flex items-center gap-1.5 text-[13px] font-semibold text-cy hover:text-sky-300 transition-colors">
-        Ver demo en vivo <ArrowUpRight className="h-3.5 w-3.5" />
+        Quiero mi demo gratis <ArrowUpRight className="h-3.5 w-3.5" />
       </a>
     </div>
   )
@@ -335,8 +334,8 @@ function Services({ v }: { v: VariantTheme }) {
         <SectionHead
           v={v}
           kicker="Servicios"
-          title={<>Todo el <span className="txt-grad">conteo de personas</span> que necesitas — sin comprar sensores</>}
-          sub="Instalamos el sistema sobre tus cámaras existentes. La competencia vende sensores Nano por $1.000+ USD. Nosotros usamos lo que ya tienes + una PC en comodato."
+          title={<>Todo el <span className="txt-grad">conteo de personas</span> para tu negocio — sin sensores dedicados</>}
+          sub="Instalamos el sistema sobre tus cámaras existentes. La competencia vende sensores V-Count por $1.000 USD. Nosotros usamos lo que ya tienes + una PC en comodato. Demo en vivo sin costo."
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
@@ -359,9 +358,9 @@ function Services({ v }: { v: VariantTheme }) {
 /* ─── Cómo funciona ────────────────────────────────────────── */
 
 const STEPS = [
-  { n: '01', t: 'Demo en vivo sin costo con nuestra cámara', d: 'Llevamos nuestra cámara a tu gym/tienda y te mostramos el conteo de personas + mapa de calor en vivo sobre tu espacio real. Ves aforo, flujo y zonas muertas antes de decidir.' },
-  { n: '02', t: 'Instalamos el sistema en 48h (PC en comodato)', d: 'Conectamos una PC en comodato a tu red local y a tus cámaras vía RTSP/DVR. Corre YOLOv8 local (sin comprar sensores V-Count), cuenta personas por zona y genera mapa de calor. Sin obras.' },
-  { n: '03', t: 'Dashboard en vivo + Excel automático + mantenimiento', d: 'Recibes dashboard con ocupación por franja, alertas de aforo y Excel semanal automático. La mensualidad cubre sistema + PC + administración y mantenimiento. Nos encargamos de todo.' }
+  { n: '01', t: 'Demo en vivo sin costo con nuestra cámara', d: 'Llevamos nuestra cámara a tu negocio y te mostramos el conteo de personas + mapa de calor + control de aforo en vivo sobre tu espacio real. Ves datos antes de decidir.' },
+  { n: '02', t: 'Instalamos el sistema en 48h (PC en comodato)', d: 'Conectamos una PC en comodato a tu red local y a tus cámaras vía RTSP. Corre YOLOv8 local (sin sensores dedicados), cuenta personas por zona y genera mapa de calor. Sin obras, sin perforaciones.' },
+  { n: '03', t: 'Dashboard en vivo + Excel automático + mantenimiento', d: 'Recibes dashboard con ocupacion por franja, alertas de aforo y reportes automaticos. La mensualidad cubre sistema + PC + administracion y mantenimiento. Nos encargamos de todo. Soporte <30 min.' }
 ]
 
 function Workflow({ v }: { v: VariantTheme }) {
@@ -371,8 +370,8 @@ function Workflow({ v }: { v: VariantTheme }) {
         <SectionHead
           v={v}
           kicker="Cómo funciona"
-          title={<>Instalamos el <span className="txt-grad">sistema YOLO</span> en 3 pasos</>}
-          sub="No vendemos hardware. Te prestamos la PC en comodato y te cobramos la mensualidad por sistema + equipo + mantenimiento."
+          title={<>Instalamos el <span className="txt-grad">sistema YOLO</span> en 48h — sin obras</>}
+          sub="No vendemos hardware. Te prestamos la PC en comodato. La mensualidad incluye sistema + PC + administración y mantenimiento. Instalación en 48h sin obras."
         />
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {STEPS.map((s, i) => (
@@ -411,7 +410,7 @@ const BENEFITS = [
   { icon: Users, value: 98, suffix: '%', label: 'Precisión conteo', desc: 'Cuenta personas vs tu contador manual de puerta. Valida aforo real por zona.' },
   { icon: Flame, value: 30, suffix: '%', label: 'Zonas muertas detectadas', desc: 'Espacio que hoy pagas y no convierte. Reubícalo donde sí hay flujo.' },
   { icon: Clock, value: 24, suffix: '/7', label: 'Aforo en vivo', desc: 'Dashboard + alertas cuando una zona supera 95% capacidad.' },
-  { icon: TrendingUp, value: null, suffix: '', label: 'ROI desde semana 1', desc: 'Mueve layout y staffing con datos de 7 días de demo.' }
+  { icon: TrendingUp, value: null, suffix: '', label: 'ROI desde semana 1', desc: 'Demo en vivo sin costo: prueba el sistema 7 dias y decide.' }
 ]
 
 function Benefits({ v }: { v: VariantTheme }) {
@@ -422,7 +421,7 @@ function Benefits({ v }: { v: VariantTheme }) {
           v={v}
           kicker="Beneficios"
           title={<>Datos que convierten tu <span className="txt-grad">conteo en ventas</span></>}
-          sub="No vendemos cámaras. Convertimos las que ya tienes en un sistema de conteo de personas, mapa de calor y control de aforo para gym y tienda en Bogotá."
+          sub="No vendemos cámaras ni sensores. Convertimos las que ya tienes en un sistema de conteo de personas, mapa de calor y control de aforo para gimnasios y retail en Bogotá. Demo en vivo sin costo."
         />
         <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4">
           {BENEFITS.map((b, i) => {
@@ -603,7 +602,7 @@ function Calculator({ v }: { v: VariantTheme }) {
           v={v}
           kicker="Calculadora"
           title={<>Calcula tu <span className="txt-grad">ahorro con conteo</span></>}
-          sub="Cuánto dejas de vender por zonas muertas y saturación. Estima el retorno de instalar el sistema (PC en comodato)."
+           sub="Cuánto pierdes por zonas muertas y saturación. Estima cuánto recuperarías con el sistema (PC en comodato)."
         />
         <Reveal y={v.motionPx} duration={durationOf(v)}>
           <div className={`mt-12 ${cardSurface(v)} p-0 overflow-hidden grid lg:grid-cols-2`}>
@@ -707,7 +706,7 @@ function Contact({ v }: { v: VariantTheme }) {
                 <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-cy shrink-0" /> serviciosapcsoporte@gmail.com</li>
               </ul>
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-cta px-6 py-3.5 text-sm mt-6">
-                <MessageCircle className="h-4 w-4" /> Quiero la demo en vivo
+                <MessageCircle className="h-4 w-4" /> Quiero mi demo en vivo gratis
               </a>
               <div className="mt-6 rounded-2xl overflow-hidden border border-line">
                 <iframe

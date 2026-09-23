@@ -5,7 +5,9 @@
   --color-abyss-2: #0b1220;
   --color-panel: #111a2e;
   --color-line: #1e2a4a;
-  --color-cy: #22d3ee;
+  --color-cy: #D4FF32;
+  --color-cy-hover: #e2ff6b;
+  --color-green: #22FF44;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
 }
@@ -14,12 +16,12 @@
 
 @utility bg-grid {
   background-image:
-    linear-gradient(to right, rgba(34, 211, 238, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(34, 211, 238, 0.07) 1px, transparent 1px);
-  background-size: 56px 56px;
-}
+    linear-gradient(to right, rgba(212,255,50,0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212,255,50,0.07) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
 
-@utility orb {
+  @utility orb {
   position: absolute;
   border-radius: 9999px;
   filter: blur(70px);
@@ -49,7 +51,7 @@
     text-rendering: optimizeLegibility;
   }
   ::selection {
-    background: rgba(34, 211, 238, 0.35);
+    background: rgba(212,255,50,0.35);
     color: #fff;
   }
 }
@@ -74,7 +76,7 @@
 }
 
 @utility txt-grad {
-  background: linear-gradient(100deg, #67e8f9 0%, #22d3ee 45%, #818cf8 100%);
+  background: linear-gradient(100deg, #D4FF32 0%, #22FF44 45%, #D4FF32 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -92,9 +94,9 @@
   transition: background 180ms ease-out, transform 180ms ease-out, box-shadow 180ms ease-out;
 }
 .btn-cta:hover {
-  background: #67e8f9;
+  background: #22FF44;
   transform: translateY(-1px);
-  box-shadow: 0 10px 30px -8px rgba(34, 211, 238, 0.45);
+  box-shadow: 0 10px 30px -8px rgba(212,255,50,0.45);
 }
 .btn-cta:focus-visible {
   outline: 2px solid var(--color-cy);

@@ -94,5 +94,5 @@ export const VIDEO_POSTER = '/imagenes/hero-yolo.webp'
 export const WHATSAPP =
   'https://wa.me/573337450634?text=' +
   encodeURIComponent(
-    'Hola Alejandro, quiero la demo en vivo de conteo de personas + mapa de calor YOLO para mi gym/tienda en Bogotá. Llévame la muestra con tu cámara sin costo para ver el sistema en vivo (PC en comodato).'
+    'Hola Alejandro, quiero mi demo en vivo gratis de conteo de personas + mapa de calor + control de aforo para mi negocio en Bogota. Quiero ver el sistema en funcionamiento sin costo y sin compromisos. PC en comodato.'
   )
