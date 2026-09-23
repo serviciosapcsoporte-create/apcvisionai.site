@@ -117,7 +117,7 @@ function Nav({ v }: { v: VariantTheme }) {
             rel="noopener noreferrer"
             className="btn-cta px-4 py-2 text-[13px]"
           >
-            <MessageCircle className="h-4 w-4" /> Demo en vivo
+            <MessageCircle className="h-4 w-4" /> Quiero mi demo gratis
           </a>
         </div>
         <button
@@ -137,7 +137,7 @@ function Nav({ v }: { v: VariantTheme }) {
               </a>
             ))}
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-cta px-4 py-2.5 mt-1">
-              <MessageCircle className="h-4 w-4" /> Demo en vivo
+              <MessageCircle className="h-4 w-4" /> Quiero mi demo gratis
             </a>
           </nav>
         </div>
@@ -185,7 +185,7 @@ const HERO_CHECKS = [
 ]
 
 function Hero({ v }: { v: VariantTheme }) {
-  const title = 'Conteo de Personas YOLO + Mapa de Calor | Gimnasios y Retail Bogota'
+  const title = 'Tu gym o tienda pierde gente cada dia'
   const isQuiet = v.id === 'quiet'
 
   return (
@@ -222,25 +222,47 @@ function Hero({ v }: { v: VariantTheme }) {
           ) : (
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">{title}</h1>
           )}
-          <p className="mt-3 text-xl md:text-2xl font-bold txt-grad">Demo en vivo sin costo | PC en comodato | Sin sensores dedicados</p>
+          <p className="mt-3 text-xl md:text-2xl font-bold txt-grad">Sin sensores dedicados. Sin obras. Demo en vivo gratis en 48h.</p>
         </div>
 
         <img
-          src="/imagenes/zonas-calor.webp"
-          alt="Conteo de personas con YOLO y mapa de calor en gimnasio Bogotá — zonas muertas y aforo en vivo"
+          src="/imagenes/hero-yolo.webp"
+          alt="Sistema YOLO contando personas en vivo en gimnasio de Bogotá — conteo, mapa de calor y aforo"
           className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl border border-slate-800 my-8"
+          loading="eager"
         />
+
+        <div className="grid grid-cols-3 gap-3 max-w-4xl mx-auto">
+          <img
+            src="/imagenes/zonas-calor.webp"
+            alt="Mapa de calor con zonas muertas detectadas en tienda"
+            className="w-full rounded-xl border border-line object-cover aspect-[4/3]"
+            loading="lazy"
+          />
+          <img
+            src="/imagenes/flujo-personas.webp"
+            alt="Flujo de personas por franja horaria en gym"
+            className="w-full rounded-xl border border-line object-cover aspect-[4/3]"
+            loading="lazy"
+          />
+          <img
+            src="/imagenes/panel-analitico.webp"
+            alt="Panel analítico con ocupación y aforo en vivo"
+            className="w-full rounded-xl border border-line object-cover aspect-[4/3]"
+            loading="lazy"
+          />
+        </div>
 
         <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 80 : 200} duration={durationOf(v)}>
           <p className="mt-5 text-slate-300 max-w-2xl mx-auto text-[15px] md:text-base leading-relaxed">
-            Cuenta cuantas personas entran a tu negocio cada dia. Detecta zonas muertas, mide ocupacion en tiempo real y aumenta tu ticket con datos de tus propias camaras. Sin sensores dedicados. Sin obras. Sin interrupcion. Demo en vivo sin costo. PC en comodato. Mensualidad por sistema + PC + administracion y mantenimiento.
+            Tu gym o tienda pierde gente cada dia y no sabes cuantas. Las zonas muertas se acumulan. El personal se coordina a ojo. Sin sensores dedicados. Sin obras. Sin interrupcion. Demo en vivo gratis con tu camara. PC en comodato. Mensualidad unica por sistema + PC + mantenimiento.
           </p>
         </Reveal>
 
         <Reveal y={v.motionPx} delay={v.motionMs < 200 ? 80 : 260} duration={durationOf(v)}>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-cta px-6 py-3 text-sm">
-              <MessageCircle className="h-4 w-4" /> Quiero mi demo en vivo gratis
+              <MessageCircle className="h-4 w-4" /> Quiero mi demo gratis
             </a>
             <a href="#como-funciona" className="px-6 py-3 rounded-[14px] border border-line text-sm font-semibold text-slate-200 hover:border-cy/50 hover:text-white transition-colors">
               Cómo instalamos
@@ -267,23 +289,26 @@ function Hero({ v }: { v: VariantTheme }) {
 const SERVICES = [
   {
     icon: Users,
+    iconSrc: '/imagenes/icon_yolo_cutout.png',
     tag: 'SISTEMA DE CONTEO · YOLOv8',
     title: 'Conteo de Personas',
-    desc: 'Sistema YOLOv8 que cuenta cada persona que entra y sale de tu negocio. Flujo, ocupacion por franja horaria y patron de visitas sobre tus camaras actuales. Sin torniquetes.',
+    desc: 'Cuenta cuantas personas entran y salen, por franja horaria y zona. Usa tus camaras actuales — sin torniquetes, sin sensores. Sabes exactamente cuanta gente pasa y cuando.',
     chips: ['YOLOv8', '98% precisión', 'Tiempo real'],
   },
   {
     icon: Flame,
+    iconSrc: '/imagenes/icon_heatmap_cutout.png',
     tag: 'MAPA DE CALOR · ZONAS',
     title: 'Mapa de Calor y Zonas Muertas',
-    desc: 'Visualiza donde convergen mas personas y donde nadie pasa. Detecta zonas muertas en tu tienda o gym y optimiza layout, productos y personal.',
+    desc: 'Ve en un mapa donde convergen las personas y donde nadie pasa. Detecta las zonas muertas de tu local y reubica productos, personal y ofertas donde si hay flujo.',
     chips: ['Heatmap', 'Zonas muertas', 'Layout'],
   },
   {
     icon: BarChart3,
+    iconSrc: '/imagenes/icon_bell_cutout.png',
     tag: 'CONTROL AFORO · ALERTAS',
     title: 'Control de Aforo en Vivo',
-    desc: 'Alertas automaticas cuando el aforo supera el limite permitido. Cumplimiento normativo y toma de decisiones de personal basada en datos reales de ocupacion.',
+    desc: 'Alertas automaticas cuando el aforo supera el limite. Evita la saturacion, cumple la normativa y decide cuantos empleados necesitas segun la ocupacion real.',
     chips: ['Aforo vivo', 'Alertas', 'Dashboard'],
   },
 ]
@@ -294,8 +319,8 @@ function ServiceCard({ v, item, i }: { v: VariantTheme; item: (typeof SERVICES)[
   const inner = (
     <div className={`h-full flex flex-col ${electric ? 'p-8 md:p-10 pb-12' : 'p-7'}`}>
       <div className="flex items-center justify-between">
-        <span className={`p-3 rounded-2xl ${electric ? 'bg-cy/10 text-cy' : 'bg-abyss-2 text-cy'} border border-line h-fit`}>
-          <Icon className="h-6 w-6" />
+        <span className={`p-3 rounded-2xl ${electric ? 'bg-cy/10 text-cy' : 'bg-abyss-2 text-cy'} border border-line h-fit flex items-center justify-center`}>
+          {item.iconSrc ? <img src={item.iconSrc} alt={item.title} className="h-6 w-6 object-contain" loading="lazy" /> : <Icon className="h-6 w-6" />}
         </span>
         <span className="chip font-mono text-[10px] text-slate-400">{item.tag}</span>
       </div>
@@ -313,7 +338,7 @@ function ServiceCard({ v, item, i }: { v: VariantTheme; item: (typeof SERVICES)[
   )
 
   const body = electric ? (
-    <ElectricBorder color="#22d3ee" borderRadius={16} speed={0.8} className="h-full [--electric-border-radius:16px]">
+    <ElectricBorder color="#D4FF32" borderRadius={16} speed={0.8} className="h-full [--electric-border-radius:16px]">
       {inner}
     </ElectricBorder>
   ) : (
@@ -335,7 +360,7 @@ function Services({ v }: { v: VariantTheme }) {
           v={v}
           kicker="Servicios"
           title={<>Todo el <span className="txt-grad">conteo de personas</span> para tu negocio — sin sensores dedicados</>}
-          sub="Instalamos el sistema sobre tus cámaras existentes. La competencia vende sensores V-Count por $1.000 USD. Nosotros usamos lo que ya tienes + una PC en comodato. Demo en vivo sin costo."
+          sub="Instalamos el sistema sobre tus cámaras existentes. La competencia vende sensores V-Count por $1.000 USD. Nosotros usamos lo que ya tienes + una PC en comodato. Demo en vivo gratis sin compromiso."
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
@@ -344,12 +369,55 @@ function Services({ v }: { v: VariantTheme }) {
         </div>
         <Reveal y={v.motionPx} delay={0} duration={durationOf(v)}>
           <div className={`mt-8 ${cardSurface(v)} px-6 py-4 flex flex-wrap items-center justify-center gap-3 text-[13px]`}>
-            <span className="font-bold text-white">Qué incluye la mensualidad:</span>
+            <span className="font-bold text-white">Qué incluido en una sola mensualidad:</span>
             {['PC en comodato', 'Sistema YOLO + dashboard', 'Administración y mantenimiento', 'Soporte <30 min'].map((t) => (
               <span key={t} className="chip text-slate-200">{t}</span>
             ))}
           </div>
         </Reveal>
+      </div>
+    </section>
+  )
+}
+
+/* ─── Dashboard en Vivo ───────────────────────────────────── */
+
+function Dashboard({ v }: { v: VariantTheme }) {
+  return (
+    <section id="dashboard" className="relative py-20 px-6">
+      <div className="mx-auto max-w-6xl">
+        <SectionHead
+          v={v}
+          kicker="Dashboard"
+          title={<>Tu negocio en <span className="txt-grad">un solo panel</span></>}
+          sub="Ocupacion por franja, alertas de aforo, mapa de calor y Excel automatico — desde un solo lugar, en tiempo real."
+        />
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className={`${cardSurface(v)} p-6`}>
+            <img src="/imagenes/icon_minipc_cutout.png" alt="Mini PC en comodato corriendo YOLO local" className="h-10 w-10 object-contain mb-4" loading="lazy" />
+            <h3 className="text-lg font-bold text-white">Monitoreo en vivo</h3>
+            <p className="mt-2 text-sm text-slate-400 leading-relaxed">Ve cuantas personas hay, donde estan y en que zonas se concentran — desde cualquier dispositivo.</p>
+          </div>
+          <div className={`${cardSurface(v)} p-6`}>
+            <img src="/imagenes/icon_bell_cutout.png" alt="Alertas automaticas de aforo" className="h-10 w-10 object-contain mb-4" loading="lazy" />
+            <h3 className="text-lg font-bold text-white">Alertas automaticas</h3>
+            <p className="mt-2 text-sm text-slate-400 leading-relaxed">Notificaciones cuando el aforo supera el limite. Cumplimiento normativo sin vigilar la pantalla.</p>
+          </div>
+          <div className={`${cardSurface(v)} p-6`}>
+            <img src="/imagenes/icon_pos_cutout.png" alt="Reportes automaticos y Excel semanal" className="h-10 w-10 object-contain mb-4" loading="lazy" />
+            <h3 className="text-lg font-bold text-white">Reportes automaticos</h3>
+            <p className="mt-2 text-sm text-slate-400 leading-relaxed">Excel semanal con ocupacion, flujo y zonas muertas. Sin configuracion manual.</p>
+          </div>
+        </div>
+        <Reveal y={v.motionPx} delay={0} duration={durationOf(v)}>
+          <div className="mt-8 rounded-2xl overflow-hidden border border-line shadow-2xl">
+            <img src="/imagenes/Analitic.webp" alt="Dashboard de analitica en vivo con conteo y mapa de calor" className="w-full object-cover" loading="lazy" />
+          </div>
+        </Reveal>
+        <div className="mt-4 grid grid-cols-2 gap-4">
+          <img src="/imagenes/espera-clientes.webp" alt="Fila de espera detectada por el sistema" className="w-full rounded-xl border border-line object-cover aspect-[16/9]" loading="lazy" />
+          <img src="/imagenes/alertas-fila.webp" alt="Alerta de fila y saturacion en vivo" className="w-full rounded-xl border border-line object-cover aspect-[16/9]" loading="lazy" />
+        </div>
       </div>
     </section>
   )
@@ -471,7 +539,7 @@ function Articles({ v }: { v: VariantTheme }) {
           v={v}
           kicker="Aprende más"
           title={<>Guías de <span className="txt-grad">conteo de personas</span> y mapa de calor</>}
-          sub="Long-tail barato para posicionar donde V-Count paga caro. Contenido que convierte visitas informacionales en demo en vivo."
+          sub="Articulos que posicionan donde V-Count paga caro por Google. Contenido que atrae gente que necesita un sistema de conteo y la convierte en demo en vivo."
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {ARTICLES.map((a, i) => (
@@ -602,7 +670,7 @@ function Calculator({ v }: { v: VariantTheme }) {
           v={v}
           kicker="Calculadora"
           title={<>Calcula tu <span className="txt-grad">ahorro con conteo</span></>}
-           sub="Cuánto pierdes por zonas muertas y saturación. Estima cuánto recuperarías con el sistema (PC en comodato)."
+           sub="Cada zona muerta y cada minuto de saturación cuesta dinero. Estima cuánto pierdes hoy y cuánto recuperarías con el sistema."
         />
         <Reveal y={v.motionPx} duration={durationOf(v)}>
           <div className={`mt-12 ${cardSurface(v)} p-0 overflow-hidden grid lg:grid-cols-2`}>
@@ -706,7 +774,7 @@ function Contact({ v }: { v: VariantTheme }) {
                 <li className="flex items-center gap-3"><Mail className="h-4 w-4 text-cy shrink-0" /> serviciosapcsoporte@gmail.com</li>
               </ul>
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-cta px-6 py-3.5 text-sm mt-6">
-                <MessageCircle className="h-4 w-4" /> Quiero mi demo en vivo gratis
+                <MessageCircle className="h-4 w-4" /> Quiero mi demo gratis
               </a>
               <div className="mt-6 rounded-2xl overflow-hidden border border-line">
                 <iframe
@@ -831,6 +899,7 @@ export default function ArqueoLanding({ v }: { v: VariantTheme }) {
       <Nav v={v} />
       <main className="relative z-10">
         <Hero v={v} />
+        <Dashboard v={v} />
         <Services v={v} />
         <Workflow v={v} />
         <Benefits v={v} />
