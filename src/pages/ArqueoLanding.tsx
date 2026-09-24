@@ -100,7 +100,12 @@ function Nav({ v }: { v: VariantTheme }) {
     <header className={`fixed top-0 inset-x-0 z-50 transition-colors duration-200 ${style}`}>
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <img src="/imagenes/logo.webp" alt="APC VisionIA" className="h-9 w-9 object-contain" />
+<img
+          src="/assets/img/logo-apcvisionia.webp"
+          alt="Logo APC VisionIA - Sistema de conteo de personas con IA para gimnasios y retail Bogotá"
+          className="h-9 w-9 object-contain"
+          width="96"
+          height="96" />
           <span className="font-mono font-bold text-sm tracking-tight text-white">
             APC<span className="text-cy"> VisionIA</span>
           </span>
@@ -226,19 +231,22 @@ function Hero({ v }: { v: VariantTheme }) {
         </div>
 
         <img
-          src="/imagenes/hero-yolo.webp"
-          alt="Sistema YOLO contando personas en vivo en gimnasio de Bogotá — conteo, mapa de calor y aforo"
+          src="/assets/img/yolo-conteo-camara.webp"
+          alt="Sistema YOLO contando personas en vivo en gimnasio de Bogotá — conteo en tiempo real, mapa de calor y aforo"
           className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl border border-slate-800 my-8"
           loading="eager"
-        />
+          fetchpriority="high"
+          width="1600"
+          height="900" />
 
         <div className="grid grid-cols-3 gap-3 max-w-4xl mx-auto">
           <img
-            src="/imagenes/zonas-calor.webp"
-            alt="Mapa de calor con zonas muertas detectadas en tienda"
+            src="/assets/img/zonas-calor.webp"
+            alt="Mapa de calor con zonas muertas detectadas en tienda -- distribucion de flujo por area y producto reubicacion"
             className="w-full rounded-xl border border-line object-cover aspect-[4/3]"
             loading="lazy"
-          />
+            width="800"
+            height="600" />
           <img
             src="/imagenes/flujo-personas.webp"
             alt="Flujo de personas por franja horaria en gym"
@@ -781,7 +789,9 @@ function Contact({ v }: { v: VariantTheme }) {
                   title="Ubicación APC VisionIA"
                   src="https://www.google.com/maps?q=Cra+52c+%2339b-22,+Bogot%C3%A1&output=embed"
                   className="w-full h-44 grayscale contrast-[0.9] opacity-80"
-                  loading="lazy"
+loading="lazy"
+            width="800"
+            height="600"
                   referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
