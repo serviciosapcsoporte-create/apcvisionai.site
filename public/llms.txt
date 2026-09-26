@@ -9,6 +9,7 @@
 ## Servicios principales YOLO — 100% conteo de personas
 
 - [Conteo de Personas YOLO + Mapa de Calor](https://apcvisionai.site/): sistema de conteo de personas, sensor y cámara de conteo, mapa de calor y control de aforo. Demo en vivo sin costo Bogotá. PC en comodato.
+- [Sistema de Conteo de Personas con YOLOv8](https://apcvisionai.site/sistema-conteo-de-personas.html): precio desde 290k/mes, demo sin costo, instalación 48h en Bogotá, sin comprar cámaras ni sensores.
 - [Visión IA](https://apcvisionai.site/cctv-vision-ia.html): análisis de video YOLO: conteo, heatmaps, alertas de fila y dashboard tiempo real. Implementación 48h.
 - [Zonas Muertas y Máquinas Zombie Gym](https://apcvisionai.site/zonas-muertas-maquinas-zombie-gym.html): mapa de calor por franja, detecta máquinas zombie con datos.
 - [Conteo y Aforo Gym YOLO](https://apcvisionai.site/conteo-aforo-gym-yolo.html): ocupación en tiempo real por franja horaria para gimnasios.
