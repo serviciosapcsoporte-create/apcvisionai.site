@@ -36,10 +36,23 @@
 - [Cuadre de Caja Diario en Excel](https://apcvisionai.site/articulos/cuadre-de-caja-diario-excel.html)
 - [Cuadres de Caja en Excel con IA](https://apcvisionai.site/articulos/cuadres-de-caja-excel-ia.html)
 - [IA para Excel: Automatizar tu Arqueo de Caja](https://apcvisionai.site/articulos/ia-para-excel-arqueo.html)
+- [Arqueo Inteligente: ¿Tu Caja Cuadra?](https://apcvisionai.site/arqueo-due%C3%B1os.html): landing transaccional del arqueo con demo, alertas y cuadre automático.
+- [Arqueo Contable: Qué Es y Cómo Cerrar el Mes en Excel con IA](https://apcvisionai.site/articulos/arqueo-contable.html)
 
 ### Sistema POS
 - [Costo de un Sistema POS en Colombia](https://apcvisionai.site/articulos/costo-sistema-pos-colombia.html)
 - [Sistema POS para Restaurantes](https://apcvisionai.site/articulos/sistema-pos-para-restaurantes.html)
+
+
+### Posts de redes (republicados)
+- [El hueco en tu control interno](https://apcvisionai.site/social/admin-financiera/post-1-hueco-control-interno.html)
+- [Auditar sin evidencia es apostar](https://apcvisionai.site/social/admin-financiera/post-2-auditar-sin-evidencia.html)
+- [Excel automático vs Excel manual](https://apcvisionai.site/social/admin-financiera/post-3-excel-automatico-vs-manual.html)
+- [Reportes que la junta confía](https://apcvisionai.site/social/admin-financiera/post-4-reportes-junta-confianza.html)
+- [La caja nunca cuadra: ¿y si no es error?](https://apcvisionai.site/social/due%C3%B1o-operativo/post-1-caja-nunca-cuadra.html)
+- [Qué esconde tu POS](https://apcvisionai.site/social/due%C3%B1o-operativo/post-2-que-esconde-tu-pos.html)
+- [Mini PC vs cámaras](https://apcvisionai.site/social/due%C3%B1o-operativo/post-3-mini-pc-vs-camaras.html)
+- [De 2 horas a 5 minutos de arqueo](https://apcvisionai.site/social/due%C3%B1o-operativo/post-4-de-2-horas-a-5-minutos.html)
 
 ### Plantilla Excel
 - [Plantilla de arqueo de caja en Excel con fórmulas automáticas](https://apcvisionai.site/plantilla-excel-arqueo-caja.html) (descarga gratuita)
