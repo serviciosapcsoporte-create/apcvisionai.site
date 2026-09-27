@@ -297,7 +297,7 @@ function Hero({ v }: { v: VariantTheme }) {
 const SERVICES = [
   {
     icon: Users,
-    iconSrc: '/imagenes/icon_yolo_cutout.png',
+    iconSrc: '/imagenes/icon_yolo_cutout.webp',
     tag: 'SISTEMA DE CONTEO · YOLOv8',
     title: 'Conteo de Personas',
     desc: 'Cuenta cuantas personas entran y salen, por franja horaria y zona. Usa tus camaras actuales — sin torniquetes, sin sensores. Sabes exactamente cuanta gente pasa y cuando.',
@@ -305,7 +305,7 @@ const SERVICES = [
   },
   {
     icon: Flame,
-    iconSrc: '/imagenes/icon_heatmap_cutout.png',
+    iconSrc: '/imagenes/icon_heatmap_cutout.webp',
     tag: 'MAPA DE CALOR · ZONAS',
     title: 'Mapa de Calor y Zonas Muertas',
     desc: 'Ve en un mapa donde convergen las personas y donde nadie pasa. Detecta las zonas muertas de tu local y reubica productos, personal y ofertas donde si hay flujo.',
@@ -313,7 +313,7 @@ const SERVICES = [
   },
   {
     icon: BarChart3,
-    iconSrc: '/imagenes/icon_bell_cutout.png',
+    iconSrc: '/imagenes/icon_bell_cutout.webp',
     tag: 'CONTROL AFORO · ALERTAS',
     title: 'Control de Aforo en Vivo',
     desc: 'Alertas automaticas cuando el aforo supera el limite. Evita la saturacion, cumple la normativa y decide cuantos empleados necesitas segun la ocupacion real.',
@@ -402,17 +402,17 @@ function Dashboard({ v }: { v: VariantTheme }) {
         />
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           <div className={`${cardSurface(v)} p-6`}>
-            <img src="/imagenes/icon_minipc_cutout.png" alt="Mini PC en comodato corriendo YOLO local" className="h-10 w-10 object-contain mb-4" loading="lazy" />
+            <img src="/imagenes/icon_minipc_cutout.webp" alt="Mini PC en comodato corriendo YOLO local" className="h-10 w-10 object-contain mb-4" loading="lazy" />
             <h3 className="text-lg font-bold text-white">Monitoreo en vivo</h3>
             <p className="mt-2 text-sm text-slate-400 leading-relaxed">Ve cuantas personas hay, donde estan y en que zonas se concentran — desde cualquier dispositivo.</p>
           </div>
           <div className={`${cardSurface(v)} p-6`}>
-            <img src="/imagenes/icon_bell_cutout.png" alt="Alertas automaticas de aforo" className="h-10 w-10 object-contain mb-4" loading="lazy" />
+            <img src="/imagenes/icon_bell_cutout.webp" alt="Alertas automaticas de aforo" className="h-10 w-10 object-contain mb-4" loading="lazy" />
             <h3 className="text-lg font-bold text-white">Alertas automaticas</h3>
             <p className="mt-2 text-sm text-slate-400 leading-relaxed">Notificaciones cuando el aforo supera el limite. Cumplimiento normativo sin vigilar la pantalla.</p>
           </div>
           <div className={`${cardSurface(v)} p-6`}>
-            <img src="/imagenes/icon_pos_cutout.png" alt="Reportes automaticos y Excel semanal" className="h-10 w-10 object-contain mb-4" loading="lazy" />
+            <img src="/imagenes/icon_pos_cutout.webp" alt="Reportes automaticos y Excel semanal" className="h-10 w-10 object-contain mb-4" loading="lazy" />
             <h3 className="text-lg font-bold text-white">Reportes automaticos</h3>
             <p className="mt-2 text-sm text-slate-400 leading-relaxed">Excel semanal con ocupacion, flujo y zonas muertas. Sin configuracion manual.</p>
           </div>
