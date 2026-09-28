@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:tw && vite build",
+    "build:tw": "npx --yes tailwindcss@3.4.17 -c tools/tailwind.public.cjs -i tools/tw.input.css -o public/assets/tw.css --minify",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
