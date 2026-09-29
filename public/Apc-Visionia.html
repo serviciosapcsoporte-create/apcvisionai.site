@@ -61,7 +61,7 @@
       <div class="hidden lg:flex items-center gap-3">
         <a href="https://wa.me/573337450634?text=Hola%20Alejandro%2C%20quiero%20la%20demo%20en%20vivo%20de%20conteo%20de%20personas%20%2B%20mapa%20de%20calor%20YOLO%20en%20mi%20negocio%20Bogot%C3%A1.%20Ll%C3%A9vame%20la%20muestra%20con%20tu%20c%C3%A1mara%20sin%20costo" target="_blank" rel="noopener" class="px-5 h-9 rounded-full bg-apc-lime text-black text-[13.5px] font-semibold hover:bg-apc-lime-hover transition-colors flex items-center">Demo en vivo</a>
       </div>
-      <button id="menuBtn" class="lg:hidden w-9 h-9 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center">
+      <button id="menuBtn" aria-label="Abrir menú" class="lg:hidden w-9 h-9 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center">
         <div class="space-y-1.5"><div class="w-4 h-[1.5px] bg-white"></div><div class="w-4 h-[1.5px] bg-white"></div><div class="w-4 h-[1.5px] bg-white"></div></div>
       </button>
     </div>
@@ -108,7 +108,7 @@
           <div class="absolute top-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur border border-white/10 text-[11px] font-semibold tracking-widest"><span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> LIVE REC</div>
           <div class="absolute top-4 right-4 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur border border-white/10 text-[11px] mono text-white/80">YOLOv8 &middot; 32.1 FPS &middot; 0.92 conf</div>
           <div class="absolute bottom-3 left-3 right-3 grid grid-cols-3 gap-3">
-            <div class="rounded-[14px] bg-black/70 backdrop-blur border border-white/10 p-3"><div class="text-[10px] tracking-widest text-white/50 mono">AFORO</div><div class="mt-1 text-[20px] font-bold leading-none">23<span class="text-white/40 text-[14px]">/40</span></div><div class="mt-2 h-1.5 rounded-full bg-white/10 overflow-hidden"><div class="h-full w-[57%] bg-apc-lime"></div></div></div>
+            <div class="rounded-[14px] bg-black/70 backdrop-blur border border-white/10 p-3"><div class="text-[10px] tracking-widest text-white/50 mono">AFORO</div><div class="mt-1 text-[20px] font-bold leading-none">23<span class="text-white/50 text-[14px]">/40</span></div><div class="mt-2 h-1.5 rounded-full bg-white/10 overflow-hidden"><div class="h-full w-[57%] bg-apc-lime"></div></div></div>
             <div class="rounded-[14px] bg-black/70 backdrop-blur border border-white/10 p-3"><div class="text-[10px] tracking-widest text-white/50 mono">ZONA HOT</div><div class="mt-1 text-[14px] font-semibold leading-tight">Peso libre &middot; 8.2 min</div><div class="mt-2 flex gap-1"><div class="h-1.5 flex-1 rounded-full bg-apc-lime"></div><div class="h-1.5 flex-1 rounded-full bg-apc-lime/60"></div><div class="h-1.5 flex-1 rounded-full bg-white/20"></div></div></div>
             <div class="rounded-[14px] bg-apc-lime text-black p-3"><div class="text-[10px] tracking-widest mono font-bold opacity-60">ALERTA</div><div class="mt-1 text-[13px] font-bold leading-tight">Maquina zombie #4 sin uso 47min</div><div class="mt-1 text-[11px] opacity-70">&rarr; Reubicar cerca cardio</div></div>
           </div>
@@ -132,7 +132,7 @@
         <div class="group relative rounded-[20px] border border-white/[0.07] bg-apc-card overflow-hidden hover:border-apc-lime/40 transition-all duration-300 hover:-translate-y-1">
           <div class="absolute inset-0 opacity-[0.12] group-hover:opacity-[0.18] transition"><img src="/imagenes/icon_yolo_cutout.webp" class="w-full h-full object-cover" alt="Conteo de personas YOLO"></div>
           <div class="relative p-7">
-            <div class="flex items-center justify-between"><div class="text-[11px] tracking-widest mono text-white/40">YOLO EN VIVO &middot; GYM &amp; RETAIL</div><div class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-[14px]">&#128100;</div></div>
+            <div class="flex items-center justify-between"><div class="text-[11px] tracking-widest mono text-white/50">YOLO EN VIVO &middot; GYM &amp; RETAIL</div><div class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-[14px]">&#128100;</div></div>
             <h3 class="mt-4 text-[20px] font-bold">Conteo de Personas YOLO</h3>
             <p class="mt-2 text-[13.5px] leading-[1.5] text-white/60 max-w-[420px]">Cuantas personas entran, cuanto tiempo se quedan y aforo por franja. Sobre tus camaras actuales, sin obras.</p>
             <div class="mt-4 flex gap-2"><span class="px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/[0.08] text-[11px] mono">YOLOv8</span><span class="px-2.5 py-1 rounded-full bg-apc-lime/15 border border-apc-lime/20 text-[11px] mono text-apc-lime">Tiempo real</span></div>
@@ -144,7 +144,7 @@
           <div class="absolute inset-0 opacity-[0.18] group-hover:opacity-[0.26] transition"><img src="/imagenes/icon_heatmap_cutout.webp" class="w-full h-full object-cover" alt="Mapa de calor YOLO"></div>
           <div class="absolute inset-0 bg-gradient-to-t from-apc-card via-apc-card/70 to-transparent"></div>
           <div class="relative p-7">
-            <div class="flex items-center justify-between"><div class="text-[11px] tracking-widest mono text-white/40">ZONAS MUERTAS &middot; OPTIMIZA LAYOUT</div><div class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-[14px]">&#128506;</div></div>
+            <div class="flex items-center justify-between"><div class="text-[11px] tracking-widest mono text-white/50">ZONAS MUERTAS &middot; OPTIMIZA LAYOUT</div><div class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-[14px]">&#128506;</div></div>
             <h3 class="mt-4 text-[20px] font-bold">Mapas de Calor</h3>
             <p class="mt-2 text-[13.5px] leading-[1.5] text-white/60 max-w-[420px]">Detecta zonas muertas, maquinas zombie y vitrinas frias. Sube ticket y rotacion con datos, no intuicion.</p>
             <div class="mt-4 flex gap-2"><span class="px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/[0.08] text-[11px] mono">Heatmap</span><span class="px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/[0.08] text-[11px] mono">Layout</span></div>
@@ -154,7 +154,7 @@
         <!-- Card 3 -->
         <div class="group relative rounded-[20px] border border-white/[0.07] bg-apc-card overflow-hidden hover:border-apc-lime/40 transition-all duration-300 hover:-translate-y-1">
           <div class="relative p-7">
-            <div class="flex items-center justify-between"><div class="text-[11px] tracking-widest mono text-white/40">CONTROL DE AFORO &middot; ALERTAS</div><div class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-[14px]">&#9889;</div></div>
+            <div class="flex items-center justify-between"><div class="text-[11px] tracking-widest mono text-white/50">CONTROL DE AFORO &middot; ALERTAS</div><div class="w-8 h-8 rounded-full bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-[14px]">&#9889;</div></div>
             <h3 class="mt-4 text-[20px] font-bold">Control de Aforo</h3>
             <p class="mt-2 text-[13.5px] leading-[1.5] text-white/60 max-w-[420px]">Aforo en vivo con alertas WhatsApp y dashboard. Cumplimiento y staff optimo para gyms y tiendas Bogota.</p>
             <div class="mt-4 flex gap-2"><span class="px-2.5 py-1 rounded-full bg-apc-cyan/15 border border-apc-cyan/20 text-[11px] mono text-apc-cyan">Alertas</span><span class="px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/[0.08] text-[11px] mono">Dashboard</span></div>
@@ -210,7 +210,7 @@
         </div>
       </div>
       <div class="mt-10 rounded-[16px] border border-white/[0.06] bg-white/[0.02] px-6 py-4 flex flex-wrap gap-6 text-[13px]">
-        <span class="text-white/40 mono tracking-widest text-[11px]">CADA PLAN INCLUYE:</span>
+        <span class="text-white/50 mono tracking-widest text-[11px]">CADA PLAN INCLUYE:</span>
         <span class="inline-flex items-center gap-2 text-white/70"><span class="w-4 h-4 rounded-full bg-apc-lime text-black flex items-center justify-center text-[10px]">&#10003;</span> Instalacion 48h Bogota y Sabana</span>
         <span class="inline-flex items-center gap-2 text-white/70"><span class="w-4 h-4 rounded-full bg-apc-lime text-black flex items-center justify-center text-[10px]">&#10003;</span> Soporte &lt;30 min</span>
         <span class="inline-flex items-center gap-2 text-white/70"><span class="w-4 h-4 rounded-full bg-apc-lime text-black flex items-center justify-center text-[10px]">&#10003;</span> PC en comodato + mantenimiento</span>
@@ -239,36 +239,36 @@
     <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
       <div class="flex items-center justify-between mb-8">
         <h3 class="text-[22px] font-bold">Aprende mas — Conteo de personas, aforo y mapas de calor YOLO</h3>
-        <span class="hidden sm:inline text-[11px] mono tracking-widest text-white/30">6 GUIAS &middot; ACTUALIZADO 2026</span>
+        <span class="hidden sm:inline text-[11px] mono tracking-widest text-white/50">6 GUIAS &middot; ACTUALIZADO 2026</span>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="group rounded-[16px] border border-white/[0.07] bg-apc-card p-5 hover:border-white/[0.15] transition">
-          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-white/[0.06] border-white/[0.08] text-white/60">Guia</span><span class="text-[11px] text-white/30 mono">&middot; 6 min</span></div>
+          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-white/[0.06] border-white/[0.08] text-white/60">Guia</span><span class="text-[11px] text-white/50 mono">&middot; 6 min</span></div>
           <h4 class="mt-3 text-[14.5px] font-semibold leading-[1.35] group-hover:text-white">Conteo de Personas: Que Es, Como Funciona YOLO y Como Implementarlo en tu Negocio</h4>
           <a href="/articulos/conteo-de-personas-que-es-yolo.html" class="mt-4 text-[12.5px] font-medium text-white/60 hover:text-apc-lime inline-flex items-center gap-1">Leer guia <span>&rarr;</span></a>
         </div>
         <div class="group rounded-[16px] border border-white/[0.07] bg-apc-card p-5 hover:border-white/[0.15] transition">
-          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-white/[0.06] border-white/[0.08] text-white/60">Guia</span><span class="text-[11px] text-white/30 mono">&middot; 6 min</span></div>
+          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-white/[0.06] border-white/[0.08] text-white/60">Guia</span><span class="text-[11px] text-white/50 mono">&middot; 6 min</span></div>
           <h4 class="mt-3 text-[14.5px] font-semibold leading-[1.35] group-hover:text-white">Mapa de Calor en tu Negocio: Detecta Zonas Muertas y Aumenta 30% el Uso</h4>
           <a href="/articulos/mapa-de-calor-negocio-zonas-muertas.html" class="mt-4 text-[12.5px] font-medium text-white/60 hover:text-apc-lime inline-flex items-center gap-1">Leer guia <span>&rarr;</span></a>
         </div>
         <div class="group rounded-[16px] border border-white/[0.07] bg-apc-card p-5 hover:border-white/[0.15] transition">
-          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-apc-cyan/15 border-apc-cyan/20 text-apc-cyan">IA</span><span class="text-[11px] text-white/30 mono">&middot; 6 min</span></div>
+          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-apc-cyan/15 border-apc-cyan/20 text-apc-cyan">IA</span><span class="text-[11px] text-white/50 mono">&middot; 6 min</span></div>
           <h4 class="mt-3 text-[14.5px] font-semibold leading-[1.35] group-hover:text-white">YOLOv8 para Conteo de Personas: Sistema con Camaras que Ya Tienes (Sin Sensores)</h4>
           <a href="/articulos/yolov8-sistema-conteo-camaras-existentes.html" class="mt-4 text-[12.5px] font-medium text-white/60 hover:text-apc-lime inline-flex items-center gap-1">Leer guia <span>&rarr;</span></a>
         </div>
         <div class="group rounded-[16px] border border-white/[0.07] bg-apc-card p-5 hover:border-white/[0.15] transition">
-          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-apc-lime/10 border-apc-lime/20 text-apc-lime">POS</span><span class="text-[11px] text-white/30 mono">&middot; 6 min</span></div>
+          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-apc-lime/10 border-apc-lime/20 text-apc-lime">POS</span><span class="text-[11px] text-white/50 mono">&middot; 6 min</span></div>
           <h4 class="mt-3 text-[14.5px] font-semibold leading-[1.35] group-hover:text-white">Control de Aforo en Vivo: Cumplimiento y Staff Optimo para Negocios en Bogota</h4>
           <a href="/articulos/control-aforo-vivo-negocios-bogota.html" class="mt-4 text-[12.5px] font-medium text-white/60 hover:text-apc-lime inline-flex items-center gap-1">Leer guia <span>&rarr;</span></a>
         </div>
         <div class="group rounded-[16px] border border-white/[0.07] bg-apc-card p-5 hover:border-white/[0.15] transition">
-          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-apc-lime/10 border-apc-lime/20 text-apc-lime">POS</span><span class="text-[11px] text-white/30 mono">&middot; 6 min</span></div>
+          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-apc-lime/10 border-apc-lime/20 text-apc-lime">POS</span><span class="text-[11px] text-white/50 mono">&middot; 6 min</span></div>
           <h4 class="mt-3 text-[14.5px] font-semibold leading-[1.35] group-hover:text-white">5 Formas de Usar Conteo + Heatmap para Subir Ticket en Retail</h4>
           <a href="/articulos/conteo-heatmap-subir-ticket-retail.html" class="mt-4 text-[12.5px] font-medium text-white/60 hover:text-apc-lime inline-flex items-center gap-1">Leer guia <span>&rarr;</span></a>
         </div>
         <div class="group rounded-[16px] border border-white/[0.07] bg-apc-card p-5 hover:border-white/[0.15] transition">
-          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-white/[0.06] border-white/[0.08] text-white/60">Guia</span><span class="text-[11px] text-white/30 mono">&middot; 6 min</span></div>
+          <div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full text-[10px] mono font-bold border bg-white/[0.06] border-white/[0.08] text-white/60">Guia</span><span class="text-[11px] text-white/50 mono">&middot; 6 min</span></div>
           <h4 class="mt-3 text-[14.5px] font-semibold leading-[1.35] group-hover:text-white">Sensor de Conteo vs Camara YOLO: Costos y Precision Comparados 2026</h4>
           <a href="/articulos/sensor-vs-camara-yolo-costos-2026.html" class="mt-4 text-[12.5px] font-medium text-white/60 hover:text-apc-lime inline-flex items-center gap-1">Leer guia <span>&rarr;</span></a>
         </div>
@@ -289,15 +289,15 @@
           <label class="space-y-2"><span class="text-[12px] text-white/60">Tasa conversion actual (%)</span><input type="number" id="calcConversion" value="25" class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"></label>
         </div>
         <button onclick="calcular()" class="mt-6 w-full sm:w-auto px-7 h-[44px] rounded-full bg-apc-lime text-black font-semibold text-[14px] hover:bg-apc-lime-hover transition glow-lime">Calcular ahorro</button>
-        <p id="calcHint" class="mt-4 text-[13px] text-white/30">Completa trafico y ticket para ver tu fuga por zonas muertas.</p>
+        <p id="calcHint" class="mt-4 text-[13px] text-white/50">Completa trafico y ticket para ver tu fuga por zonas muertas.</p>
       </div>
       <div class="rounded-[24px] border border-white/[0.08] bg-apc-dark p-7 lg:sticky lg:top-24">
-        <div class="flex items-center justify-between"><span class="text-[11px] mono tracking-widest text-white/40">RESULTADO YOLO</span><span class="w-2 h-2 rounded-full bg-apc-green animate-pulse"></span></div>
+        <div class="flex items-center justify-between"><span class="text-[11px] mono tracking-widest text-white/50">RESULTADO YOLO</span><span class="w-2 h-2 rounded-full bg-apc-green animate-pulse"></span></div>
         <div id="calcResult" class="mt-6 rounded-[16px] bg-apc-card border border-white/[0.06] p-8 text-center">
-          <div class="text-[14px] text-white/40">Aqui veras tu fuga estimada</div>
-          <div class="mt-2 text-[12px] text-white/25">Hasta 30% zonas muertas = ticket perdido</div>
+          <div class="text-[14px] text-white/50">Aqui veras tu fuga estimada</div>
+          <div class="mt-2 text-[12px] text-white/50">Hasta 30% zonas muertas = ticket perdido</div>
         </div>
-        <div class="mt-6 grid grid-cols-3 gap-2 text-[10px] mono text-white/30">
+        <div class="mt-6 grid grid-cols-3 gap-2 text-[10px] mono text-white/50">
           <span class="px-2.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.06] text-center">YOLOv8</span>
           <span class="px-2.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.06] text-center">Heatmap</span>
           <span class="px-2.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.06] text-center">WhatsApp</span>
@@ -363,21 +363,21 @@
         <p class="mt-1 text-[13px] text-white/50">Cuentanos tu negocio, camaras y zonas. Respondemos &lt;30 min en hora habil. Demo sin costo con nuestra camara.</p>
         <form id="contactForm" class="mt-6 space-y-4" onsubmit="enviarWhatsApp(event);">
           <div class="grid sm:grid-cols-2 gap-4">
-            <label class="space-y-2"><span class="text-[11px] mono tracking-widest text-white/50">NOMBRE *</span><input id="fNombre" type="text" required placeholder="Tu nombre" class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] placeholder:text-white/20 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"></label>
-            <label class="space-y-2"><span class="text-[11px] mono tracking-widest text-white/50">CORREO</span><input id="fCorreo" type="email" placeholder="tu@correo.com" class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] placeholder:text-white/20 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"></label>
+            <label class="space-y-2"><span class="text-[11px] mono tracking-widest text-white/50">NOMBRE *</span><input id="fNombre" type="text" required placeholder="Tu nombre" class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] placeholder:text-white/50 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"></label>
+            <label class="space-y-2"><span class="text-[11px] mono tracking-widest text-white/50">CORREO</span><input id="fCorreo" type="email" placeholder="tu@correo.com" class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] placeholder:text-white/50 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"></label>
           </div>
-          <label class="space-y-2 block"><span class="text-[11px] mono tracking-widest text-white/50">TELEFONO / WHATSAPP *</span><input id="fTelefono" type="tel" required placeholder="+57 333 745 0634" class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] placeholder:text-white/20 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"></label>
+          <label class="space-y-2 block"><span class="text-[11px] mono tracking-widest text-white/50">TELEFONO / WHATSAPP *</span><input id="fTelefono" type="tel" required placeholder="+57 333 745 0634" class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] placeholder:text-white/50 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"></label>
           <div class="grid sm:grid-cols-2 gap-4">
             <label class="space-y-2"><span class="text-[11px] mono tracking-widest text-white/50">TIPO DE NEGOCIO *</span><select id="fNegocio" required class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] text-white/80 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"><option value="" disabled selected>Selecciona</option><option>Retail / Tienda</option><option>Supermercado</option><option>Restaurante</option><option>Centro comercial</option><option>Oficina / Cowork</option><option>Bodega / Logistica</option><option>Otro</option></select></label>
             <label class="space-y-2"><span class="text-[11px] mono tracking-widest text-white/50">N° CAMARAS *</span><select id="fCamaras" required class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] text-white/80 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"><option value="" disabled selected>Cuantas?</option><option>1-2 camaras</option><option>3-4 camaras</option><option>5-8 camaras</option><option>9+ camaras</option><option>Aun no tengo — asesorame</option></select></label>
           </div>
           <div class="grid sm:grid-cols-2 gap-4">
             <label class="space-y-2"><span class="text-[11px] mono tracking-widest text-white/50">ZONAS A MEDIR</span><select id="fZonas" class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] text-white/80 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"><option value="" disabled selected>Selecciona</option><option>Entrada / Puerta principal</option><option>Pasillos / Sala</option><option>Caja / Punto de pago</option><option>Vitrinas / Perimetral</option><option>Completo (todas)</option></select></label>
-            <label class="space-y-2"><span class="text-[11px] mono tracking-widest text-white/50">AFORO / TRAFICO DIA</span><input id="fAforo" type="text" placeholder="Ej: 200 personas/dia, aforo 40" class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] placeholder:text-white/20 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"></label>
+            <label class="space-y-2"><span class="text-[11px] mono tracking-widest text-white/50">AFORO / TRAFICO DIA</span><input id="fAforo" type="text" placeholder="Ej: 200 personas/dia, aforo 40" class="w-full h-[44px] rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 text-[14px] placeholder:text-white/50 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20"></label>
           </div>
-          <label class="space-y-2 block"><span class="text-[11px] mono tracking-widest text-white/50">CUENTANOS TU CASO</span><textarea id="fMensaje" placeholder="Ej: Tienda 80m2 en Suba, 2 camaras Dahua, quiero conteo + mapa calor para detectar vitrina fria..." rows="3" class="w-full rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 py-3 text-[14px] placeholder:text-white/20 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20 resize-none"></textarea></label>
+          <label class="space-y-2 block"><span class="text-[11px] mono tracking-widest text-white/50">CUENTANOS TU CASO</span><textarea id="fMensaje" placeholder="Ej: Tienda 80m2 en Suba, 2 camaras Dahua, quiero conteo + mapa calor para detectar vitrina fria..." rows="3" class="w-full rounded-[12px] bg-apc-dark border border-white/[0.08] px-4 py-3 text-[14px] placeholder:text-white/50 focus:border-apc-lime/50 focus:outline-none focus:ring-2 focus:ring-apc-lime/20 resize-none"></textarea></label>
           <button type="submit" class="w-full h-[46px] rounded-full bg-apc-lime text-black font-semibold text-[14px] hover:bg-apc-lime-hover transition glow-lime">Enviar y abrir WhatsApp</button>
-          <p class="text-[11px] text-white/30 text-center">Al enviar abrimos WhatsApp con tu mensaje listo. Demo en vivo sin costo. No spam.</p>
+          <p class="text-[11px] text-white/50 text-center">Al enviar abrimos WhatsApp con tu mensaje listo. Demo en vivo sin costo. No spam.</p>
         </form>
       </div>
     </div>
@@ -388,11 +388,11 @@
     <div class="max-w-[1280px] mx-auto px-6 lg:px-8 grid lg:grid-cols-[1.4fr_0.8fr_0.8fr_1fr] gap-10">
       <div>
         <div class="flex items-center gap-2"><div class="w-2.5 h-2.5 rounded-full bg-apc-lime"></div><span class="font-extrabold tracking-tight text-[16px]">APC VisionIA</span></div>
-        <p class="mt-3 text-[13px] leading-[1.6] text-white/40 max-w-[320px]">Sistema conteo de personas YOLO, mapa de calor y control de aforo para gyms y retail en Bogota. Demo en vivo sin costo. PC en comodato.</p>
+        <p class="mt-3 text-[13px] leading-[1.6] text-white/50 max-w-[320px]">Sistema conteo de personas YOLO, mapa de calor y control de aforo para gyms y retail en Bogota. Demo en vivo sin costo. PC en comodato.</p>
         <div class="mt-4 flex gap-2"><span class="px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/[0.08] text-[11px] mono text-white/50">YOLOv8</span><span class="px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/[0.08] text-[11px] mono text-white/50">Bogota</span></div>
       </div>
       <div>
-        <div class="text-[12px] font-semibold tracking-widest mono text-white/30">ENLACES</div>
+        <div class="text-[12px] font-semibold tracking-widest mono text-white/50">ENLACES</div>
         <div class="mt-3 space-y-2 text-[13px] text-white/60">
           <div class="hover:text-white cursor-pointer">Conteo YOLO</div>
           <div class="hover:text-white cursor-pointer">Mapa de Calor</div>
@@ -401,14 +401,14 @@
         </div>
       </div>
       <div>
-        <div class="text-[12px] font-semibold tracking-widest mono text-white/30">CONTACTO</div>
+        <div class="text-[12px] font-semibold tracking-widest mono text-white/50">CONTACTO</div>
         <div class="mt-3 space-y-2 text-[13px] text-white/60">
           <div>+57 333 745 0634</div>
           <div>serviciosapcsoporte@gmail.com</div>
           <div>Bogota, Colombia — Cra 52c #39b-22</div>
         </div>
       </div>
-      <div class="text-[12px] text-white/30 leading-[1.6]">
+      <div class="text-[12px] text-white/50 leading-[1.6]">
         <div>&copy; 2026 Servicios APC. Todos los derechos reservados.</div>
         <div class="mt-1 mono">apcvisionai.site</div>
         <div class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.06]"><span class="w-1.5 h-1.5 rounded-full bg-apc-lime"></span> Web creada por dogweb.lat</div>
@@ -455,7 +455,7 @@
           '<div class="rounded-[16px] bg-[#101728] border border-white/[0.06] p-5">' +
             '<div class="text-[12px] text-white/50">Visitas mes / no convertidas</div>' +
             '<div class="mt-1 text-[22px] font-black text-white">' + visitasMes.toLocaleString('es-CO') + ' <span class="text-[13px] font-semibold text-white/50">/ ' + Math.round(personasNoConvertidas).toLocaleString('es-CO') + ' sin comprar</span></div>' +
-            '<div class="mt-2 text-[11px] text-white/40">Conversion actual ' + conversion + '% → ' + Math.round(convertidas).toLocaleString('es-CO') + ' compras/mes</div>' +
+            '<div class="mt-2 text-[11px] text-white/50">Conversion actual ' + conversion + '% → ' + Math.round(convertidas).toLocaleString('es-CO') + ' compras/mes</div>' +
           '</div>' +
           '<div class="rounded-[16px] bg-[#D4FF32] text-black p-5">' +
             '<div class="text-[12px] opacity-60 font-semibold">Fuga por zonas muertas (30%)</div>' +
