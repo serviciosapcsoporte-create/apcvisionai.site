@@ -56,3 +56,6 @@
 
 ### Plantilla Excel
 - [Plantilla de arqueo de caja en Excel con fórmulas automáticas](https://apcvisionai.site/plantilla-excel-arqueo-caja.html) (descarga gratuita)
+
+## Legal
+- [Política de cookies de APC VisionIA](https://apcvisionai.site/politicas-de-cookies.html): cookies propias y Google Analytics, aceptar o rechazar desde el aviso.

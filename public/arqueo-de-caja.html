@@ -21,6 +21,8 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+  if(/(?:^|;\s*)apc_consent=accepted/.test(document.cookie)){gtag('consent','update',{analytics_storage:'granted'});}
   gtag('js', new Date());
   gtag('config', 'G-EWFDLTCM8R');
 </script>
@@ -42,5 +44,6 @@
     <p style="font-size:20px;font-weight:700;">Redirigiendo a Arqueo de Caja con IA en Bogotá...</p>
     <p style="color:#64748B;margin-top:8px;"><a href="https://apcvisionai.site/" style="color:#D4FF32;">Ir a la página principal</a></p>
   </div>
+<script src="/js/cookies.js"></script>
 </body>
 </html>
